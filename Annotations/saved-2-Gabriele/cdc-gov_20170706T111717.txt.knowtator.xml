@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="cdc-gov_20170706T111717.txt">
+    <annotation>
+        <mention id="EHOST_Instance_1523" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="818" end="821" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:55:42 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1523">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1524" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="2162" end="2165" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:57:46 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1524">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1525" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="2427" end="2430" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:58:25 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1525">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1526" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="3191" end="3193" />
+        <spannedText>un</spannedText>
+        <creationDate>Tue Jan 05 19:00:30 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1526">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1527" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="4068" end="4071" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 19:02:22 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1527">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1528" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="4145" end="4148" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 19:02:41 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1528">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1529" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="5022" end="5024" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 19:05:04 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1529">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1530" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="5189" end="5191" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 19:05:32 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1530">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1531" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="5351" end="5354" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 19:05:48 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1531">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1532" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="6190" end="6193" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 19:07:16 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1532">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1533" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="6421" end="6424" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 19:07:42 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1533">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+

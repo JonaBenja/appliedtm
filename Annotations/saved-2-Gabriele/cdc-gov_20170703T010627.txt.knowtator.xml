@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="cdc-gov_20170703T010627.txt">
+    <annotation>
+        <mention id="EHOST_Instance_1514" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="724" end="726" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 18:15:05 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1514">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1515" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="1019" end="1022" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:15:56 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1515">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1516" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="1362" end="1365" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:16:49 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1516">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1517" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="1576" end="1579" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:17:22 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1517">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1518" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="1865" end="1867" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 18:18:21 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1518">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1519" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="1932" end="1934" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 18:19:13 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1519">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1520" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="2314" end="2317" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:20:44 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1520">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1521" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="2717" end="2719" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 18:21:47 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1521">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1522" />
+        <annotator id="eHOST_2010">Gabriele</annotator>
+        <span start="2861" end="2864" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 18:22:04 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1522">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+
