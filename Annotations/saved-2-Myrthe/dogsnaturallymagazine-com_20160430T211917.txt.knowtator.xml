@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="dogsnaturallymagazine-com_20160430T211917.txt">
+    <annotation>
+        <mention id="EHOST_Instance_1204" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="818" end="821" />
+        <spannedText>n't</spannedText>
+        <creationDate>Tue Jan 05 20:41:21 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1204">
+        <mentionClass id="NegCue">n't</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1205" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="2636" end="2641" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:44:49 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1205">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1206" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="2687" end="2689" />
+        <spannedText>im</spannedText>
+        <creationDate>Tue Jan 05 20:45:06 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1206">
+        <mentionClass id="NegCue">im</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1207" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="3285" end="3287" />
+        <spannedText>ir</spannedText>
+        <creationDate>Tue Jan 05 20:45:54 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1207">
+        <mentionClass id="NegCue">ir</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1208" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="3541" end="3544" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 20:46:52 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1208">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1209" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="3561" end="3568" />
+        <spannedText>neither</spannedText>
+        <creationDate>Tue Jan 05 20:46:55 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1209">
+        <mentionClass id="NegCue">neither</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1210" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="3721" end="3726" />
+        <spannedText>Never</spannedText>
+        <creationDate>Tue Jan 05 20:47:05 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1210">
+        <mentionClass id="NegCue">Never</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1211" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="3983" end="3988" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:47:22 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1211">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1212" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="4028" end="4033" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:47:44 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1212">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1213" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="4167" end="4169" />
+        <spannedText>un</spannedText>
+        <creationDate>Tue Jan 05 20:47:58 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1213">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1214" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="4385" end="4390" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:48:24 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1214">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1215" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="5056" end="5059" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 20:48:56 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1215">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1216" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="5216" end="5221" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:50:47 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1216">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1217" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="5835" end="5840" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:51:19 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1217">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1218" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="6528" end="6533" />
+        <spannedText>nâ€™t</spannedText>
+        <creationDate>Tue Jan 05 20:52:06 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1218">
+        <mentionClass id="NegCue">nâ€™t</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1219" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="7189" end="7192" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 20:52:44 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1219">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1220" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="7238" end="7241" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 20:52:47 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1220">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1221" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="8390" end="8393" />
+        <spannedText>n't</spannedText>
+        <creationDate>Tue Jan 05 20:54:34 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1221">
+        <mentionClass id="NegCue">n't</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1222" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="7943" end="7946" />
+        <spannedText>non</spannedText>
+        <creationDate>Tue Jan 05 20:55:34 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1222">
+        <mentionClass id="NegCue">non</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+

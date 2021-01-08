@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotations textSource="cdc-gov_20170706T111717.txt">
+    <annotation>
+        <mention id="EHOST_Instance_1091" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="818" end="821" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 16:48:11 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1091">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1092" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="4068" end="4071" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 16:50:29 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1092">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1093" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="4145" end="4148" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 16:50:34 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1093">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1094" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="5022" end="5024" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 16:51:25 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1094">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1095" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="5189" end="5191" />
+        <spannedText>no</spannedText>
+        <creationDate>Tue Jan 05 16:51:40 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1095">
+        <mentionClass id="NegCue">no</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1096" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="5351" end="5354" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 16:51:56 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1096">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1097" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="6190" end="6193" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 16:52:45 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1097">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1098" />
+        <annotator id="01">Myrthe</annotator>
+        <span start="6421" end="6424" />
+        <spannedText>not</spannedText>
+        <creationDate>Tue Jan 05 16:52:58 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1098">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1099" />
+        <annotator id="eHOST_2010">Myrthe</annotator>
+        <span start="2162" end="2165" />
+        <spannedText>not</spannedText>
+        <creationDate>Thu Jan 07 15:15:52 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1099">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1100" />
+        <annotator id="eHOST_2010">Myrthe</annotator>
+        <span start="2427" end="2430" />
+        <spannedText>not</spannedText>
+        <creationDate>Thu Jan 07 15:16:13 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1100">
+        <mentionClass id="NegCue">not</mentionClass>
+    </classMention>
+    <annotation>
+        <mention id="EHOST_Instance_1101" />
+        <annotator id="eHOST_2010">Myrthe</annotator>
+        <span start="3191" end="3193" />
+        <spannedText>un</spannedText>
+        <creationDate>Thu Jan 07 15:16:48 CET 2021</creationDate>
+    </annotation>
+    <classMention id="EHOST_Instance_1101">
+        <mentionClass id="NegCue">un</mentionClass>
+    </classMention>
+    <eHOST_Adjudication_Status version="1.0">
+        <Adjudication_Selected_Annotators version="1.0" />
+        <Adjudication_Selected_Classes version="1.0" />
+        <Adjudication_Others>
+            <CHECK_OVERLAPPED_SPANS>false</CHECK_OVERLAPPED_SPANS>
+            <CHECK_ATTRIBUTES>false</CHECK_ATTRIBUTES>
+            <CHECK_RELATIONSHIP>false</CHECK_RELATIONSHIP>
+            <CHECK_CLASS>false</CHECK_CLASS>
+            <CHECK_COMMENT>false</CHECK_COMMENT>
+        </Adjudication_Others>
+    </eHOST_Adjudication_Status>
+</annotations>
+
