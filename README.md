@@ -23,3 +23,7 @@ The code for this project will be added in the future.
 ### Data
 This folder contains the data used for training and testing the system during development. 
 For measuring results, the system will be tested on a unseen test set.
+
+training data: `SEM-2012-SharedTask-CD-SCO-training-simple/txt`
+
+development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
