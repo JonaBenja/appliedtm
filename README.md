@@ -1,7 +1,7 @@
 # A [insert machine learning method] for negation cue detection
 
 This repository will contain all code and files used to train a negation detection classifier.
-The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl.
+The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
 
 ### Annotations
 10 articles about vaccination that were retrieved from a larger batch of web crawled articles.
