@@ -30,8 +30,16 @@ development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
 ### Code
 This folder contains the following scripts:
 
-`preprocessing.py` preprocesses the data.
+`preprocessing.py` preprocesses the data and saves it as new files.
+
+training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed.tsv`
+
+development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed.tsv`
 
 `utils.py` contains all functions for the feature extraction.
 
-`feature_extraction.py` extracts features and writes them to a new file.
+`feature_extraction.py` extracts features and writes them to new files:
+
+training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.tsv`
+
+development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.tsv`
