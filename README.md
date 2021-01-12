@@ -1,8 +1,10 @@
+# A [insert machine learning method] for negation cue detection
+
 This repository will contain all code and files used to train a negation detection classifier.
 The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl.
 
 ### Annotations
-10 articles about vaccination that were retrieved from a larger batch of articles.
+10 articles about vaccination that were retrieved from a larger batch of web crawled articles.
 
 `annotations` folder: contains the annotations made by the 4 contributing authors on the following files:
 
@@ -28,8 +30,8 @@ development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
 ### Code
 This folder contains the following scripts:
 
-`preprocessing.py`: preprocesses the data
+`preprocessing.py`: preprocesses the data.
 
 `utils.py`: contains all functions for the feature extraction.
 
-`feature_extraction.py`: extracts features and writes them to a new file
+`feature_extraction.py`: extracts features and writes them to a new file.
