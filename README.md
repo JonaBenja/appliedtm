@@ -17,9 +17,6 @@ The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Ev
 * `en-wikipedia-org_20170702T222036.txt`
 * `fitfortravel-nhs-uk_20160812T165007.txt`
 
-### Code
-The code for this project will be added in the future.
-
 ### Data
 This folder contains the data used for training and testing the system during development. 
 For measuring results, the system will be tested on an unseen test set.
@@ -27,3 +24,12 @@ For measuring results, the system will be tested on an unseen test set.
 training data: `SEM-2012-SharedTask-CD-SCO-training-simple.txt`
 
 development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
+
+### Code
+This folder contains the following scripts:
+
+`preprocessing.py`: preprocesses the data
+
+`utils.py`: contains all functions for the feature extraction.
+
+`feature_extraction.py`: extracts features and writes them to a new file
