@@ -55,7 +55,6 @@ def extract_features(input_file, outputfile):
     outfile.close()
     return outputfile
 
-"""
 
 # def write_features(input_file):
 #     """
