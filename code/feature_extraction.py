@@ -25,7 +25,6 @@ def write_features(input_file):
         
             #defining header names 
             features = ["token",
-                        "prev_token", 
                         "lemma",
                         "pos_tag",
                         "prev_token",
