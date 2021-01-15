@@ -22,7 +22,24 @@ def write_features(input_file):
     labels = input_data.iloc[:, -1]
 
     with open(output_file, 'w', encoding='utf-8') as outfile:
-        for token, label in zip(tokens, labels):
+        
+            #defining header names 
+            features = ["token",
+                        "prev_token", 
+                        "lemma",
+                        "pos_tag",
+                        "prev_token",
+                        "next_token",
+                        "punctuation", 
+                       "gold_label"]
+
+            writer = csv.writer(outfile, delimiter = '\t')
+            writer.writerow(features)
+        
+        
+        for token, label in zip(tokens, labels):#think this line needs to be removed, function for pos could not take token as input 
+            #but only tokens as a list, so now all functions take tokens (list) as input to be more conscise. 
+            
 
             # Write token to
             outfile.write(token + '\t')
