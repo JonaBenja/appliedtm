@@ -65,15 +65,15 @@ def punctuation(tokens):
     """
     Function to determine if a token is a punctuation mark.
     """
-    for token in tokens: 
     punctuation = []
-    #0 is no punctuation 
-    punct = 0
-    
-    #assigning 1 when token is punctuation mark
+    for token in tokens:
+        
+    #assigning 1 when token is punctuation mark    
     if not token.isalnum():
-            punctuation = 1
-            
+        punct = 1
+    else:
+        punct = 0
+        
     punctuation.append(punct)
     
     return punctuation
