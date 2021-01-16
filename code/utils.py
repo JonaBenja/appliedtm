@@ -8,12 +8,12 @@ def lemma_extraction(tokens):
     Function to extract lemmas from tokens.
     """
     lemmas = []
-    for token in tokens: 
-        lem = WordNetLemmatizer() 
+    for token in tokens:
+        lem = WordNetLemmatizer()
         lemma = lem.lemmatize(token)
         lemmas.append(lemma)
         
-    return lemmas 
+    return lemmas
     
 def pos_extraction(tokens):
     """
@@ -29,31 +29,32 @@ def pos_extraction(tokens):
 def previous_and_next_token_extraction(tokens):
     """
     Function to extract previous and preceding token from tokens list.
-    """ 
-    
-    prev_index = (position_index - 1)
-    next_index = (position_index + 1)
-    
+    """
     position_index = 0
+
+    prev_tokens = []
+    next_tokens = []
     
-    for token in tokens: 
-        
-        prev_tokens = []
-        next_tokens = []
+    for token in tokens:
+
+        prev_index = (position_index - 1)
+        next_index = (position_index + 1)
         
         #previous token
         if prev_index < 0:
             previous_token = ""
         else: 
             previous_token = tokens[prev_index]
-            prev_tokens.append(previous_token)
+
+        prev_tokens.append(previous_token)
             
         #next token
-        if next_index < (len(tokens)):
+        if next_index < len(tokens):
             next_token = tokens[next_index]
         else: 
             next_token = "" 
-            next_tokens.append(next_token)
+
+        next_tokens.append(next_token)
             
         #moving to next token in list 
         position_index += 1
@@ -61,7 +62,7 @@ def previous_and_next_token_extraction(tokens):
     return prev_tokens, next_tokens
                 
         
-def punctuation(tokens):
+def is_punctuation(tokens):
     """
     Function to determine if a token is a punctuation mark.
     """
@@ -77,4 +78,3 @@ def punctuation(tokens):
         punctuation.append(punct)
     
     return punctuation
-        
