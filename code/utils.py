@@ -35,7 +35,7 @@ def previous_and_next_token_extraction(tokens):
     prev_tokens = []
     next_tokens = []
     
-    for token in tokens:
+    for i in range(len(tokens)):
 
         prev_index = (position_index - 1)
         next_index = (position_index + 1)
