@@ -15,7 +15,7 @@ def write_features(input_file):
     :type input_file: string
     """
     # Prepare output file
-    output_file = input_file.replace('.tsv', '-features.conll')
+    output_file = input_file.replace('.tsv', '-features.tsv')
 
     # Read in preprocessed file
     input_data = pd.read_csv(input_file, encoding='utf-8', sep='\t')
@@ -26,6 +26,8 @@ def write_features(input_file):
     feature_names = ["token",
                 "lemma",
                 "pos_tag",
+                "prev_token",
+                "next_token",
                 "punctuation",
                 "gold_label"]
 
@@ -38,7 +40,7 @@ def write_features(input_file):
 
     punctuation = is_punctuation(tokens)
 
-    features_dict = {'token': tokens, 'lemma': lemmas, 'pos_tag': pos_tags, 'prev_token':prev_tokens,
+    features_dict = {'token': tokens, 'lemma': lemmas, 'pos_tag': pos_tags, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'gold_label': labels}
 
     features_df = pd.DataFrame(features_dict, columns = feature_names)
