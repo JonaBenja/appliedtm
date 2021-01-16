@@ -1,5 +1,6 @@
 import argparse
 import pandas as pd
+from utils import *
 
 """
 '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.tsv'
@@ -14,50 +15,35 @@ def write_features(input_file):
     :type input_file: string
     """
     # Prepare output file
-    output_file = input_file.replace('.tsv', '-features.tsv')
+    output_file = input_file.replace('.tsv', '-features.conll')
 
     # Read in preprocessed file
     input_data = pd.read_csv(input_file, encoding='utf-8', sep='\t')
     tokens = input_data.iloc[:, 0]
     labels = input_data.iloc[:, -1]
 
-    with open(output_file, 'w', encoding='utf-8') as outfile:
-        
-            #defining header names 
-            features = ["token",
-                        "lemma",
-                        "pos_tag",
-                        "prev_token",
-                        "next_token",
-                        "punctuation", 
-                       "gold_label"]
+    # Defining header names
+    feature_names = ["token",
+                "lemma",
+                "pos_tag",
+                "punctuation",
+                "gold_label"]
 
-            writer = csv.writer(outfile, delimiter = '\t')
-            writer.writerow(features)
-        
-        
-        for token, label in zip(tokens, labels):#think this line needs to be removed, function for pos could not take token as input 
-            #but only tokens as a list, so now all functions take tokens (list) as input to be more conscise. 
-            
+    lemmas = lemma_extraction(tokens)
 
-            # Write token to
-            outfile.write(token + '\t')
+    pos_tags = pos_extraction(tokens)
 
-            # Write lemma feature value
-            lemma = 'lemma'
-            outfile.write(lemma + '\t')
+    prev_next_tokens = previous_and_next_token_extraction(tokens)
+    prev_tokens, next_tokens = prev_next_tokens
 
-            # Write POS feature value
-            pos = 'POS'
-            outfile.write(pos + '\t')
+    punctuation = is_punctuation(tokens)
 
-            # Write NE feature value
-            ne = 'NE'
-            outfile.write(ne + '\t')
+    features_dict = {'token': tokens, 'lemma': lemmas, 'pos_tag': pos_tags, 'prev_token':prev_tokens,
+                     'next_token': next_tokens, 'punctuation': punctuation, 'gold_label': labels}
 
-            # Append label to line
-            outfile.write(label + '\n')
+    features_df = pd.DataFrame(features_dict, columns = feature_names)
 
+    features_df.to_csv(output_file, sep='\t', index=False)
 
 def main():
     # Set up command line parser
