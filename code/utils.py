@@ -69,12 +69,12 @@ def punctuation(tokens):
     for token in tokens:
         
     #assigning 1 when token is punctuation mark    
-    if not token.isalnum():
-        punct = 1
-    else:
-        punct = 0
+        if not token.isalnum():
+            punct = 1
+        else:
+            punct = 0
         
-    punctuation.append(punct)
+        punctuation.append(punct)
     
     return punctuation
         
