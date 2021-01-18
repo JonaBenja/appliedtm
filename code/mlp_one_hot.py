@@ -1,19 +1,14 @@
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_extraction import DictVectorizer
+from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
-from collections import defaultdict
 import pandas as pd
+
 
 
 """
 TRAINING
 """
-feature_names = ["token",
-                 "lemma",
-                 "pos_tag",
-                 "prev_token",
-                 "next_token",
-                 "punctuation"]
 
 baskerville = '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.tsv'
 training = pd.read_csv(baskerville, encoding='utf-8', sep='\t')
@@ -55,9 +50,8 @@ x_test = vec.transform(test_data)
 
 prediction = clf.predict(x_test)
 
-accuracy = accuracy_score(test_labels, prediction)
-
-print(accuracy)
+metrics = classification_report(test_labels, prediction)
+print(metrics)
 
 errors = []
 for y_pred, y_true in zip(prediction, test_labels):

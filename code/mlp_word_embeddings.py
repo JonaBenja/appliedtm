@@ -1,6 +1,6 @@
 from sklearn.neural_network import MLPClassifier
-from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
 import pandas as pd
 import gensim
 
@@ -69,10 +69,8 @@ print(len(test_data), len(test_labels))
 
 prediction = clf.predict(test_data)
 
-accuracy = accuracy_score(test_labels, prediction, normalize=False)
-
-print(accuracy, "/", len(test_labels))
-print(accuracy/len(test_labels))
+metrics = classification_report(test_labels, prediction)
+print(metrics)
 
 errors = []
 i = 0
