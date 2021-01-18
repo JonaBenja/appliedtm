@@ -1,18 +1,31 @@
 from sklearn.neural_network import MLPClassifier
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.metrics import accuracy_score
+from collections import defaultdict
 import pandas as pd
-import gensim
+
 
 """
 TRAINING
 """
+feature_names = ["token",
+                 "lemma",
+                 "pos_tag",
+                 "prev_token",
+                 "next_token",
+                 "punctuation"]
 
-baskerville = '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.tsv'
+baskerville = '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.tsv'
 training = pd.read_csv(baskerville, encoding='utf-8', sep='\t')
 
-training_data = [{'token': token} for token in training.iloc[:, 0]]
-training_labels = [label for label in training.iloc[:, -1]]
+training_data = [{'token': token} for token in training['token']]
+training_labels = training['gold_label']
+
+print('Sample of training data:')
+print(training_data[:10])
+
+print('Sample of training labels:')
+print(training_labels[:10])
 
 print(len(training_data), len(training_labels))
 
@@ -32,26 +45,26 @@ print("Done training network")
 #TESTING
 """
 
-wistoria = '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.tsv'
+wistoria = '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.tsv'
 test = pd.read_csv(wistoria, encoding='utf-8', sep='\t')
 
-test_data = [{'token': token} for token in test.iloc[:, 0]]
-test_labels = list(test.iloc[:, -1])
+test_data = [{'token': token} for token in test['token']]
+test_labels = test['gold_label']
 
 x_test = vec.transform(test_data)
 
 prediction = clf.predict(x_test)
 
-accuracy = accuracy_score(test_labels, prediction, normalize=False)
+accuracy = accuracy_score(test_labels, prediction)
 
-print(accuracy, "/", len(test_labels))
-print(accuracy/len(test_labels))
+print(accuracy)
 
 errors = []
 for y_pred, y_true in zip(prediction, test_labels):
     if y_pred != y_true:
         errors.append((y_pred, y_true))
 
+print('Errors made (prediction, label):')
 print(errors)
 
 # One-hot encoded tokens
