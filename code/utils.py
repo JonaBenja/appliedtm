@@ -42,7 +42,7 @@ def previous_and_next_token_extraction(tokens):
         
         #previous token
         if prev_index < 0:
-            previous_token = ""
+            previous_token = "None"
         else: 
             previous_token = tokens[prev_index]
 
@@ -52,7 +52,7 @@ def previous_and_next_token_extraction(tokens):
         if next_index < len(tokens):
             next_token = tokens[next_index]
         else: 
-            next_token = "" 
+            next_token = "None"
 
         next_tokens.append(next_token)
             
