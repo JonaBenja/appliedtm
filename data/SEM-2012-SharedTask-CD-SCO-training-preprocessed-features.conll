@@ -1,5 +1,5 @@
 token	lemma	pos_tag	prev_token	next_token	punctuation	gold_label
-1.	1.	CD		mr.	1	O
+1.	1.	CD	None	mr.	1	O
 mr.	mr.	NN	1.	sherlock	1	O
 sherlock	sherlock	NN	mr.	holmes	0	O
 holmes	holmes	VBZ	sherlock	mr.	0	O
@@ -65448,4 +65448,4 @@ slopes	slope	NNS	russet	of	0	O
 of	of	IN	slopes	the	0	O
 the	the	DT	of	moor	0	O
 moor	moor	NN	the	.	0	O
-.	.	.	moor		1	O
+.	.	.	moor	None	1	O

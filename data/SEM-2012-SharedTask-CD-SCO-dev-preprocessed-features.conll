@@ -1,5 +1,5 @@
 token	lemma	pos_tag	prev_token	next_token	punctuation	gold_label
-the	the	DT		singular	0	O
+the	the	DT	None	singular	0	O
 singular	singular	JJ	the	experience	0	O
 experience	experience	NN	singular	of	0	O
 of	of	IN	experience	mr.	0	O
@@ -13564,4 +13564,4 @@ orthodox	orthodox	JJ	very	in	0	O
 in	in	IN	orthodox	his	0	O
 his	his	PRP$	in	ritual	0	O
 ritual	ritual	NN	his	.	0	O
-.	.	.	ritual		1	O
+.	.	.	ritual	None	1	O

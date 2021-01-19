@@ -3,8 +3,8 @@ import pandas as pd
 from utils import *
 
 """
-'../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.tsv'
-'../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.tsv'
+'../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll'
+'../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll'
 """
 
 
@@ -15,7 +15,7 @@ def write_features(input_file):
     :type input_file: string
     """
     # Prepare output file
-    output_file = input_file.replace('.tsv', '-features.tsv')
+    output_file = input_file.replace('.conll', '-features.conll')
 
     # Read in preprocessed file
     input_data = pd.read_csv(input_file, encoding='utf-8', sep='\t')
