@@ -693,7 +693,7 @@ admit	O
 that	O
 i	O
 could	O
-not	O
+not	B-NEG
 leave	O
 it	O
 where	O
@@ -779,7 +779,7 @@ your	O
 toilet	O
 and	O
 attire	O
-without	O
+without	B-NEG
 seeing	O
 that	O
 your	O
@@ -803,7 +803,7 @@ hair	O
 and	O
 felt	O
 his	O
-unshaven	O
+unshaven	B-NEG
 chin	O
 .	O
 ``	O
@@ -946,7 +946,7 @@ you	O
 out	O
 unbrushed	B-NEG
 and	O
-unkempt	O
+unkempt	B-NEG
 ,	O
 with	O
 dress	O
@@ -1340,7 +1340,7 @@ mean	O
 --	O
 you	O
 do	O
-n't	O
+n't	B-NEG
 mean	O
 that	O
 i	O
@@ -1512,7 +1512,7 @@ have	O
 done	O
 had	O
 you	O
-never	O
+never	B-NEG
 been	O
 interrupted	O
 .	O
@@ -2074,7 +2074,7 @@ the	O
 taciturn	O
 servant	O
 did	O
-not	O
+not	B-NEG
 help	O
 to	O
 enliven	O
@@ -3452,7 +3452,7 @@ to	O
 mr.	O
 garcia	O
 ,	O
-nor	O
+nor	B-NEG
 what	O
 has	O
 become	O
@@ -3591,7 +3591,7 @@ no	B-NEG
 ,	O
 there	O
 was	O
-no	O
+no	B-NEG
 attempt	O
 at	O
 robbery	O
@@ -4009,7 +4009,7 @@ but	O
 by	B-NEG
 no	I-NEG
 means	I-NEG
-impossible	O
+impossible	B-NEG
 ,	O
 ''	O
 said	O
@@ -4672,7 +4672,7 @@ not	B-NEG
 particularly	O
 intelligent	O
 --	O
-not	O
+not	B-NEG
 a	O
 man	O
 likely	O
@@ -5008,7 +5008,7 @@ yet	O
 but	O
 i	O
 do	O
-not	O
+not	B-NEG
 think	O
 there	O
 are	O
@@ -5132,7 +5132,7 @@ godspeed	O
 '	O
 had	O
 it	O
-not	O
+not	B-NEG
 been	O
 so	O
 .	O
@@ -6116,7 +6116,7 @@ it	O
 .	O
 it	O
 was	O
-n't	O
+n't	B-NEG
 black	O
 ,	O
 sir	O
@@ -6126,7 +6126,7 @@ was	O
 it	O
 white	O
 ,	O
-nor	O
+nor	B-NEG
 any	O
 colour	O
 that	O
@@ -6194,7 +6194,7 @@ sir	O
 ,	O
 i	O
 could	O
-n't	O
+n't	B-NEG
 move	O
 a	O
 finger	O
@@ -6272,7 +6272,7 @@ god	O
 that	O
 he	O
 could	O
-not	O
+not	B-NEG
 lay	O
 his	O
 hands	O
@@ -7386,7 +7386,7 @@ after	O
 mine	O
 i	O
 asked	O
-no	O
+no	B-NEG
 questions	O
 .	O
 sufficient	O
@@ -7410,7 +7410,7 @@ that	O
 intent	O
 brain	O
 with	O
-needless	O
+needless	B-NEG
 interruption	O
 .	O
 all	O
@@ -7646,7 +7646,7 @@ he	O
 also	O
 was	O
 not	B-NEG
-dissatisfied	O
+dissatisfied	B-NEG
 at	O
 the	O
 course	O
@@ -8454,7 +8454,7 @@ holmes	O
 ;	O
 i	O
 did	O
-n't	O
+n't	B-NEG
 say	O
 so	O
 .	O
@@ -9623,7 +9623,7 @@ my	O
 way	O
 had	O
 i	O
-not	O
+not	B-NEG
 been	O
 looking	O
 out	O
@@ -10261,7 +10261,7 @@ of	O
 it	O
 might	O
 be	O
-invisible	O
+invisible	B-NEG
 for	O
 a	O
 week	O
@@ -11103,7 +11103,7 @@ we	O
 ca	O
 n't	B-NEG
 arrest	O
-without	O
+without	B-NEG
 her	O
 evidence	O
 ,	O
@@ -11694,7 +11694,7 @@ juan	O
 murillo	O
 ,	O
 and	O
-no	O
+no	B-NEG
 peace	O
 in	O
 life	O
@@ -12758,7 +12758,7 @@ cab	O
 ,	O
 i	O
 should	O
-never	O
+never	B-NEG
 had	O
 broken	O
 away	O
@@ -12918,7 +12918,7 @@ him	O
 .	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 we	O
 shall	O
@@ -13494,7 +13494,7 @@ attempts	O
 nothing	B-NEG
 of	O
 importance	O
-without	O
+without	B-NEG
 certain	O
 sacrifices	O
 which	O
@@ -13503,7 +13503,7 @@ intended	O
 to	O
 propitiate	O
 his	O
-unclean	O
+unclean	B-NEG
 gods	O
 .	O
 in	O

@@ -693,7 +693,7 @@ admit	admit	VB	must	that	0	O
 that	that	IN	admit	i	0	O
 i	i	NN	that	could	0	O
 could	could	MD	i	not	0	O
-not	not	RB	could	leave	0	O
+not	not	RB	could	leave	0	B-NEG
 leave	leave	VB	not	it	0	O
 it	it	PRP	leave	where	0	O
 where	where	WRB	it	it	0	O
@@ -779,7 +779,7 @@ your	your	PRP$	at	toilet	0	O
 toilet	toilet	NN	your	and	0	O
 and	and	CC	toilet	attire	0	O
 attire	attire	NN	and	without	0	O
-without	without	IN	attire	seeing	0	O
+without	without	IN	attire	seeing	0	B-NEG
 seeing	seeing	VBG	without	that	0	O
 that	that	IN	seeing	your	0	O
 your	your	PRP$	that	disturbance	0	O
@@ -803,7 +803,7 @@ hair	hair	NN	unbrushed	and	0	O
 and	and	CC	hair	felt	0	O
 felt	felt	VBD	and	his	0	O
 his	his	PRP$	felt	unshaven	0	O
-unshaven	unshaven	JJ	his	chin	0	O
+unshaven	unshaven	JJ	his	chin	0	B-NEG
 chin	chin	NN	unshaven	.	0	O
 .	.	.	chin	``	1	O
 ``	``	``	.	you	1	O
@@ -946,7 +946,7 @@ you	you	PRP	sent	out	0	O
 out	out	IN	you	unbrushed	0	O
 unbrushed	unbrushed	VBN	out	and	0	B-NEG
 and	and	CC	unbrushed	unkempt	0	O
-unkempt	unkempt	JJ	and	,	0	O
+unkempt	unkempt	JJ	and	,	0	B-NEG
 ,	,	,	unkempt	with	1	O
 with	with	IN	,	dress	0	O
 dress	dress	JJ	with	boots	0	O
@@ -1340,7 +1340,7 @@ mean	mean	VB	n't	--	0	O
 --	--	:	mean	you	1	O
 you	you	PRP	--	do	0	O
 do	do	VBP	you	n't	0	O
-n't	n't	RB	do	mean	1	O
+n't	n't	RB	do	mean	1	B-NEG
 mean	mean	VB	n't	that	0	O
 that	that	IN	mean	i	0	O
 i	i	NN	that	am	0	O
@@ -1512,7 +1512,7 @@ have	have	VB	would	done	0	O
 done	done	VBN	have	had	0	O
 had	had	VBN	done	you	0	O
 you	you	PRP	had	never	0	O
-never	never	RB	you	been	0	O
+never	never	RB	you	been	0	B-NEG
 been	been	VBN	never	interrupted	0	O
 interrupted	interrupted	VBN	been	.	0	O
 .	.	.	interrupted	''	1	O
@@ -2074,7 +2074,7 @@ the	the	DT	of	taciturn	0	O
 taciturn	taciturn	NN	the	servant	0	O
 servant	servant	NN	taciturn	did	0	O
 did	did	VBD	servant	not	0	O
-not	not	RB	did	help	0	O
+not	not	RB	did	help	0	B-NEG
 help	help	VB	not	to	0	O
 to	to	TO	help	enliven	0	O
 enliven	enliven	VB	to	us	0	O
@@ -3452,7 +3452,7 @@ to	to	TO	happened	mr.	0	O
 mr.	mr.	VB	to	garcia	1	O
 garcia	garcia	NN	mr.	,	0	O
 ,	,	,	garcia	nor	1	O
-nor	nor	CC	,	what	0	O
+nor	nor	CC	,	what	0	B-NEG
 what	what	WDT	nor	has	0	O
 has	ha	VBZ	what	become	0	O
 become	become	VBN	has	of	0	O
@@ -3591,7 +3591,7 @@ no	no	DT	``	,	0	B-NEG
 ,	,	,	no	there	1	O
 there	there	EX	,	was	0	O
 was	wa	VBD	there	no	0	O
-no	no	DT	was	attempt	0	O
+no	no	DT	was	attempt	0	B-NEG
 attempt	attempt	NN	no	at	0	O
 at	at	IN	attempt	robbery	0	O
 robbery	robbery	NN	at	.	0	O
@@ -4009,7 +4009,7 @@ but	but	CC	,	by	0	O
 by	by	IN	but	no	0	B-NEG
 no	no	DT	by	means	0	I-NEG
 means	mean	NNS	no	impossible	0	I-NEG
-impossible	impossible	JJ	means	,	0	O
+impossible	impossible	JJ	means	,	0	B-NEG
 ,	,	,	impossible	''	1	O
 ''	''	''	,	said	1	O
 said	said	VBD	''	holmes	0	O
@@ -4672,7 +4672,7 @@ not	not	RB	is	particularly	0	B-NEG
 particularly	particularly	RB	not	intelligent	0	O
 intelligent	intelligent	JJ	particularly	--	0	O
 --	--	:	intelligent	not	1	O
-not	not	RB	--	a	0	O
+not	not	RB	--	a	0	B-NEG
 a	a	DT	not	man	0	O
 man	man	NN	a	likely	0	O
 likely	likely	JJ	man	to	0	O
@@ -5008,7 +5008,7 @@ yet	yet	RB	facts	,	0	O
 but	but	CC	,	i	0	O
 i	i	RB	but	do	0	O
 do	do	VBP	i	not	0	O
-not	not	RB	do	think	0	O
+not	not	RB	do	think	0	B-NEG
 think	think	VB	not	there	0	O
 there	there	EX	think	are	0	O
 are	are	VBP	there	any	0	O
@@ -5132,7 +5132,7 @@ godspeed	godspeed	NN	`	'	0	O
 '	'	''	godspeed	had	1	O
 had	had	VBD	'	it	0	O
 it	it	PRP	had	not	0	O
-not	not	RB	it	been	0	O
+not	not	RB	it	been	0	B-NEG
 been	been	VBN	not	so	0	O
 so	so	RB	been	.	0	O
 .	.	.	so	`	1	O
@@ -6116,7 +6116,7 @@ it	it	PRP	deny	.	0	O
 .	.	.	it	it	1	O
 it	it	PRP	.	was	0	O
 was	wa	VBD	it	n't	0	O
-n't	n't	RB	was	black	1	O
+n't	n't	RB	was	black	1	B-NEG
 black	black	JJ	n't	,	0	O
 ,	,	,	black	sir	1	O
 sir	sir	JJ	,	,	0	O
@@ -6126,7 +6126,7 @@ was	wa	VBD	nor	it	0	O
 it	it	PRP	was	white	0	O
 white	white	JJ	it	,	0	O
 ,	,	,	white	nor	1	O
-nor	nor	CC	,	any	0	O
+nor	nor	CC	,	any	0	B-NEG
 any	any	DT	nor	colour	0	O
 colour	colour	NN	any	that	0	O
 that	that	IN	colour	i	0	O
@@ -6194,7 +6194,7 @@ sir	sir	VB	,	,	0	O
 ,	,	,	sir	i	1	O
 i	i	NN	,	could	0	O
 could	could	MD	i	n't	0	O
-n't	n't	RB	could	move	1	O
+n't	n't	RB	could	move	1	B-NEG
 move	move	VB	n't	a	0	O
 a	a	DT	move	finger	0	O
 finger	finger	NN	a	,	0	O
@@ -6272,7 +6272,7 @@ god	god	NN	thank	that	0	O
 that	that	IN	god	he	0	O
 he	he	PRP	that	could	0	O
 could	could	MD	he	not	0	O
-not	not	RB	could	lay	0	O
+not	not	RB	could	lay	0	B-NEG
 lay	lay	VB	not	his	0	O
 his	his	PRP$	lay	hands	0	O
 hands	hand	NNS	his	upon	0	O
@@ -7386,7 +7386,7 @@ after	after	IN	and	mine	0	O
 mine	mine	NN	after	i	0	O
 i	i	NN	mine	asked	0	O
 asked	asked	VBD	i	no	0	O
-no	no	DT	asked	questions	0	O
+no	no	DT	asked	questions	0	B-NEG
 questions	question	NNS	no	.	0	O
 .	.	.	questions	sufficient	1	O
 sufficient	sufficient	NN	.	for	0	O
@@ -7410,7 +7410,7 @@ that	that	DT	distracting	intent	0	O
 intent	intent	NN	that	brain	0	O
 brain	brain	NN	intent	with	0	O
 with	with	IN	brain	needless	0	O
-needless	needle	JJ	with	interruption	0	O
+needless	needle	JJ	with	interruption	0	B-NEG
 interruption	interruption	NN	needless	.	0	O
 .	.	.	interruption	all	1	O
 all	all	DT	.	would	0	O
@@ -7646,7 +7646,7 @@ he	he	PRP	that	also	0	O
 also	also	RB	he	was	0	O
 was	wa	VBD	also	not	0	O
 not	not	RB	was	dissatisfied	0	B-NEG
-dissatisfied	dissatisfied	VBN	not	at	0	O
+dissatisfied	dissatisfied	VBN	not	at	0	B-NEG
 at	at	IN	dissatisfied	the	0	O
 the	the	DT	at	course	0	O
 course	course	NN	the	of	0	O
@@ -8454,7 +8454,7 @@ holmes	holmes	NNS	mr.	;	0	O
 ;	;	:	holmes	i	1	O
 i	i	NN	;	did	0	O
 did	did	VBD	i	n't	0	O
-n't	n't	RB	did	say	1	O
+n't	n't	RB	did	say	1	B-NEG
 say	say	VB	n't	so	0	O
 so	so	RB	say	.	0	O
 .	.	.	so	we	1	O
@@ -9623,7 +9623,7 @@ my	my	PRP$	come	way	0	O
 way	way	NN	my	had	0	O
 had	had	VBD	way	i	0	O
 i	i	VBN	had	not	0	O
-not	not	RB	i	been	0	O
+not	not	RB	i	been	0	B-NEG
 been	been	VBN	not	looking	0	O
 looking	looking	VBG	been	out	0	O
 out	out	RP	looking	for	0	O
@@ -10261,7 +10261,7 @@ of	of	IN	member	it	0	O
 it	it	PRP	of	might	0	O
 might	might	MD	it	be	0	O
 be	be	VB	might	invisible	0	O
-invisible	invisible	JJ	be	for	0	O
+invisible	invisible	JJ	be	for	0	B-NEG
 for	for	IN	invisible	a	0	O
 a	a	DT	for	week	0	O
 week	week	NN	a	.	0	O
@@ -11103,7 +11103,7 @@ we	we	PRP	.	ca	0	O
 ca	ca	MD	we	n't	0	O
 n't	n't	RB	ca	arrest	1	B-NEG
 arrest	arrest	VB	n't	without	0	O
-without	without	IN	arrest	her	0	O
+without	without	IN	arrest	her	0	B-NEG
 her	her	PRP	without	evidence	0	O
 evidence	evidence	NN	her	,	0	O
 ,	,	,	evidence	that	1	O
@@ -11694,7 +11694,7 @@ juan	juan	NN	like	murillo	0	O
 murillo	murillo	NN	juan	,	0	O
 ,	,	,	murillo	and	1	O
 and	and	CC	,	no	0	O
-no	no	DT	and	peace	0	O
+no	no	DT	and	peace	0	B-NEG
 peace	peace	NN	no	in	0	O
 in	in	IN	peace	life	0	O
 life	life	NN	in	while	0	O
@@ -12758,7 +12758,7 @@ cab	cab	NN	the	,	0	O
 ,	,	,	cab	i	1	O
 i	i	NN	,	should	0	O
 should	should	MD	i	never	0	O
-never	never	RB	should	had	0	O
+never	never	RB	should	had	0	B-NEG
 had	had	VBD	never	broken	0	O
 broken	broken	VBN	had	away	0	O
 away	away	RB	broken	.	0	O
@@ -12918,7 +12918,7 @@ him	him	PRP	from	.	0	O
 .	.	.	him	no	1	O
 no	no	DT	.	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	RB	,	,	0	O
+no	no	RB	,	,	0	B-NEG
 ,	,	,	no	we	1	O
 we	we	PRP	,	shall	0	O
 shall	shall	MD	we	all	0	O
@@ -13494,7 +13494,7 @@ attempts	attempt	NNS	voodoo-worshipper	nothing	0	O
 nothing	nothing	NN	attempts	of	0	B-NEG
 of	of	IN	nothing	importance	0	O
 importance	importance	NN	of	without	0	O
-without	without	IN	importance	certain	0	O
+without	without	IN	importance	certain	0	B-NEG
 certain	certain	JJ	without	sacrifices	0	O
 sacrifices	sacrifice	NNS	certain	which	0	O
 which	which	WDT	sacrifices	are	0	O
@@ -13503,7 +13503,7 @@ intended	intended	VBN	are	to	0	O
 to	to	TO	intended	propitiate	0	O
 propitiate	propitiate	VB	to	his	0	O
 his	his	PRP$	propitiate	unclean	0	O
-unclean	unclean	JJ	his	gods	0	O
+unclean	unclean	JJ	his	gods	0	B-NEG
 gods	god	NNS	unclean	.	0	O
 .	.	.	gods	in	1	O
 in	in	IN	.	extreme	0	O

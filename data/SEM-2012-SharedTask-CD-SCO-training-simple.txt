@@ -17,10 +17,10 @@ baskervilles01	1	9	in	O
 baskervilles01	1	10	the	O
 baskervilles01	1	11	mornings	O
 baskervilles01	1	12	,	O
-baskervilles01	1	13	save	O
+baskervilles01	1	13	save	B-NEG
 baskervilles01	1	14	upon	O
 baskervilles01	1	15	those	O
-baskervilles01	1	16	not	O
+baskervilles01	1	16	not	B-NEG
 baskervilles01	1	17	infrequent	B-NEG
 baskervilles01	1	18	occasions	O
 baskervilles01	1	19	when	O
@@ -265,7 +265,7 @@ baskervilles01	13	8	miss	O
 baskervilles01	13	9	him	O
 baskervilles01	13	10	and	O
 baskervilles01	13	11	have	O
-baskervilles01	13	12	no	O
+baskervilles01	13	12	no	B-NEG
 baskervilles01	13	13	notion	O
 baskervilles01	13	14	of	O
 baskervilles01	13	15	his	O
@@ -918,18 +918,18 @@ baskervilles01	46	6	''	O
 baskervilles01	47	0	``	O
 baskervilles01	47	1	No	B-NEG
 baskervilles01	47	2	,	O
-baskervilles01	47	3	no	O
+baskervilles01	47	3	no	B-NEG
 baskervilles01	47	4	,	O
 baskervilles01	47	5	my	O
 baskervilles01	47	6	dear	O
 baskervilles01	47	7	Watson	O
 baskervilles01	47	8	,	O
-baskervilles01	47	9	not	O
+baskervilles01	47	9	not	B-NEG
 baskervilles01	47	10	all	O
 baskervilles01	47	11	--	O
-baskervilles01	47	12	by	O
-baskervilles01	47	13	no	O
-baskervilles01	47	14	means	O
+baskervilles01	47	12	by	B-NEG
+baskervilles01	47	13	no	I-NEG
+baskervilles01	47	14	means	I-NEG
 baskervilles01	47	15	all	O
 baskervilles01	47	16	.	O
 
@@ -1276,7 +1276,7 @@ baskervilles01	66	35	such	O
 baskervilles01	66	36	a	O
 baskervilles01	66	37	one	O
 baskervilles01	66	38	would	O
-baskervilles01	66	39	not	O
+baskervilles01	66	39	not	B-NEG
 baskervilles01	66	40	drift	O
 baskervilles01	66	41	into	O
 baskervilles01	66	42	the	O
@@ -1443,7 +1443,7 @@ baskervilles01	72	21	at	O
 baskervilles01	72	22	least	O
 baskervilles01	72	23	it	O
 baskervilles01	72	24	is	O
-baskervilles01	72	25	not	O
+baskervilles01	72	25	not	B-NEG
 baskervilles01	72	26	difficult	O
 baskervilles01	72	27	to	O
 baskervilles01	72	28	find	O
@@ -1712,7 +1712,7 @@ baskervilles01	86	37	leaves	O
 baskervilles01	86	38	his	O
 baskervilles01	86	39	stick	O
 baskervilles01	86	40	and	O
-baskervilles01	86	41	not	O
+baskervilles01	86	41	not	B-NEG
 baskervilles01	86	42	his	O
 baskervilles01	86	43	visiting-card	O
 baskervilles01	86	44	after	O
@@ -2707,7 +2707,7 @@ baskervilles01	144	1	No	B-NEG
 baskervilles01	144	2	,	O
 baskervilles01	144	3	sir	O
 baskervilles01	144	4	,	O
-baskervilles01	144	5	no	O
+baskervilles01	144	5	no	B-NEG
 baskervilles01	144	6	;	O
 baskervilles01	144	7	though	O
 baskervilles01	144	8	I	O
@@ -2871,7 +2871,7 @@ baskervilles01	153	5	that	O
 baskervilles01	153	6	I	O
 baskervilles01	153	7	have	O
 baskervilles01	153	8	not	B-NEG
-baskervilles01	153	9	inadvertently	O
+baskervilles01	153	9	inadvertently	B-NEG
 baskervilles01	153	10	--	O
 baskervilles01	153	11	''	O
 
@@ -3556,7 +3556,7 @@ baskervilles02	32	31	suffered	O
 baskervilles02	32	32	so	O
 baskervilles02	32	33	grievously	O
 baskervilles02	32	34	may	O
-baskervilles02	32	35	not	O
+baskervilles02	32	35	not	B-NEG
 baskervilles02	32	36	again	O
 baskervilles02	32	37	be	O
 baskervilles02	32	38	loosed	O
@@ -3621,7 +3621,7 @@ baskervilles02	33	52	,	O
 baskervilles02	33	53	profane	O
 baskervilles02	33	54	,	O
 baskervilles02	33	55	and	O
-baskervilles02	33	56	godless	O
+baskervilles02	33	56	godless	B-NEG
 baskervilles02	33	57	man	O
 baskervilles02	33	58	.	O
 
@@ -4711,7 +4711,7 @@ baskervilles02	62	6	of	O
 baskervilles02	62	7	her	O
 baskervilles02	62	8	body	O
 baskervilles02	62	9	,	O
-baskervilles02	62	10	nor	O
+baskervilles02	62	10	nor	B-NEG
 baskervilles02	62	11	yet	O
 baskervilles02	62	12	was	O
 baskervilles02	62	13	it	O
@@ -4935,7 +4935,7 @@ baskervilles02	67	8	the	O
 baskervilles02	67	9	family	O
 baskervilles02	67	10	have	O
 baskervilles02	67	11	been	O
-baskervilles02	67	12	unhappy	O
+baskervilles02	67	12	unhappy	B-NEG
 baskervilles02	67	13	in	O
 baskervilles02	67	14	their	O
 baskervilles02	67	15	deaths	O
@@ -4965,7 +4965,7 @@ baskervilles02	68	10	Providence	O
 baskervilles02	68	11	,	O
 baskervilles02	68	12	which	O
 baskervilles02	68	13	would	O
-baskervilles02	68	14	not	O
+baskervilles02	68	14	not	B-NEG
 baskervilles02	68	15	forever	O
 baskervilles02	68	16	punish	O
 baskervilles02	68	17	the	O
@@ -6060,8 +6060,8 @@ baskervilles02	110	57	a	O
 baskervilles02	110	58	symptom	O
 baskervilles02	110	59	which	O
 baskervilles02	110	60	is	O
-baskervilles02	110	61	not	O
-baskervilles02	110	62	unusual	O
+baskervilles02	110	61	not	B-NEG
+baskervilles02	110	62	unusual	B-NEG
 baskervilles02	110	63	in	O
 baskervilles02	110	64	cases	O
 baskervilles02	110	65	of	O
@@ -6529,12 +6529,12 @@ baskervilles02	127	28	with	O
 baskervilles02	127	29	you	O
 baskervilles02	127	30	there	O
 baskervilles02	127	31	is	O
-baskervilles02	127	32	no	O
+baskervilles02	127	32	no	B-NEG
 baskervilles02	127	33	reason	O
 baskervilles02	127	34	why	O
 baskervilles02	127	35	I	O
 baskervilles02	127	36	should	O
-baskervilles02	127	37	not	O
+baskervilles02	127	37	not	B-NEG
 baskervilles02	127	38	be	O
 baskervilles02	127	39	perfectly	O
 baskervilles02	127	40	frank	O
@@ -7308,7 +7308,7 @@ baskervilles02	153	60	body	O
 baskervilles02	153	61	,	O
 baskervilles02	153	62	which	O
 baskervilles02	153	63	had	O
-baskervilles02	153	64	not	O
+baskervilles02	153	64	not	B-NEG
 baskervilles02	153	65	been	O
 baskervilles02	153	66	touched	O
 baskervilles02	153	67	until	O
@@ -7613,7 +7613,7 @@ baskervilles03	9	17	.	O
 
 baskervilles03	10	0	I	O
 baskervilles03	10	1	do	O
-baskervilles03	10	2	n't	O
+baskervilles03	10	2	n't	B-NEG
 baskervilles03	10	3	suppose	O
 baskervilles03	10	4	I	O
 baskervilles03	10	5	should	O
@@ -8291,7 +8291,7 @@ baskervilles03	67	7	,	O
 baskervilles03	67	8	Mr.	O
 baskervilles03	67	9	Holmes	O
 baskervilles03	67	10	,	O
-baskervilles03	67	11	without	O
+baskervilles03	67	11	without	B-NEG
 baskervilles03	67	12	disclosing	O
 baskervilles03	67	13	these	O
 baskervilles03	67	14	facts	O
@@ -8307,7 +8307,7 @@ baskervilles03	67	23	given	O
 baskervilles03	67	24	my	O
 baskervilles03	67	25	reasons	O
 baskervilles03	67	26	for	O
-baskervilles03	67	27	not	O
+baskervilles03	67	27	not	B-NEG
 baskervilles03	67	28	wishing	O
 baskervilles03	67	29	to	O
 baskervilles03	67	30	do	O
@@ -12365,7 +12365,7 @@ baskervilles04	52	4	confess	O
 baskervilles04	52	5	that	O
 baskervilles04	52	6	I	O
 baskervilles04	52	7	see	O
-baskervilles04	52	8	no	O
+baskervilles04	52	8	no	B-NEG
 baskervilles04	52	9	connection	O
 baskervilles04	52	10	.	O
 baskervilles04	52	11	''	O
@@ -13188,7 +13188,7 @@ baskervilles04	93	26	a	O
 baskervilles04	93	27	letter	O
 baskervilles04	93	28	would	O
 baskervilles04	93	29	be	O
-baskervilles04	93	30	careless	O
+baskervilles04	93	30	careless	B-NEG
 baskervilles04	93	31	.	O
 
 baskervilles04	94	0	If	O
@@ -14653,7 +14653,7 @@ baskervilles04	172	9	,	O
 baskervilles04	172	10	and	O
 baskervilles04	172	11	there	O
 baskervilles04	172	12	is	O
-baskervilles04	172	13	no	O
+baskervilles04	172	13	no	B-NEG
 baskervilles04	172	14	man	O
 baskervilles04	172	15	upon	O
 baskervilles04	172	16	earth	O
@@ -16089,7 +16089,7 @@ baskervilles04	251	4	,	O
 baskervilles04	251	5	indeed	O
 baskervilles04	251	6	I	O
 baskervilles04	251	7	have	O
-baskervilles04	251	8	not	O
+baskervilles04	251	8	not	B-NEG
 baskervilles04	251	9	.	O
 
 baskervilles04	252	0	You	O
@@ -16836,7 +16836,7 @@ baskervilles05	12	14	very	O
 baskervilles05	12	15	active	O
 baskervilles05	12	16	gentleman	O
 baskervilles05	12	17	,	O
-baskervilles05	12	18	not	O
+baskervilles05	12	18	not	B-NEG
 baskervilles05	12	19	older	O
 baskervilles05	12	20	than	O
 baskervilles05	12	21	yourself	O
@@ -17429,7 +17429,7 @@ baskervilles05	47	14	but	O
 baskervilles05	47	15	I	O
 baskervilles05	47	16	can	O
 baskervilles05	47	17	hear	O
-baskervilles05	47	18	no	O
+baskervilles05	47	18	no	B-NEG
 baskervilles05	47	19	word	O
 baskervilles05	47	20	of	O
 baskervilles05	47	21	it	O
@@ -17913,7 +17913,7 @@ baskervilles05	75	3	''	O
 baskervilles05	76	0	``	O
 baskervilles05	76	1	That	O
 baskervilles05	76	2	,	O
-baskervilles05	76	3	unfortunately	O
+baskervilles05	76	3	unfortunately	B-NEG
 baskervilles05	76	4	,	O
 baskervilles05	76	5	is	O
 baskervilles05	76	6	what	O
@@ -18251,7 +18251,7 @@ baskervilles05	99	32	mighty	O
 baskervilles05	99	33	fine	O
 baskervilles05	99	34	home	O
 baskervilles05	99	35	and	O
-baskervilles05	99	36	nothing	O
+baskervilles05	99	36	nothing	B-NEG
 baskervilles05	99	37	to	O
 baskervilles05	99	38	do	O
 baskervilles05	99	39	.	O
@@ -18759,7 +18759,7 @@ baskervilles05	134	4	Holmes	O
 baskervilles05	134	5	,	O
 baskervilles05	134	6	I	O
 baskervilles05	134	7	have	O
-baskervilles05	134	8	not	O
+baskervilles05	134	8	not	B-NEG
 baskervilles05	134	9	.	O
 
 baskervilles05	135	0	I	O
@@ -19530,7 +19530,7 @@ baskervilles05	178	10	of	O
 baskervilles05	178	11	the	O
 baskervilles05	178	12	matter	O
 baskervilles05	178	13	,	O
-baskervilles05	178	14	nor	O
+baskervilles05	178	14	nor	B-NEG
 baskervilles05	178	15	could	O
 baskervilles05	178	16	any	O
 baskervilles05	178	17	inquiry	O
@@ -20871,7 +20871,7 @@ baskervilles05	261	1	No	B-NEG
 baskervilles05	261	2	,	O
 baskervilles05	261	3	I	O
 baskervilles05	261	4	ca	O
-baskervilles05	261	5	n't	O
+baskervilles05	261	5	n't	B-NEG
 baskervilles05	261	6	say	O
 baskervilles05	261	7	that	O
 baskervilles05	261	8	.	O
@@ -20892,7 +20892,7 @@ baskervilles05	263	1	No	B-NEG
 baskervilles05	263	2	,	O
 baskervilles05	263	3	sir	O
 baskervilles05	263	4	;	O
-baskervilles05	263	5	nothing	O
+baskervilles05	263	5	nothing	B-NEG
 baskervilles05	263	6	.	O
 baskervilles05	263	7	''	O
 
@@ -21472,7 +21472,7 @@ baskervilles06	13	29	.	O
 
 baskervilles06	14	0	No	B-NEG
 baskervilles06	14	1	,	O
-baskervilles06	14	2	no	O
+baskervilles06	14	2	no	B-NEG
 baskervilles06	14	3	,	O
 baskervilles06	14	4	we	O
 baskervilles06	14	5	will	O
@@ -21678,7 +21678,7 @@ baskervilles06	27	1	No	B-NEG
 baskervilles06	27	2	,	O
 baskervilles06	27	3	we	O
 baskervilles06	27	4	have	O
-baskervilles06	27	5	no	O
+baskervilles06	27	5	no	B-NEG
 baskervilles06	27	6	news	O
 baskervilles06	27	7	of	O
 baskervilles06	27	8	any	O
@@ -21726,14 +21726,14 @@ baskervilles06	29	1	have	O
 baskervilles06	29	2	never	B-NEG
 baskervilles06	29	3	gone	O
 baskervilles06	29	4	out	O
-baskervilles06	29	5	without	O
+baskervilles06	29	5	without	B-NEG
 baskervilles06	29	6	keeping	O
 baskervilles06	29	7	a	O
 baskervilles06	29	8	sharp	O
 baskervilles06	29	9	watch	O
 baskervilles06	29	10	,	O
 baskervilles06	29	11	and	O
-baskervilles06	29	12	no	O
+baskervilles06	29	12	no	B-NEG
 baskervilles06	29	13	one	O
 baskervilles06	29	14	could	O
 baskervilles06	29	15	have	O
@@ -22144,7 +22144,7 @@ baskervilles06	49	5	Devonshire	O
 baskervilles06	49	6	man	O
 baskervilles06	49	7	who	O
 baskervilles06	49	8	did	O
-baskervilles06	49	9	not	O
+baskervilles06	49	9	not	B-NEG
 baskervilles06	49	10	swear	O
 baskervilles06	49	11	by	O
 baskervilles06	49	12	his	O
@@ -23745,7 +23745,7 @@ baskervilles06	113	12	.	O
 baskervilles06	114	0	``	O
 baskervilles06	114	1	No	B-NEG
 baskervilles06	114	2	,	O
-baskervilles06	114	3	no	O
+baskervilles06	114	3	no	B-NEG
 baskervilles06	114	4	,	O
 baskervilles06	114	5	the	O
 baskervilles06	114	6	yew	O
@@ -25319,7 +25319,7 @@ baskervilles06	193	17	the	O
 baskervilles06	193	18	sleep	O
 baskervilles06	193	19	which	O
 baskervilles06	193	20	would	O
-baskervilles06	193	21	not	O
+baskervilles06	193	21	not	B-NEG
 baskervilles06	193	22	come	O
 baskervilles06	193	23	.	O
 
@@ -26462,7 +26462,7 @@ baskervilles07	48	14	''	O
 
 baskervilles07	49	0	It	O
 baskervilles07	49	1	seemed	O
-baskervilles07	49	2	hopeless	O
+baskervilles07	49	2	hopeless	B-NEG
 baskervilles07	49	3	to	O
 baskervilles07	49	4	pursue	O
 baskervilles07	49	5	the	O
@@ -26488,7 +26488,7 @@ baskervilles07	49	24	proof	O
 baskervilles07	49	25	that	O
 baskervilles07	49	26	Barrymore	O
 baskervilles07	49	27	had	O
-baskervilles07	49	28	not	O
+baskervilles07	49	28	not	B-NEG
 baskervilles07	49	29	been	O
 baskervilles07	49	30	in	O
 baskervilles07	49	31	London	O
@@ -26665,7 +26665,7 @@ baskervilles07	57	21	to	O
 baskervilles07	57	22	be	O
 baskervilles07	57	23	weaving	O
 baskervilles07	57	24	an	O
-baskervilles07	57	25	invisible	O
+baskervilles07	57	25	invisible	B-NEG
 baskervilles07	57	26	net	O
 baskervilles07	57	27	round	O
 baskervilles07	57	28	the	O
@@ -27411,7 +27411,7 @@ baskervilles07	94	28	.	O
 baskervilles07	95	0	``	O
 baskervilles07	95	1	It	O
 baskervilles07	95	2	is	O
-baskervilles07	95	3	useless	O
+baskervilles07	95	3	useless	B-NEG
 baskervilles07	95	4	for	O
 baskervilles07	95	5	us	O
 baskervilles07	95	6	to	O
@@ -27448,7 +27448,7 @@ baskervilles07	96	13	could	O
 baskervilles07	96	14	not	B-NEG
 baskervilles07	96	15	celebrate	O
 baskervilles07	96	16	him	O
-baskervilles07	96	17	without	O
+baskervilles07	96	17	without	B-NEG
 baskervilles07	96	18	being	O
 baskervilles07	96	19	known	O
 baskervilles07	96	20	yourself	O
@@ -27702,7 +27702,7 @@ baskervilles07	110	6	I	O
 baskervilles07	110	7	feel	O
 baskervilles07	110	8	was	O
 baskervilles07	110	9	an	O
-baskervilles07	110	10	unjustifiable	O
+baskervilles07	110	10	unjustifiable	B-NEG
 baskervilles07	110	11	intrusion	O
 baskervilles07	110	12	,	O
 baskervilles07	110	13	and	O
@@ -28869,7 +28869,7 @@ baskervilles07	184	14	''	O
 baskervilles07	185	0	``	O
 baskervilles07	185	1	No	B-NEG
 baskervilles07	185	2	,	O
-baskervilles07	185	3	no	O
+baskervilles07	185	3	no	B-NEG
 baskervilles07	185	4	,	O
 baskervilles07	185	5	that	O
 baskervilles07	185	6	was	O
@@ -28898,7 +28898,7 @@ baskervilles07	187	7	?	O
 baskervilles07	187	8	''	O
 
 baskervilles07	188	0	``	O
-baskervilles07	188	1	No	O
+baskervilles07	188	1	No	B-NEG
 baskervilles07	188	2	,	O
 baskervilles07	188	3	I	O
 baskervilles07	188	4	never	B-NEG
@@ -29293,12 +29293,12 @@ baskervilles07	214	4	jerky	O
 baskervilles07	214	5	,	O
 baskervilles07	214	6	zigzag	O
 baskervilles07	214	7	,	O
-baskervilles07	214	8	irregular	O
+baskervilles07	214	8	irregular	B-NEG
 baskervilles07	214	9	progress	O
 baskervilles07	214	10	made	O
 baskervilles07	214	11	him	O
 baskervilles07	214	12	not	B-NEG
-baskervilles07	214	13	unlike	O
+baskervilles07	214	13	unlike	B-NEG
 baskervilles07	214	14	some	O
 baskervilles07	214	15	huge	O
 baskervilles07	214	16	moth	O
@@ -30009,7 +30009,7 @@ baskervilles07	254	11	''	O
 baskervilles07	255	0	``	O
 baskervilles07	255	1	No	B-NEG
 baskervilles07	255	2	,	O
-baskervilles07	255	3	no	O
+baskervilles07	255	3	no	B-NEG
 baskervilles07	255	4	,	O
 baskervilles07	255	5	''	O
 baskervilles07	255	6	said	O
@@ -30268,7 +30268,7 @@ baskervilles07	268	4	their	O
 baskervilles07	268	5	windows	O
 baskervilles07	268	6	at	O
 baskervilles07	268	7	the	O
-baskervilles07	268	8	interminable	O
+baskervilles07	268	8	interminable	B-NEG
 baskervilles07	268	9	granite-flecked	O
 baskervilles07	268	10	moor	O
 baskervilles07	268	11	rolling	O
@@ -30469,7 +30469,7 @@ baskervilles07	277	9	of	O
 baskervilles07	277	10	my	O
 baskervilles07	277	11	capital	O
 baskervilles07	277	12	was	O
-baskervilles07	277	13	irretrievably	O
+baskervilles07	277	13	irretrievably	B-NEG
 baskervilles07	277	14	swallowed	O
 baskervilles07	277	15	up	O
 baskervilles07	277	16	.	O
@@ -30514,7 +30514,7 @@ baskervilles07	278	36	,	O
 baskervilles07	278	37	I	O
 baskervilles07	278	38	find	O
 baskervilles07	278	39	an	O
-baskervilles07	278	40	unlimited	O
+baskervilles07	278	40	unlimited	B-NEG
 baskervilles07	278	41	field	O
 baskervilles07	278	42	of	O
 baskervilles07	278	43	work	O
@@ -30591,11 +30591,11 @@ baskervilles07	280	26	''	O
 baskervilles07	281	0	``	O
 baskervilles07	281	1	No	B-NEG
 baskervilles07	281	2	,	O
-baskervilles07	281	3	no	O
+baskervilles07	281	3	no	B-NEG
 baskervilles07	281	4	,	O
 baskervilles07	281	5	I	O
 baskervilles07	281	6	am	O
-baskervilles07	281	7	never	O
+baskervilles07	281	7	never	B-NEG
 baskervilles07	281	8	dull	O
 baskervilles07	281	9	,	O
 baskervilles07	281	10	''	O
@@ -31152,7 +31152,7 @@ baskervilles07	308	22	''	O
 baskervilles07	309	0	``	O
 baskervilles07	309	1	No	B-NEG
 baskervilles07	309	2	,	O
-baskervilles07	309	3	no	O
+baskervilles07	309	3	no	B-NEG
 baskervilles07	309	4	.	O
 
 baskervilles07	310	0	I	O
@@ -31540,7 +31540,7 @@ baskervilles07	331	24	''	O
 baskervilles07	332	0	``	O
 baskervilles07	332	1	I	O
 baskervilles07	332	2	can	O
-baskervilles07	332	3	not	O
+baskervilles07	332	3	not	B-NEG
 baskervilles07	332	4	say	O
 baskervilles07	332	5	anything	O
 baskervilles07	332	6	definite	O
@@ -31585,7 +31585,7 @@ baskervilles07	334	13	,	O
 baskervilles07	334	14	why	O
 baskervilles07	334	15	should	O
 baskervilles07	334	16	you	O
-baskervilles07	334	17	not	O
+baskervilles07	334	17	not	B-NEG
 baskervilles07	334	18	wish	O
 baskervilles07	334	19	your	O
 baskervilles07	334	20	brother	O
@@ -32057,7 +32057,7 @@ baskervilles08	11	9	that	O
 baskervilles08	11	10	they	O
 baskervilles08	11	11	were	O
 baskervilles08	11	12	some	O
-baskervilles08	11	13	unwarlike	O
+baskervilles08	11	13	unwarlike	B-NEG
 baskervilles08	11	14	and	O
 baskervilles08	11	15	harried	O
 baskervilles08	11	16	race	O
@@ -32068,7 +32068,7 @@ baskervilles08	11	20	to	O
 baskervilles08	11	21	accept	O
 baskervilles08	11	22	that	O
 baskervilles08	11	23	which	O
-baskervilles08	11	24	none	O
+baskervilles08	11	24	none	B-NEG
 baskervilles08	11	25	other	O
 baskervilles08	11	26	would	O
 baskervilles08	11	27	occupy	O
@@ -32161,7 +32161,7 @@ baskervilles08	15	16	to	O
 baskervilles08	15	17	today	O
 baskervilles08	15	18	there	O
 baskervilles08	15	19	was	O
-baskervilles08	15	20	nothing	O
+baskervilles08	15	20	nothing	B-NEG
 baskervilles08	15	21	of	O
 baskervilles08	15	22	importance	O
 baskervilles08	15	23	to	O
@@ -32272,7 +32272,7 @@ baskervilles08	20	12	not	B-NEG
 baskervilles08	20	13	been	O
 baskervilles08	20	14	seen	O
 baskervilles08	20	15	and	O
-baskervilles08	20	16	nothing	O
+baskervilles08	20	16	nothing	B-NEG
 baskervilles08	20	17	has	O
 baskervilles08	20	18	been	O
 baskervilles08	20	19	heard	O
@@ -34023,7 +34023,7 @@ baskervilles08	90	11	that	O
 baskervilles08	90	12	the	O
 baskervilles08	90	13	test	O
 baskervilles08	90	14	was	O
-baskervilles08	90	15	worthless	O
+baskervilles08	90	15	worthless	B-NEG
 baskervilles08	90	16	and	O
 baskervilles08	90	17	that	O
 baskervilles08	90	18	we	O
@@ -34651,7 +34651,7 @@ baskervilles08	121	4	rooms	O
 baskervilles08	121	5	are	O
 baskervilles08	121	6	unfurnished	B-NEG
 baskervilles08	121	7	and	O
-baskervilles08	121	8	unoccupied	O
+baskervilles08	121	8	unoccupied	B-NEG
 baskervilles08	121	9	so	O
 baskervilles08	121	10	that	O
 baskervilles08	121	11	his	O
@@ -35977,7 +35977,7 @@ baskervilles09	46	21	especially	O
 baskervilles09	46	22	that	O
 baskervilles09	46	23	you	O
 baskervilles09	46	24	should	O
-baskervilles09	46	25	not	O
+baskervilles09	46	25	not	B-NEG
 baskervilles09	46	26	go	O
 baskervilles09	46	27	alone	O
 baskervilles09	46	28	upon	O
@@ -36901,7 +36901,7 @@ baskervilles09	85	17	so	O
 baskervilles09	85	18	intimate	O
 baskervilles09	85	19	a	O
 baskervilles09	85	20	scene	O
-baskervilles09	85	21	without	O
+baskervilles09	85	21	without	B-NEG
 baskervilles09	85	22	my	O
 baskervilles09	85	23	friend	O
 baskervilles09	85	24	's	O
@@ -37485,7 +37485,7 @@ baskervilles09	118	20	,	O
 baskervilles09	118	21	and	O
 baskervilles09	118	22	she	O
 baskervilles09	118	23	would	O
-baskervilles09	118	24	n't	O
+baskervilles09	118	24	n't	B-NEG
 baskervilles09	118	25	have	O
 baskervilles09	118	26	let	O
 baskervilles09	118	27	me	O
@@ -37885,7 +37885,7 @@ baskervilles09	133	4	be	O
 baskervilles09	133	5	rejected	O
 baskervilles09	133	6	so	O
 baskervilles09	133	7	brusquely	O
-baskervilles09	133	8	without	O
+baskervilles09	133	8	without	B-NEG
 baskervilles09	133	9	any	O
 baskervilles09	133	10	reference	O
 baskervilles09	133	11	to	O
@@ -37993,7 +37993,7 @@ baskervilles09	136	5	now	O
 baskervilles09	136	6	that	O
 baskervilles09	136	7	he	O
 baskervilles09	136	8	is	O
-baskervilles09	136	9	n't	O
+baskervilles09	136	9	n't	B-NEG
 baskervilles09	136	10	a	O
 baskervilles09	136	11	crazy	O
 baskervilles09	136	12	man	O
@@ -38006,7 +38006,7 @@ baskervilles09	136	18	;	O
 baskervilles09	136	19	``	O
 baskervilles09	136	20	I	O
 baskervilles09	136	21	ca	O
-baskervilles09	136	22	n't	O
+baskervilles09	136	22	n't	B-NEG
 baskervilles09	136	23	forget	O
 baskervilles09	136	24	the	O
 baskervilles09	136	25	look	O
@@ -38026,7 +38026,7 @@ baskervilles09	136	38	I	O
 baskervilles09	136	39	must	O
 baskervilles09	136	40	allow	O
 baskervilles09	136	41	that	O
-baskervilles09	136	42	no	O
+baskervilles09	136	42	no	B-NEG
 baskervilles09	136	43	man	O
 baskervilles09	136	44	could	O
 baskervilles09	136	45	make	O
@@ -38174,7 +38174,7 @@ baskervilles09	141	48	a	O
 baskervilles09	141	49	time	O
 baskervilles09	141	50	he	O
 baskervilles09	141	51	was	O
-baskervilles09	141	52	not	O
+baskervilles09	141	52	not	B-NEG
 baskervilles09	141	53	responsible	O
 baskervilles09	141	54	for	O
 baskervilles09	141	55	what	O
@@ -38456,7 +38456,7 @@ baskervilles09	151	19	--	O
 baskervilles09	151	20	that	O
 baskervilles09	151	21	you	O
 baskervilles09	151	22	do	O
-baskervilles09	151	23	not	O
+baskervilles09	151	23	not	B-NEG
 baskervilles09	151	24	regret	O
 baskervilles09	151	25	the	O
 baskervilles09	151	26	confidence	O
@@ -39273,7 +39273,7 @@ baskervilles09	190	6	Sir	O
 baskervilles09	190	7	Henry	O
 baskervilles09	190	8	--	O
 baskervilles09	190	9	do	O
-baskervilles09	190	10	n't	O
+baskervilles09	190	10	n't	B-NEG
 baskervilles09	190	11	ask	O
 baskervilles09	190	12	me	O
 baskervilles09	190	13	!	O
@@ -39297,7 +39297,7 @@ baskervilles09	191	15	and	O
 baskervilles09	191	16	that	O
 baskervilles09	191	17	I	O
 baskervilles09	191	18	can	O
-baskervilles09	191	19	not	O
+baskervilles09	191	19	not	B-NEG
 baskervilles09	191	20	tell	O
 baskervilles09	191	21	it	O
 baskervilles09	191	22	.	O
@@ -39311,7 +39311,7 @@ baskervilles09	192	5	but	O
 baskervilles09	192	6	myself	O
 baskervilles09	192	7	I	O
 baskervilles09	192	8	would	O
-baskervilles09	192	9	not	O
+baskervilles09	192	9	not	B-NEG
 baskervilles09	192	10	try	O
 baskervilles09	192	11	to	O
 baskervilles09	192	12	keep	O
@@ -39468,17 +39468,17 @@ baskervilles09	199	8	.	O
 baskervilles09	200	0	``	O
 baskervilles09	200	1	No	B-NEG
 baskervilles09	200	2	,	O
-baskervilles09	200	3	no	O
+baskervilles09	200	3	no	B-NEG
 baskervilles09	200	4	,	O
 baskervilles09	200	5	sir	O
 baskervilles09	200	6	,	O
 baskervilles09	200	7	it	O
 baskervilles09	200	8	is	O
-baskervilles09	200	9	nothing	O
+baskervilles09	200	9	nothing	B-NEG
 baskervilles09	200	10	--	O
-baskervilles09	200	11	nothing	O
-baskervilles09	200	12	at	O
-baskervilles09	200	13	all	O
+baskervilles09	200	11	nothing	B-NEG
+baskervilles09	200	12	at	I-NEG
+baskervilles09	200	13	all	I-NEG
 baskervilles09	200	14	!	O
 baskervilles09	200	15	''	O
 baskervilles09	200	16	the	O
@@ -39666,13 +39666,13 @@ baskervilles09	214	28	''	O
 baskervilles09	215	0	``	O
 baskervilles09	215	1	No	B-NEG
 baskervilles09	215	2	,	O
-baskervilles09	215	3	no	O
+baskervilles09	215	3	no	B-NEG
 baskervilles09	215	4	,	O
 baskervilles09	215	5	sir	O
 baskervilles09	215	6	;	O
-baskervilles09	215	7	no	O
+baskervilles09	215	7	no	B-NEG
 baskervilles09	215	8	,	O
-baskervilles09	215	9	not	O
+baskervilles09	215	9	not	B-NEG
 baskervilles09	215	10	against	O
 baskervilles09	215	11	you	O
 baskervilles09	215	12	!	O
@@ -39918,7 +39918,7 @@ baskervilles09	232	9	and	O
 baskervilles09	232	10	that	O
 baskervilles09	232	11	I	O
 baskervilles09	232	12	could	O
-baskervilles09	232	13	not	O
+baskervilles09	232	13	not	B-NEG
 baskervilles09	232	14	tell	O
 baskervilles09	232	15	it	O
 baskervilles09	232	16	to	O
@@ -40673,9 +40673,9 @@ baskervilles09	272	12	for	O
 baskervilles09	272	13	whom	O
 baskervilles09	272	14	there	O
 baskervilles09	272	15	was	O
-baskervilles09	272	16	neither	O
+baskervilles09	272	16	neither	B-NEG
 baskervilles09	272	17	pity	O
-baskervilles09	272	18	nor	O
+baskervilles09	272	18	nor	B-NEG
 baskervilles09	272	19	excuse	O
 baskervilles09	272	20	.	O
 
@@ -41463,7 +41463,7 @@ baskervilles09	322	13	''	O
 baskervilles09	323	0	``	O
 baskervilles09	323	1	No	B-NEG
 baskervilles09	323	2	,	O
-baskervilles09	323	3	no	O
+baskervilles09	323	3	no	B-NEG
 baskervilles09	323	4	,	O
 baskervilles09	323	5	it	O
 baskervilles09	323	6	was	O
@@ -41517,7 +41517,7 @@ baskervilles09	326	11	''	O
 baskervilles09	327	0	``	O
 baskervilles09	327	1	No	B-NEG
 baskervilles09	327	2	,	O
-baskervilles09	327	3	no	O
+baskervilles09	327	3	no	B-NEG
 baskervilles09	327	4	.	O
 baskervilles09	327	5	''	O
 
@@ -42141,7 +42141,7 @@ baskervilles09	358	27	thinking	O
 baskervilles09	358	28	that	O
 baskervilles09	358	29	all	O
 baskervilles09	358	30	was	O
-baskervilles09	358	31	not	O
+baskervilles09	358	31	not	B-NEG
 baskervilles09	358	32	well	O
 baskervilles09	358	33	,	O
 baskervilles09	358	34	but	O
@@ -42320,7 +42320,7 @@ baskervilles09	365	24	not	B-NEG
 baskervilles09	365	25	to	O
 baskervilles09	365	26	shoot	O
 baskervilles09	365	27	an	O
-baskervilles09	365	28	unarmed	O
+baskervilles09	365	28	unarmed	B-NEG
 baskervilles09	365	29	man	O
 baskervilles09	365	30	who	O
 baskervilles09	365	31	was	O
@@ -42700,7 +42700,7 @@ baskervilles09	383	22	of	O
 baskervilles09	383	23	that	O
 baskervilles09	383	24	silent	O
 baskervilles09	383	25	and	O
-baskervilles09	383	26	motionless	O
+baskervilles09	383	26	motionless	B-NEG
 baskervilles09	383	27	figure	O
 baskervilles09	383	28	.	O
 
@@ -42769,7 +42769,7 @@ baskervilles09	386	8	the	O
 baskervilles09	386	9	tor	O
 baskervilles09	386	10	and	O
 baskervilles09	386	11	could	O
-baskervilles09	386	12	not	O
+baskervilles09	386	12	not	B-NEG
 baskervilles09	386	13	feel	O
 baskervilles09	386	14	the	O
 baskervilles09	386	15	thrill	O
@@ -43414,7 +43414,7 @@ baskervilles10	14	18	.	O
 
 baskervilles10	15	0	It	O
 baskervilles10	15	1	is	O
-baskervilles10	15	2	incredible	O
+baskervilles10	15	2	incredible	B-NEG
 baskervilles10	15	3	,	O
 baskervilles10	15	4	impossible	B-NEG
 baskervilles10	15	5	,	O
@@ -44266,7 +44266,7 @@ baskervilles10	53	15	--	O
 baskervilles10	53	16	indeed	O
 baskervilles10	53	17	I	O
 baskervilles10	53	18	did	O
-baskervilles10	53	19	n't	O
+baskervilles10	53	19	n't	B-NEG
 baskervilles10	53	20	.	O
 baskervilles10	53	21	''	O
 
@@ -44470,7 +44470,7 @@ baskervilles10	65	2	n't	B-NEG
 baskervilles10	65	3	tell	O
 baskervilles10	65	4	on	O
 baskervilles10	65	5	him	O
-baskervilles10	65	6	without	O
+baskervilles10	65	6	without	B-NEG
 baskervilles10	65	7	getting	O
 baskervilles10	65	8	my	O
 baskervilles10	65	9	wife	O
@@ -44819,7 +44819,7 @@ baskervilles10	88	3	sir	O
 baskervilles10	88	4	,	O
 baskervilles10	88	5	I	O
 baskervilles10	88	6	do	O
-baskervilles10	88	7	n't	O
+baskervilles10	88	7	n't	B-NEG
 baskervilles10	88	8	know	O
 baskervilles10	88	9	that	O
 baskervilles10	88	10	.	O
@@ -45034,13 +45034,13 @@ baskervilles10	104	10	the	O
 baskervilles10	104	11	matter	O
 baskervilles10	104	12	,	O
 baskervilles10	104	13	and	O
-baskervilles10	104	14	never	O
+baskervilles10	104	14	never	B-NEG
 baskervilles10	104	15	would	O
 baskervilles10	104	16	have	O
 baskervilles10	104	17	done	O
 baskervilles10	104	18	had	O
 baskervilles10	104	19	it	O
-baskervilles10	104	20	not	O
+baskervilles10	104	20	not	B-NEG
 baskervilles10	104	21	been	O
 baskervilles10	104	22	for	O
 baskervilles10	104	23	my	O
@@ -45457,7 +45457,7 @@ baskervilles10	125	15	would	O
 baskervilles10	125	16	be	O
 baskervilles10	125	17	treating	O
 baskervilles10	125	18	you	O
-baskervilles10	125	19	unfairly	O
+baskervilles10	125	19	unfairly	B-NEG
 baskervilles10	125	20	not	B-NEG
 baskervilles10	125	21	to	O
 baskervilles10	125	22	tell	O
@@ -46263,7 +46263,7 @@ baskervilles10	168	9	for	O
 baskervilles10	168	10	whom	O
 baskervilles10	168	11	I	O
 baskervilles10	168	12	ca	O
-baskervilles10	168	13	n't	O
+baskervilles10	168	13	n't	B-NEG
 baskervilles10	168	14	answer	O
 baskervilles10	168	15	,	O
 baskervilles10	168	16	but	O
@@ -46406,7 +46406,7 @@ baskervilles10	179	10	because	O
 baskervilles10	179	11	she	O
 baskervilles10	179	12	had	O
 baskervilles10	179	13	married	O
-baskervilles10	179	14	without	O
+baskervilles10	179	14	without	B-NEG
 baskervilles10	179	15	his	O
 baskervilles10	179	16	consent	O
 baskervilles10	179	17	and	O
@@ -46575,7 +46575,7 @@ baskervilles10	188	22	,	O
 baskervilles10	188	23	for	O
 baskervilles10	188	24	there	O
 baskervilles10	188	25	is	O
-baskervilles10	188	26	no	O
+baskervilles10	188	26	no	B-NEG
 baskervilles10	188	27	reason	O
 baskervilles10	188	28	why	O
 baskervilles10	188	29	we	O
@@ -47029,7 +47029,7 @@ baskervilles10	212	15	,	O
 baskervilles10	212	16	that	O
 baskervilles10	212	17	I	O
 baskervilles10	212	18	do	O
-baskervilles10	212	19	n't	O
+baskervilles10	212	19	n't	B-NEG
 baskervilles10	212	20	like	O
 baskervilles10	212	21	it	O
 baskervilles10	212	22	.	O
@@ -47987,7 +47987,7 @@ baskervilles11	9	5	,	O
 baskervilles11	9	6	therefore	O
 baskervilles11	9	7	,	O
 baskervilles11	9	8	not	B-NEG
-baskervilles11	9	9	without	O
+baskervilles11	9	9	without	B-NEG
 baskervilles11	9	10	some	O
 baskervilles11	9	11	prickings	O
 baskervilles11	9	12	of	O
@@ -48333,7 +48333,7 @@ baskervilles11	25	0	``	O
 baskervilles11	25	1	I	O
 baskervilles11	25	2	owe	O
 baskervilles11	25	3	him	O
-baskervilles11	25	4	nothing	O
+baskervilles11	25	4	nothing	B-NEG
 baskervilles11	25	5	,	O
 baskervilles11	25	6	and	O
 baskervilles11	25	7	his	O
@@ -49370,7 +49370,7 @@ baskervilles11	95	10	from	O
 baskervilles11	95	11	this	O
 baskervilles11	95	12	long	O
 baskervilles11	95	13	and	O
-baskervilles11	95	14	inconclusive	O
+baskervilles11	95	14	inconclusive	B-NEG
 baskervilles11	95	15	interview	O
 baskervilles11	95	16	,	O
 baskervilles11	95	17	``	O
@@ -49899,7 +49899,7 @@ baskervilles11	122	8	say	O
 baskervilles11	122	9	that	O
 baskervilles11	122	10	she	O
 baskervilles11	122	11	had	O
-baskervilles11	122	12	not	O
+baskervilles11	122	12	not	B-NEG
 baskervilles11	122	13	been	O
 baskervilles11	122	14	to	O
 baskervilles11	122	15	Baskerville	O
@@ -49923,7 +49923,7 @@ baskervilles11	122	32	there	O
 baskervilles11	122	33	,	O
 baskervilles11	122	34	and	O
 baskervilles11	122	35	could	O
-baskervilles11	122	36	not	O
+baskervilles11	122	36	not	B-NEG
 baskervilles11	122	37	have	O
 baskervilles11	122	38	returned	O
 baskervilles11	122	39	to	O
@@ -50838,7 +50838,7 @@ baskervilles11	165	1	None	B-NEG
 baskervilles11	165	2	,	O
 baskervilles11	165	3	sir	O
 baskervilles11	165	4	,	O
-baskervilles11	165	5	none	O
+baskervilles11	165	5	none	B-NEG
 baskervilles11	165	6	.	O
 
 baskervilles11	166	0	I	O
@@ -52207,7 +52207,7 @@ baskervilles11	245	5	was	O
 baskervilles11	245	6	no	B-NEG
 baskervilles11	245	7	sound	O
 baskervilles11	245	8	and	O
-baskervilles11	245	9	no	O
+baskervilles11	245	9	no	B-NEG
 baskervilles11	245	10	movement	O
 baskervilles11	245	11	.	O
 
@@ -52828,7 +52828,7 @@ baskervilles11	274	11	the	O
 baskervilles11	274	12	moor	O
 baskervilles11	274	13	which	O
 baskervilles11	274	14	had	O
-baskervilles11	274	15	not	O
+baskervilles11	274	15	not	B-NEG
 baskervilles11	274	16	been	O
 baskervilles11	274	17	observed	O
 baskervilles11	274	18	and	O
@@ -52917,7 +52917,7 @@ baskervilles11	277	9	of	O
 baskervilles11	277	10	the	O
 baskervilles11	277	11	kind	O
 baskervilles11	277	12	,	O
-baskervilles11	277	13	nor	O
+baskervilles11	277	13	nor	B-NEG
 baskervilles11	277	14	could	O
 baskervilles11	277	15	I	O
 baskervilles11	277	16	discover	O
@@ -52987,7 +52987,7 @@ baskervilles11	278	25	kept	O
 baskervilles11	278	26	him	O
 baskervilles11	278	27	in	O
 baskervilles11	278	28	that	O
-baskervilles11	278	29	inhospitable	O
+baskervilles11	278	29	inhospitable	B-NEG
 baskervilles11	278	30	abode	O
 baskervilles11	278	31	.	O
 
@@ -53629,7 +53629,7 @@ baskervilles12	14	6	?	O
 baskervilles12	14	7	''	O
 
 baskervilles12	15	0	``	O
-baskervilles12	15	1	No	O
+baskervilles12	15	1	No	B-NEG
 baskervilles12	15	2	,	O
 baskervilles12	15	3	Watson	O
 baskervilles12	15	4	,	O
@@ -54284,7 +54284,7 @@ baskervilles12	49	26	and	O
 baskervilles12	49	27	I	O
 baskervilles12	49	28	remain	O
 baskervilles12	49	29	an	O
-baskervilles12	49	30	unknown	O
+baskervilles12	49	30	unknown	B-NEG
 baskervilles12	49	31	factor	O
 baskervilles12	49	32	in	O
 baskervilles12	49	33	the	O
@@ -56109,7 +56109,7 @@ baskervilles12	153	5	heavy	O
 baskervilles12	153	6	silence	O
 baskervilles12	153	7	of	O
 baskervilles12	153	8	the	O
-baskervilles12	153	9	windless	O
+baskervilles12	153	9	windless	B-NEG
 baskervilles12	153	10	night	O
 baskervilles12	153	11	.	O
 
@@ -56156,10 +56156,10 @@ baskervilles12	157	5	''	O
 baskervilles12	158	0	``	O
 baskervilles12	158	1	No	B-NEG
 baskervilles12	158	2	,	O
-baskervilles12	158	3	no	O
+baskervilles12	158	3	no	B-NEG
 baskervilles12	158	4	,	O
 baskervilles12	158	5	surely	O
-baskervilles12	158	6	not	O
+baskervilles12	158	6	not	B-NEG
 baskervilles12	158	7	!	O
 baskervilles12	158	8	''	O
 
@@ -57835,7 +57835,7 @@ baskervilles12	255	4	show	O
 baskervilles12	255	5	your	O
 baskervilles12	255	6	suspicions	O
 baskervilles12	255	7	--	O
-baskervilles12	255	8	not	O
+baskervilles12	255	8	not	B-NEG
 baskervilles12	255	9	a	O
 baskervilles12	255	10	word	O
 baskervilles12	255	11	,	O
@@ -57960,7 +57960,7 @@ baskervilles12	262	2	?	O
 baskervilles12	263	0	Not	B-NEG
 baskervilles12	263	1	--	O
 baskervilles12	263	2	do	O
-baskervilles12	263	3	n't	O
+baskervilles12	263	3	n't	B-NEG
 baskervilles12	263	4	tell	O
 baskervilles12	263	5	me	O
 baskervilles12	263	6	that	O
@@ -59290,7 +59290,7 @@ baskervilles13	34	12	fact	O
 baskervilles13	34	13	that	O
 baskervilles13	34	14	we	O
 baskervilles13	34	15	have	O
-baskervilles13	34	16	no	O
+baskervilles13	34	16	no	B-NEG
 baskervilles13	34	17	case	O
 baskervilles13	34	18	at	O
 baskervilles13	34	19	present	O
@@ -59786,7 +59786,7 @@ baskervilles13	59	1	I	O
 baskervilles13	59	2	had	O
 baskervilles13	59	3	n't	B-NEG
 baskervilles13	59	4	sworn	O
-baskervilles13	59	5	not	O
+baskervilles13	59	5	not	B-NEG
 baskervilles13	59	6	to	O
 baskervilles13	59	7	go	O
 baskervilles13	59	8	about	O
@@ -62059,7 +62059,7 @@ baskervilles13	191	9	and	O
 baskervilles13	191	10	courage	O
 baskervilles13	191	11	I	O
 baskervilles13	191	12	would	O
-baskervilles13	191	13	not	O
+baskervilles13	191	13	not	B-NEG
 baskervilles13	191	14	suggest	O
 baskervilles13	191	15	it	O
 baskervilles13	191	16	,	O
@@ -62213,7 +62213,7 @@ baskervilles13	198	14	go	O
 baskervilles13	198	15	with	O
 baskervilles13	198	16	him	O
 baskervilles13	198	17	,	O
-baskervilles13	198	18	nor	O
+baskervilles13	198	18	nor	B-NEG
 baskervilles13	198	19	could	O
 baskervilles13	198	20	I	O
 baskervilles13	198	21	understand	O
@@ -66520,7 +66520,7 @@ baskervilles14	134	5	bloodhound	O
 baskervilles14	134	6	and	O
 baskervilles14	134	7	it	O
 baskervilles14	134	8	was	O
-baskervilles14	134	9	not	O
+baskervilles14	134	9	not	B-NEG
 baskervilles14	134	10	a	O
 baskervilles14	134	11	pure	O
 baskervilles14	134	12	mastiff	O
@@ -66967,7 +66967,7 @@ baskervilles14	161	16	.	O
 
 baskervilles14	162	0	No	B-NEG
 baskervilles14	162	1	,	O
-baskervilles14	162	2	no	O
+baskervilles14	162	2	no	B-NEG
 baskervilles14	162	3	,	O
 baskervilles14	162	4	he	O
 baskervilles14	162	5	's	O
@@ -67039,12 +67039,12 @@ baskervilles14	165	13	the	O
 baskervilles14	165	14	lamp	O
 baskervilles14	165	15	and	O
 baskervilles14	165	16	left	O
-baskervilles14	165	17	no	O
+baskervilles14	165	17	no	B-NEG
 baskervilles14	165	18	corner	O
 baskervilles14	165	19	of	O
 baskervilles14	165	20	the	O
 baskervilles14	165	21	house	O
-baskervilles14	165	22	unexplored	O
+baskervilles14	165	22	unexplored	B-NEG
 baskervilles14	165	23	.	O
 
 baskervilles14	166	0	No	B-NEG
@@ -67485,11 +67485,11 @@ baskervilles14	190	9	''	O
 baskervilles14	191	0	``	O
 baskervilles14	191	1	No	B-NEG
 baskervilles14	191	2	,	O
-baskervilles14	191	3	no	O
+baskervilles14	191	3	no	B-NEG
 baskervilles14	191	4	,	O
 baskervilles14	191	5	I	O
 baskervilles14	191	6	did	O
-baskervilles14	191	7	not	O
+baskervilles14	191	7	not	B-NEG
 baskervilles14	191	8	mean	O
 baskervilles14	191	9	my	O
 baskervilles14	191	10	husband	O
@@ -67586,7 +67586,7 @@ baskervilles14	203	2	this	O
 baskervilles14	203	3	is	O
 baskervilles14	203	4	nothing	B-NEG
 baskervilles14	203	5	--	O
-baskervilles14	203	6	nothing	O
+baskervilles14	203	6	nothing	B-NEG
 baskervilles14	203	7	!	O
 
 baskervilles14	204	0	It	O
@@ -68385,7 +68385,7 @@ baskervilles14	239	23	him	O
 baskervilles14	239	24	out	O
 baskervilles14	239	25	he	O
 baskervilles14	239	26	could	O
-baskervilles14	239	27	never	O
+baskervilles14	239	27	never	B-NEG
 baskervilles14	239	28	have	O
 baskervilles14	239	29	set	O
 baskervilles14	239	30	his	O
@@ -68806,7 +68806,7 @@ baskervilles14	263	11	secret	O
 baskervilles14	263	12	which	O
 baskervilles14	263	13	we	O
 baskervilles14	263	14	have	O
-baskervilles14	263	15	not	O
+baskervilles14	263	15	not	B-NEG
 baskervilles14	263	16	already	O
 baskervilles14	263	17	fathomed	O
 baskervilles14	263	18	.	O
@@ -68835,7 +68835,7 @@ baskervilles14	264	20	even	O
 baskervilles14	264	21	in	O
 baskervilles14	264	22	daylight	O
 baskervilles14	264	23	were	O
-baskervilles14	264	24	not	O
+baskervilles14	264	24	not	B-NEG
 baskervilles14	264	25	pleasant	O
 baskervilles14	264	26	to	O
 baskervilles14	264	27	hear	O

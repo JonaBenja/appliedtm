@@ -16,10 +16,10 @@ in	in	IN	late	the	0	O
 the	the	DT	in	mornings	0	O
 mornings	morning	NNS	the	,	0	O
 ,	,	,	mornings	save	1	O
-save	save	VBP	,	upon	0	O
+save	save	VBP	,	upon	0	B-NEG
 upon	upon	IN	save	those	0	O
 those	those	DT	upon	not	0	O
-not	not	RB	those	infrequent	0	O
+not	not	RB	those	infrequent	0	B-NEG
 infrequent	infrequent	JJ	not	occasions	0	B-NEG
 occasions	occasion	NNS	infrequent	when	0	O
 when	when	WRB	occasions	he	0	O
@@ -252,7 +252,7 @@ miss	miss	VB	to	him	0	O
 him	him	PRP	miss	and	0	O
 and	and	CC	him	have	0	O
 have	have	VBP	and	no	0	O
-no	no	DT	have	notion	0	O
+no	no	DT	have	notion	0	B-NEG
 notion	notion	NN	no	of	0	O
 of	of	IN	notion	his	0	O
 his	his	PRP$	of	errand	0	O
@@ -871,18 +871,18 @@ all	all	DT	was	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	RB	,	,	0	O
+no	no	RB	,	,	0	B-NEG
 ,	,	,	no	my	1	O
 my	my	PRP$	,	dear	0	O
 dear	dear	JJ	my	watson	0	O
 watson	watson	NN	dear	,	0	O
 ,	,	,	watson	not	1	O
-not	not	RB	,	all	0	O
+not	not	RB	,	all	0	B-NEG
 all	all	DT	not	--	0	O
 --	--	:	all	by	1	O
-by	by	IN	--	no	0	O
-no	no	DT	by	means	0	O
-means	mean	NNS	no	all	0	O
+by	by	IN	--	no	0	B-NEG
+no	no	DT	by	means	0	I-NEG
+means	mean	NNS	no	all	0	I-NEG
 all	all	DT	means	.	0	O
 .	.	.	all	i	1	O
 i	i	NN	.	would	0	O
@@ -1210,7 +1210,7 @@ such	such	PDT	and	a	0	O
 a	a	DT	such	one	0	O
 one	one	NN	a	would	0	O
 would	would	MD	one	not	0	O
-not	not	RB	would	drift	0	O
+not	not	RB	would	drift	0	B-NEG
 drift	drift	VB	not	into	0	O
 into	into	IN	drift	the	0	O
 the	the	DT	into	country	0	O
@@ -1371,7 +1371,7 @@ at	at	IN	but	least	0	O
 least	least	JJS	at	it	0	O
 it	it	PRP	least	is	0	O
 is	is	VBZ	it	not	0	O
-not	not	RB	is	difficult	0	O
+not	not	RB	is	difficult	0	B-NEG
 difficult	difficult	JJ	not	to	0	O
 to	to	TO	difficult	find	0	O
 find	find	VB	to	out	0	O
@@ -1626,7 +1626,7 @@ leaves	leaf	VBZ	who	his	0	O
 his	his	PRP$	leaves	stick	0	O
 stick	stick	NN	his	and	0	O
 and	and	CC	stick	not	0	O
-not	not	RB	and	his	0	O
+not	not	RB	and	his	0	B-NEG
 his	his	PRP$	not	visiting-card	0	O
 visiting-card	visiting-card	NN	his	after	1	O
 after	after	IN	visiting-card	waiting	0	O
@@ -2563,7 +2563,7 @@ no	no	DT	``	,	0	B-NEG
 ,	,	,	no	sir	1	O
 sir	sir	NN	,	,	0	O
 ,	,	,	sir	no	1	O
-no	no	DT	,	;	0	O
+no	no	DT	,	;	0	B-NEG
 ;	;	:	no	though	1	O
 though	though	IN	;	i	0	O
 i	i	NN	though	am	0	O
@@ -2718,7 +2718,7 @@ that	that	IN	,	i	0	O
 i	i	NNS	that	have	0	O
 have	have	VBP	i	not	0	O
 not	not	RB	have	inadvertently	0	B-NEG
-inadvertently	inadvertently	RB	not	--	0	O
+inadvertently	inadvertently	RB	not	--	0	B-NEG
 --	--	:	inadvertently	''	1	O
 ''	''	''	--	``	1	O
 ``	``	``	''	just	1	O
@@ -3368,7 +3368,7 @@ suffered	suffered	VBN	has	so	0	O
 so	so	RB	suffered	grievously	0	O
 grievously	grievously	RB	so	may	0	O
 may	may	MD	grievously	not	0	O
-not	not	RB	may	again	0	O
+not	not	RB	may	again	0	B-NEG
 again	again	RB	not	be	0	O
 be	be	VB	again	loosed	0	O
 loosed	loosed	VBN	be	to	0	O
@@ -3432,7 +3432,7 @@ wild	wild	JJ	most	,	0	O
 profane	profane	NN	,	,	0	O
 ,	,	,	profane	and	1	O
 and	and	CC	,	godless	0	O
-godless	godless	JJ	and	man	0	O
+godless	godless	JJ	and	man	0	B-NEG
 man	man	NN	godless	.	0	O
 .	.	.	man	this	1	O
 this	this	DT	.	,	0	O
@@ -4493,7 +4493,7 @@ of	of	IN	sight	her	0	O
 her	her	PRP$	of	body	0	O
 body	body	NN	her	,	0	O
 ,	,	,	body	nor	1	O
-nor	nor	CC	,	yet	0	O
+nor	nor	CC	,	yet	0	B-NEG
 yet	yet	RB	nor	was	0	O
 was	wa	VBD	yet	it	0	O
 it	it	PRP	was	that	0	O
@@ -4712,7 +4712,7 @@ the	the	DT	of	family	0	O
 family	family	NN	the	have	0	O
 have	have	VBP	family	been	0	O
 been	been	VBN	have	unhappy	0	O
-unhappy	unhappy	JJ	been	in	0	O
+unhappy	unhappy	JJ	been	in	0	B-NEG
 in	in	IN	unhappy	their	0	O
 their	their	PRP$	in	deaths	0	O
 deaths	death	NNS	their	,	0	O
@@ -4741,7 +4741,7 @@ providence	providence	NN	of	,	0	O
 ,	,	,	providence	which	1	O
 which	which	WDT	,	would	0	O
 would	would	MD	which	not	0	O
-not	not	RB	would	forever	0	O
+not	not	RB	would	forever	0	B-NEG
 forever	forever	VB	not	punish	0	O
 punish	punish	VB	forever	the	0	O
 the	the	DT	punish	innocent	0	O
@@ -5794,8 +5794,8 @@ a	a	DT	is	symptom	0	O
 symptom	symptom	NN	a	which	0	O
 which	which	WDT	symptom	is	0	O
 is	is	VBZ	which	not	0	O
-not	not	RB	is	unusual	0	O
-unusual	unusual	JJ	not	in	0	O
+not	not	RB	is	unusual	0	B-NEG
+unusual	unusual	JJ	not	in	0	B-NEG
 in	in	IN	unusual	cases	0	O
 cases	case	NNS	in	of	0	O
 of	of	IN	cases	dyspnoea	0	O
@@ -6246,12 +6246,12 @@ with	with	IN	but	you	0	O
 you	you	PRP	with	there	0	O
 there	there	EX	you	is	0	O
 is	is	VBZ	there	no	0	O
-no	no	DT	is	reason	0	O
+no	no	DT	is	reason	0	B-NEG
 reason	reason	NN	no	why	0	O
 why	why	WRB	reason	i	0	O
 i	i	NN	why	should	0	O
 should	should	MD	i	not	0	O
-not	not	RB	should	be	0	O
+not	not	RB	should	be	0	B-NEG
 be	be	VB	not	perfectly	0	O
 perfectly	perfectly	RB	be	frank	0	O
 frank	frank	JJ	perfectly	.	0	O
@@ -6999,7 +6999,7 @@ body	body	NN	the	,	0	O
 ,	,	,	body	which	1	O
 which	which	WDT	,	had	0	O
 had	had	VBD	which	not	0	O
-not	not	RB	had	been	0	O
+not	not	RB	had	been	0	B-NEG
 been	been	VBN	not	touched	0	O
 touched	touched	VBN	been	until	0	O
 until	until	IN	touched	my	0	O
@@ -7282,7 +7282,7 @@ thought	thought	NN	a	.	0	O
 .	.	.	thought	i	1	O
 i	i	VB	.	do	0	O
 do	do	VBP	i	n't	0	O
-n't	n't	RB	do	suppose	1	O
+n't	n't	RB	do	suppose	1	B-NEG
 suppose	suppose	VB	n't	i	0	O
 i	i	NN	suppose	should	0	O
 should	should	MD	i	have	0	O
@@ -7903,7 +7903,7 @@ in	in	IN	you	,	0	O
 mr.	mr.	NN	,	holmes	1	O
 holmes	holmes	NNS	mr.	,	0	O
 ,	,	,	holmes	without	1	O
-without	without	IN	,	disclosing	0	O
+without	without	IN	,	disclosing	0	B-NEG
 disclosing	disclosing	VBG	without	these	0	O
 these	these	DT	disclosing	facts	0	O
 facts	fact	NNS	these	to	0	O
@@ -7919,7 +7919,7 @@ given	given	VBN	already	my	0	O
 my	my	PRP$	given	reasons	0	O
 reasons	reason	NNS	my	for	0	O
 for	for	IN	reasons	not	0	O
-not	not	RB	for	wishing	0	O
+not	not	RB	for	wishing	0	B-NEG
 wishing	wishing	VBG	not	to	0	O
 to	to	TO	wishing	do	0	O
 do	do	VB	to	so	0	O
@@ -11743,7 +11743,7 @@ confess	confess	VBP	i	that	0	O
 that	that	IN	confess	i	0	O
 i	i	NN	that	see	0	O
 see	see	VBP	i	no	0	O
-no	no	DT	see	connection	0	O
+no	no	DT	see	connection	0	B-NEG
 connection	connection	NN	no	.	0	O
 .	.	.	connection	''	1	O
 ''	''	''	.	``	1	O
@@ -12525,7 +12525,7 @@ a	a	DT	such	letter	0	O
 letter	letter	NN	a	would	0	O
 would	would	MD	letter	be	0	O
 be	be	VB	would	careless	0	O
-careless	careless	JJ	be	.	0	O
+careless	careless	JJ	be	.	0	B-NEG
 .	.	.	careless	if	1	O
 if	if	IN	.	he	0	O
 he	he	PRP	if	were	0	O
@@ -13911,7 +13911,7 @@ holmes	holmes	NNS	mr.	,	0	O
 and	and	CC	,	there	0	O
 there	there	EX	and	is	0	O
 is	is	VBZ	there	no	0	O
-no	no	DT	is	man	0	O
+no	no	DT	is	man	0	B-NEG
 man	man	NN	no	upon	0	O
 upon	upon	IN	man	earth	0	O
 earth	earth	NN	upon	who	0	O
@@ -15268,7 +15268,7 @@ sir	sir	NN	,	,	0	O
 indeed	indeed	RB	,	i	0	O
 i	i	NNS	indeed	have	0	O
 have	have	VBP	i	not	0	O
-not	not	RB	have	.	0	O
+not	not	RB	have	.	0	B-NEG
 .	.	.	not	you	1	O
 you	you	PRP	.	saved	0	O
 saved	saved	VBD	you	my	0	O
@@ -15967,7 +15967,7 @@ very	very	RB	a	active	0	O
 active	active	JJ	very	gentleman	0	O
 gentleman	gentleman	NN	active	,	0	O
 ,	,	,	gentleman	not	1	O
-not	not	RB	,	older	0	O
+not	not	RB	,	older	0	B-NEG
 older	older	JJR	not	than	0	O
 than	than	IN	older	yourself	0	O
 yourself	yourself	PRP	than	.	0	O
@@ -16525,7 +16525,7 @@ but	but	CC	,	i	0	O
 i	i	NNS	but	can	0	O
 can	can	MD	i	hear	0	O
 hear	hear	VB	can	no	0	O
-no	no	DT	hear	word	0	O
+no	no	DT	hear	word	0	B-NEG
 word	word	NN	no	of	0	O
 of	of	IN	word	it	0	O
 it	it	PRP	of	.	0	O
@@ -16980,7 +16980,7 @@ whom	whom	WP	by	?	0	O
 ``	``	``	''	that	1	O
 that	that	DT	``	,	0	O
 ,	,	,	that	unfortunately	1	O
-unfortunately	unfortunately	RB	,	,	0	O
+unfortunately	unfortunately	RB	,	,	0	B-NEG
 ,	,	,	unfortunately	is	1	O
 is	is	VBZ	,	what	0	O
 what	what	WP	is	i	0	O
@@ -17295,7 +17295,7 @@ mighty	mighty	JJ	a	fine	0	O
 fine	fine	JJ	mighty	home	0	O
 home	home	NN	fine	and	0	O
 and	and	CC	home	nothing	0	O
-nothing	nothing	NN	and	to	0	O
+nothing	nothing	NN	and	to	0	B-NEG
 to	to	TO	nothing	do	0	O
 do	do	VB	to	.	0	O
 .	.	.	do	''	1	O
@@ -17768,7 +17768,7 @@ holmes	holmes	NNS	mr.	,	0	O
 ,	,	,	holmes	i	1	O
 i	i	NNS	,	have	0	O
 have	have	VBP	i	not	0	O
-not	not	RB	have	.	0	O
+not	not	RB	have	.	0	B-NEG
 .	.	.	not	i	1	O
 i	i	VB	.	've	0	O
 've	've	VBP	i	had	1	O
@@ -18495,7 +18495,7 @@ of	of	IN	nothing	the	0	O
 the	the	DT	of	matter	0	O
 matter	matter	NN	the	,	0	O
 ,	,	,	matter	nor	1	O
-nor	nor	CC	,	could	0	O
+nor	nor	CC	,	could	0	B-NEG
 could	could	MD	nor	any	0	O
 any	any	DT	could	inquiry	0	O
 inquiry	inquiry	JJ	any	clear	0	O
@@ -19753,7 +19753,7 @@ no	no	DT	``	,	0	B-NEG
 ,	,	,	no	i	1	O
 i	i	NN	,	ca	0	O
 ca	ca	MD	i	n't	0	O
-n't	n't	RB	ca	say	1	O
+n't	n't	RB	ca	say	1	B-NEG
 say	say	VB	n't	that	0	O
 that	that	DT	say	.	0	O
 .	.	.	that	''	1	O
@@ -19772,7 +19772,7 @@ no	no	DT	``	,	0	B-NEG
 ,	,	,	no	sir	1	O
 sir	sir	NN	,	;	0	O
 ;	;	:	sir	nothing	1	O
-nothing	nothing	NN	;	.	0	O
+nothing	nothing	NN	;	.	0	B-NEG
 .	.	.	nothing	''	1	O
 ''	''	''	.	``	1	O
 ``	``	``	''	well	1	O
@@ -20321,7 +20321,7 @@ them	them	PRP	to	.	0	O
 .	.	.	them	no	1	O
 no	no	DT	.	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	RB	,	,	0	O
+no	no	RB	,	,	0	B-NEG
 ,	,	,	no	we	1	O
 we	we	PRP	,	will	0	O
 will	will	MD	we	preserve	0	O
@@ -20514,7 +20514,7 @@ no	no	RB	``	,	0	B-NEG
 ,	,	,	no	we	1	O
 we	we	PRP	,	have	0	O
 have	have	VBP	we	no	0	O
-no	no	DT	have	news	0	O
+no	no	DT	have	news	0	B-NEG
 news	news	NN	no	of	0	O
 of	of	IN	news	any	0	O
 any	any	DT	of	kind	0	O
@@ -20560,14 +20560,14 @@ have	have	VBP	we	never	0	O
 never	never	RB	have	gone	0	B-NEG
 gone	gone	VBN	never	out	0	O
 out	out	RP	gone	without	0	O
-without	without	IN	out	keeping	0	O
+without	without	IN	out	keeping	0	B-NEG
 keeping	keeping	VBG	without	a	0	O
 a	a	DT	keeping	sharp	0	O
 sharp	sharp	JJ	a	watch	0	O
 watch	watch	NN	sharp	,	0	O
 ,	,	,	watch	and	1	O
 and	and	CC	,	no	0	O
-no	no	DT	and	one	0	O
+no	no	DT	and	one	0	B-NEG
 one	one	NN	no	could	0	O
 could	could	MD	one	have	0	O
 have	have	VB	could	escaped	0	O
@@ -20958,7 +20958,7 @@ devonshire	devonshire	NN	a	man	0	O
 man	man	NN	devonshire	who	0	O
 who	who	WP	man	did	0	O
 did	did	VBD	who	not	0	O
-not	not	RB	did	swear	0	O
+not	not	RB	did	swear	0	B-NEG
 swear	swear	VB	not	by	0	O
 by	by	IN	swear	his	0	O
 his	his	PRP$	by	county	0	O
@@ -22494,7 +22494,7 @@ voice	voice	NN	low	.	0	O
 ``	``	``	.	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	the	1	O
 the	the	DT	,	yew	0	O
 yew	yew	NN	the	alley	0	O
@@ -23989,7 +23989,7 @@ the	the	DT	for	sleep	0	O
 sleep	sleep	NN	the	which	0	O
 which	which	WDT	sleep	would	0	O
 would	would	MD	which	not	0	O
-not	not	RB	would	come	0	O
+not	not	RB	would	come	0	B-NEG
 come	come	VB	not	.	0	O
 .	.	.	come	far	1	O
 far	far	RB	.	away	0	O
@@ -25076,7 +25076,7 @@ complain	complain	VB	to	.	0	O
 ''	''	''	.	it	1	O
 it	it	PRP	''	seemed	0	O
 seemed	seemed	VBD	it	hopeless	0	O
-hopeless	hopeless	JJ	seemed	to	0	O
+hopeless	hopeless	JJ	seemed	to	0	B-NEG
 to	to	TO	hopeless	pursue	0	O
 pursue	pursue	VB	to	the	0	O
 the	the	DT	pursue	inquiry	0	O
@@ -25102,7 +25102,7 @@ proof	proof	NN	no	that	0	O
 that	that	IN	proof	barrymore	0	O
 barrymore	barrymore	NN	that	had	0	O
 had	had	VBD	barrymore	not	0	O
-not	not	RB	had	been	0	O
+not	not	RB	had	been	0	B-NEG
 been	been	VBN	not	in	0	O
 in	in	IN	been	london	0	O
 london	london	NN	in	all	0	O
@@ -25271,7 +25271,7 @@ to	to	TO	seemed	be	0	O
 be	be	VB	to	weaving	0	O
 weaving	weaving	VBG	be	an	0	O
 an	an	DT	weaving	invisible	0	O
-invisible	invisible	JJ	an	net	0	O
+invisible	invisible	JJ	an	net	0	B-NEG
 net	net	NN	invisible	round	0	O
 round	round	VBD	net	the	0	O
 the	the	DT	round	young	0	O
@@ -25979,7 +25979,7 @@ intended	intended	VBN	was	.	0	O
 ``	``	``	.	it	1	O
 it	it	PRP	``	is	0	O
 is	is	VBZ	it	useless	0	O
-useless	useless	JJ	is	for	0	O
+useless	useless	JJ	is	for	0	B-NEG
 for	for	IN	useless	us	0	O
 us	u	PRP	for	to	0	O
 to	to	TO	us	pretend	0	O
@@ -26015,7 +26015,7 @@ could	could	MD	you	not	0	O
 not	not	RB	could	celebrate	0	B-NEG
 celebrate	celebrate	VB	not	him	0	O
 him	him	PRP	celebrate	without	0	O
-without	without	IN	him	being	0	O
+without	without	IN	him	being	0	B-NEG
 being	being	VBG	without	known	0	O
 known	known	VBN	being	yourself	0	O
 yourself	yourself	PRP	known	.	0	O
@@ -26255,7 +26255,7 @@ i	i	NN	what	feel	0	O
 feel	feel	NN	i	was	0	O
 was	wa	VBD	feel	an	0	O
 an	an	DT	was	unjustifiable	0	O
-unjustifiable	unjustifiable	JJ	an	intrusion	0	O
+unjustifiable	unjustifiable	JJ	an	intrusion	0	B-NEG
 intrusion	intrusion	NN	unjustifiable	,	0	O
 ,	,	,	intrusion	and	1	O
 and	and	CC	,	i	0	O
@@ -27347,7 +27347,7 @@ something	something	NN	or	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	that	1	O
 that	that	DT	,	was	0	O
 was	wa	VBD	that	a	0	O
@@ -27373,7 +27373,7 @@ booming	booming	NN	bittern	?	0	O
 ?	?	.	booming	''	1	O
 ''	''	''	?	``	1	O
 ``	``	``	''	no	1	O
-no	no	DT	``	,	0	O
+no	no	DT	``	,	0	B-NEG
 ,	,	,	no	i	1	O
 i	i	RB	,	never	0	O
 never	never	RB	i	did	0	B-NEG
@@ -27742,12 +27742,12 @@ jerky	jerky	NN	and	,	0	O
 ,	,	,	jerky	zigzag	1	O
 zigzag	zigzag	NN	,	,	0	O
 ,	,	,	zigzag	irregular	1	O
-irregular	irregular	JJ	,	progress	0	O
+irregular	irregular	JJ	,	progress	0	B-NEG
 progress	progress	NN	irregular	made	0	O
 made	made	VBD	progress	him	0	O
 him	him	PRP	made	not	0	O
 not	not	RB	him	unlike	0	B-NEG
-unlike	unlike	IN	not	some	0	O
+unlike	unlike	IN	not	some	0	B-NEG
 some	some	DT	unlike	huge	0	O
 huge	huge	JJ	some	moth	0	O
 moth	moth	DT	huge	himself	0	O
@@ -28417,7 +28417,7 @@ baskerville	baskerville	NN	henry	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	''	1	O
 ''	''	''	,	said	1	O
 said	said	VBD	''	i	0	O
@@ -28663,7 +28663,7 @@ their	their	PRP$	from	windows	0	O
 windows	window	NNS	their	at	0	O
 at	at	IN	windows	the	0	O
 the	the	DT	at	interminable	0	O
-interminable	interminable	JJ	the	granite-flecked	0	O
+interminable	interminable	JJ	the	granite-flecked	0	B-NEG
 granite-flecked	granite-flecked	JJ	interminable	moor	1	O
 moor	moor	NN	granite-flecked	rolling	0	O
 rolling	rolling	VBG	moor	unbroken	0	O
@@ -28855,7 +28855,7 @@ of	of	IN	much	my	0	O
 my	my	PRP$	of	capital	0	O
 capital	capital	NN	my	was	0	O
 was	wa	VBD	capital	irretrievably	0	O
-irretrievably	irretrievably	RB	was	swallowed	0	O
+irretrievably	irretrievably	RB	was	swallowed	0	B-NEG
 swallowed	swallowed	VBN	irretrievably	up	0	O
 up	up	RP	swallowed	.	0	O
 .	.	.	up	and	1	O
@@ -28899,7 +28899,7 @@ zoology	zoology	NN	and	,	0	O
 i	i	JJ	,	find	0	O
 find	find	VBP	i	an	0	O
 an	an	DT	find	unlimited	0	O
-unlimited	unlimited	JJ	an	field	0	O
+unlimited	unlimited	JJ	an	field	0	B-NEG
 field	field	NN	unlimited	of	0	O
 of	of	IN	field	work	0	O
 work	work	NN	of	here	0	O
@@ -28973,11 +28973,11 @@ sister	sister	NN	your	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	i	1	O
 i	i	VB	,	am	0	O
 am	am	VBP	i	never	0	O
-never	never	RB	am	dull	0	O
+never	never	RB	am	dull	0	B-NEG
 dull	dull	NN	never	,	0	O
 ,	,	,	dull	''	1	O
 ''	''	''	,	said	1	O
@@ -29506,7 +29506,7 @@ do	do	VBP	or	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	.	0	O
+no	no	DT	,	.	0	B-NEG
 .	.	.	no	i	1	O
 i	i	VB	.	remember	0	O
 remember	remember	VBP	i	the	0	O
@@ -29871,7 +29871,7 @@ move	move	VB	to	.	0	O
 ``	``	``	''	i	1	O
 i	i	NN	``	can	0	O
 can	can	MD	i	not	0	O
-not	not	RB	can	say	0	O
+not	not	RB	can	say	0	B-NEG
 say	say	VB	not	anything	0	O
 anything	anything	NN	say	definite	0	O
 definite	definite	JJ	anything	,	0	O
@@ -29914,7 +29914,7 @@ me	me	PRP	to	,	0	O
 why	why	WRB	,	should	0	O
 should	should	MD	why	you	0	O
 you	you	PRP	should	not	0	O
-not	not	RB	you	wish	0	O
+not	not	RB	you	wish	0	B-NEG
 wish	wish	VB	not	your	0	O
 your	your	PRP$	wish	brother	0	O
 brother	brother	NN	your	to	0	O
@@ -30367,7 +30367,7 @@ that	that	IN	imagine	they	0	O
 they	they	PRP	that	were	0	O
 were	were	VBD	they	some	0	O
 some	some	DT	were	unwarlike	0	O
-unwarlike	unwarlike	JJ	some	and	0	O
+unwarlike	unwarlike	JJ	some	and	0	B-NEG
 and	and	CC	unwarlike	harried	0	O
 harried	harried	JJ	and	race	0	O
 race	race	NN	harried	who	0	O
@@ -30378,7 +30378,7 @@ to	to	TO	forced	accept	0	O
 accept	accept	VB	to	that	0	O
 that	that	IN	accept	which	0	O
 which	which	WDT	that	none	0	O
-none	none	NN	which	other	0	O
+none	none	NN	which	other	0	B-NEG
 other	other	JJ	none	would	0	O
 would	would	MD	other	occupy	0	O
 occupy	occupy	VB	would	.	0	O
@@ -30467,7 +30467,7 @@ to	to	TO	up	today	0	O
 today	today	NN	to	there	0	O
 there	there	EX	today	was	0	O
 was	wa	VBD	there	nothing	0	O
-nothing	nothing	NN	was	of	0	O
+nothing	nothing	NN	was	of	0	B-NEG
 of	of	IN	nothing	importance	0	O
 importance	importance	NN	of	to	0	O
 to	to	TO	importance	relate	0	O
@@ -30573,7 +30573,7 @@ not	not	RB	has	been	0	B-NEG
 been	been	VBN	not	seen	0	O
 seen	seen	VBN	been	and	0	O
 and	and	CC	seen	nothing	0	O
-nothing	nothing	NN	and	has	0	O
+nothing	nothing	NN	and	has	0	B-NEG
 has	ha	VBZ	nothing	been	0	O
 been	been	VBN	has	heard	0	O
 heard	heard	VBN	been	of	0	O
@@ -32254,7 +32254,7 @@ that	that	IN	shows	the	0	O
 the	the	DT	that	test	0	O
 test	test	NN	the	was	0	O
 was	wa	VBD	test	worthless	0	O
-worthless	worthless	NN	was	and	0	O
+worthless	worthless	NN	was	and	0	B-NEG
 and	and	CC	worthless	that	0	O
 that	that	IN	and	we	0	O
 we	we	PRP	that	have	0	O
@@ -32851,7 +32851,7 @@ rooms	room	NNS	these	are	0	O
 are	are	VBP	rooms	unfurnished	0	O
 unfurnished	unfurnished	JJ	are	and	0	B-NEG
 and	and	CC	unfurnished	unoccupied	0	O
-unoccupied	unoccupied	VBD	and	so	0	O
+unoccupied	unoccupied	VBD	and	so	0	B-NEG
 so	so	RB	unoccupied	that	0	O
 that	that	IN	so	his	0	O
 his	his	PRP$	that	expedition	0	O
@@ -34118,7 +34118,7 @@ especially	especially	RB	and	that	0	O
 that	that	IN	especially	you	0	O
 you	you	PRP	that	should	0	O
 should	should	MD	you	not	0	O
-not	not	RB	should	go	0	O
+not	not	RB	should	go	0	B-NEG
 go	go	VB	not	alone	0	O
 alone	alone	RB	go	upon	0	O
 upon	upon	IN	alone	the	0	O
@@ -35003,7 +35003,7 @@ so	so	RB	witnessed	intimate	0	O
 intimate	intimate	VB	so	a	0	O
 a	a	DT	intimate	scene	0	O
 scene	scene	NN	a	without	0	O
-without	without	IN	scene	my	0	O
+without	without	IN	scene	my	0	B-NEG
 my	my	PRP$	without	friend	0	O
 friend	friend	NN	my	's	0	O
 's	's	POS	friend	knowledge	1	O
@@ -35554,7 +35554,7 @@ about	about	IN	talk	,	0	O
 and	and	CC	,	she	0	O
 she	she	PRP	and	would	0	O
 would	would	MD	she	n't	0	O
-n't	n't	RB	would	have	1	O
+n't	n't	RB	would	have	1	B-NEG
 have	have	VB	n't	let	0	O
 let	let	VB	have	me	0	O
 me	me	PRP	let	talk	0	O
@@ -35939,7 +35939,7 @@ be	be	VB	should	rejected	0	O
 rejected	rejected	VBN	be	so	0	O
 so	so	RB	rejected	brusquely	0	O
 brusquely	brusquely	RB	so	without	0	O
-without	without	IN	brusquely	any	0	O
+without	without	IN	brusquely	any	0	B-NEG
 any	any	DT	without	reference	0	O
 reference	reference	NN	any	to	0	O
 to	to	TO	reference	the	0	O
@@ -36044,7 +36044,7 @@ now	now	RB	say	that	0	O
 that	that	IN	now	he	0	O
 he	he	PRP	that	is	0	O
 is	is	VBZ	he	n't	0	O
-n't	n't	RB	is	a	1	O
+n't	n't	RB	is	a	1	B-NEG
 a	a	DT	n't	crazy	0	O
 crazy	crazy	JJ	a	man	0	O
 man	man	NN	crazy	,	0	O
@@ -36057,7 +36057,7 @@ henry	henry	NN	sir	;	0	O
 ``	``	``	;	i	1	O
 i	i	NN	``	ca	0	O
 ca	ca	MD	i	n't	0	O
-n't	n't	RB	ca	forget	1	O
+n't	n't	RB	ca	forget	1	B-NEG
 forget	forget	VB	n't	the	0	O
 the	the	DT	forget	look	0	O
 look	look	NN	the	in	0	O
@@ -36077,7 +36077,7 @@ i	i	NN	but	must	0	O
 must	must	MD	i	allow	0	O
 allow	allow	VB	must	that	0	O
 that	that	IN	allow	no	0	O
-no	no	DT	that	man	0	O
+no	no	DT	that	man	0	B-NEG
 man	man	NN	no	could	0	O
 could	could	MD	man	make	0	O
 make	make	VB	could	a	0	O
@@ -36220,7 +36220,7 @@ a	a	DT	for	time	0	O
 time	time	NN	a	he	0	O
 he	he	PRP	time	was	0	O
 was	wa	VBD	he	not	0	O
-not	not	RB	was	responsible	0	O
+not	not	RB	was	responsible	0	B-NEG
 responsible	responsible	JJ	not	for	0	O
 for	for	IN	responsible	what	0	O
 what	what	WP	for	he	0	O
@@ -36492,7 +36492,7 @@ agent	agent	NN	an	--	0	O
 that	that	IN	--	you	0	O
 you	you	PRP	that	do	0	O
 do	do	VBP	you	not	0	O
-not	not	RB	do	regret	0	O
+not	not	RB	do	regret	0	B-NEG
 regret	regret	VB	not	the	0	O
 the	the	DT	regret	confidence	0	O
 confidence	confidence	NN	the	which	0	O
@@ -37270,7 +37270,7 @@ sir	sir	JJ	,	henry	0	O
 henry	henry	NN	sir	--	0	O
 --	--	:	henry	do	1	O
 do	do	VBP	--	n't	0	O
-n't	n't	RB	do	ask	1	O
+n't	n't	RB	do	ask	1	B-NEG
 ask	ask	VB	n't	me	0	O
 me	me	PRP	ask	!	0	O
 !	!	.	me	i	1	O
@@ -37293,7 +37293,7 @@ and	and	CC	,	that	0	O
 that	that	IN	and	i	0	O
 i	i	NN	that	can	0	O
 can	can	MD	i	not	0	O
-not	not	RB	can	tell	0	O
+not	not	RB	can	tell	0	B-NEG
 tell	tell	VB	not	it	0	O
 it	it	PRP	tell	.	0	O
 .	.	.	it	if	1	O
@@ -37306,7 +37306,7 @@ but	but	CC	one	myself	0	O
 myself	myself	PRP	but	i	0	O
 i	i	RB	myself	would	0	O
 would	would	MD	i	not	0	O
-not	not	RB	would	try	0	O
+not	not	RB	would	try	0	B-NEG
 try	try	VB	not	to	0	O
 to	to	TO	try	keep	0	O
 keep	keep	VB	to	it	0	O
@@ -37455,17 +37455,17 @@ cried	cried	VBD	i	.	0	O
 ``	``	``	.	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	sir	1	O
 sir	sir	RB	,	,	0	O
 ,	,	,	sir	it	1	O
 it	it	PRP	,	is	0	O
 is	is	VBZ	it	nothing	0	O
-nothing	nothing	NN	is	--	0	O
+nothing	nothing	NN	is	--	0	B-NEG
 --	--	:	nothing	nothing	1	O
-nothing	nothing	NN	--	at	0	O
-at	at	IN	nothing	all	0	O
-all	all	DT	at	!	0	O
+nothing	nothing	NN	--	at	0	B-NEG
+at	at	IN	nothing	all	0	I-NEG
+all	all	DT	at	!	0	I-NEG
 !	!	.	all	''	1	O
 ''	''	''	!	the	1	O
 the	the	DT	''	butler	0	O
@@ -37638,13 +37638,13 @@ me	me	PRP	against	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	sir	1	O
 sir	sir	NN	,	;	0	O
 ;	;	:	sir	no	1	O
-no	no	DT	;	,	0	O
+no	no	DT	;	,	0	B-NEG
 ,	,	,	no	not	1	O
-not	not	RB	,	against	0	O
+not	not	RB	,	against	0	B-NEG
 against	against	IN	not	you	0	O
 you	you	PRP	against	!	0	O
 !	!	.	you	''	1	O
@@ -37873,7 +37873,7 @@ and	and	CC	secret	that	0	O
 that	that	IN	and	i	0	O
 i	i	NN	that	could	0	O
 could	could	MD	i	not	0	O
-not	not	RB	could	tell	0	O
+not	not	RB	could	tell	0	B-NEG
 tell	tell	VB	not	it	0	O
 it	it	PRP	tell	to	0	O
 to	to	TO	it	you	0	O
@@ -38588,9 +38588,9 @@ for	for	IN	scoundrel	whom	0	O
 whom	whom	WP	for	there	0	O
 there	there	EX	whom	was	0	O
 was	wa	VBD	there	neither	0	O
-neither	neither	DT	was	pity	0	O
+neither	neither	DT	was	pity	0	B-NEG
 pity	pity	NN	neither	nor	0	O
-nor	nor	CC	pity	excuse	0	O
+nor	nor	CC	pity	excuse	0	B-NEG
 excuse	excuse	NN	nor	.	0	O
 .	.	.	excuse	we	1	O
 we	we	PRP	.	were	0	O
@@ -39327,7 +39327,7 @@ bird	bird	NN	strange	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	it	1	O
 it	it	PRP	,	was	0	O
 was	wa	VBD	it	a	0	O
@@ -39377,7 +39377,7 @@ watson	watson	VB	,	?	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	.	0	O
+no	no	DT	,	.	0	B-NEG
 .	.	.	no	''	1	O
 ''	''	''	.	``	1	O
 ``	``	``	''	and	1	O
@@ -39970,7 +39970,7 @@ thinking	thinking	VBG	for	that	0	O
 that	that	IN	thinking	all	0	O
 all	all	DT	that	was	0	O
 was	wa	VBD	all	not	0	O
-not	not	RB	was	well	0	O
+not	not	RB	was	well	0	B-NEG
 well	well	RB	not	,	0	O
 ,	,	,	well	but	1	O
 but	but	CC	,	i	0	O
@@ -40142,7 +40142,7 @@ not	not	RB	and	to	0	B-NEG
 to	to	TO	not	shoot	0	O
 shoot	shoot	VB	to	an	0	O
 an	an	DT	shoot	unarmed	0	O
-unarmed	unarmed	JJ	an	man	0	O
+unarmed	unarmed	JJ	an	man	0	B-NEG
 man	man	NN	unarmed	who	0	O
 who	who	WP	man	was	0	O
 was	wa	VBD	who	running	0	O
@@ -40504,7 +40504,7 @@ of	of	IN	trace	that	0	O
 that	that	DT	of	silent	0	O
 silent	silent	NN	that	and	0	O
 and	and	CC	silent	motionless	0	O
-motionless	motionless	JJ	and	figure	0	O
+motionless	motionless	JJ	and	figure	0	B-NEG
 figure	figure	NN	motionless	.	0	O
 .	.	.	figure	i	1	O
 i	i	NN	.	wished	0	O
@@ -40570,7 +40570,7 @@ the	the	DT	upon	tor	0	O
 tor	tor	NN	the	and	0	O
 and	and	CC	tor	could	0	O
 could	could	MD	and	not	0	O
-not	not	RB	could	feel	0	O
+not	not	RB	could	feel	0	B-NEG
 feel	feel	VB	not	the	0	O
 the	the	DT	feel	thrill	0	O
 thrill	thrill	NN	the	which	0	O
@@ -41187,7 +41187,7 @@ hound	hound	NN	a	.	0	O
 .	.	.	hound	it	1	O
 it	it	PRP	.	is	0	O
 is	is	VBZ	it	incredible	0	O
-incredible	incredible	JJ	is	,	0	O
+incredible	incredible	JJ	is	,	0	B-NEG
 ,	,	,	incredible	impossible	1	O
 impossible	impossible	JJ	,	,	0	B-NEG
 ,	,	,	impossible	that	1	O
@@ -42001,7 +42001,7 @@ henry	henry	NN	sir	--	0	O
 indeed	indeed	RB	--	i	0	O
 i	i	NN	indeed	did	0	O
 did	did	VBD	i	n't	0	O
-n't	n't	RB	did	.	1	O
+n't	n't	RB	did	.	1	B-NEG
 .	.	.	n't	''	1	O
 ''	''	''	.	``	1	O
 ``	``	``	''	the	1	O
@@ -42193,7 +42193,7 @@ n't	n't	RB	ca	tell	1	B-NEG
 tell	tell	VB	n't	on	0	O
 on	on	IN	tell	him	0	O
 him	him	PRP	on	without	0	O
-without	without	IN	him	getting	0	O
+without	without	IN	him	getting	0	B-NEG
 getting	getting	VBG	without	my	0	O
 my	my	PRP$	getting	wife	0	O
 wife	wife	NN	my	and	0	O
@@ -42519,7 +42519,7 @@ sir	sir	NN	,	,	0	O
 ,	,	,	sir	i	1	O
 i	i	NN	,	do	0	O
 do	do	VBP	i	n't	0	O
-n't	n't	RB	do	know	1	O
+n't	n't	RB	do	know	1	B-NEG
 know	know	VB	n't	that	0	O
 that	that	DT	know	.	0	O
 .	.	.	that	''	1	O
@@ -42718,13 +42718,13 @@ the	the	DT	of	matter	0	O
 matter	matter	NN	the	,	0	O
 ,	,	,	matter	and	1	O
 and	and	CC	,	never	0	O
-never	never	RB	and	would	0	O
+never	never	RB	and	would	0	B-NEG
 would	would	MD	never	have	0	O
 have	have	VB	would	done	0	O
 done	done	VBN	have	had	0	O
 had	had	VBD	done	it	0	O
 it	it	PRP	had	not	0	O
-not	not	RB	it	been	0	O
+not	not	RB	it	been	0	B-NEG
 been	been	VBN	not	for	0	O
 for	for	IN	been	my	0	O
 my	my	PRP$	for	wife	0	O
@@ -43120,7 +43120,7 @@ would	would	MD	it	be	0	O
 be	be	VB	would	treating	0	O
 treating	treating	VBG	be	you	0	O
 you	you	PRP	treating	unfairly	0	O
-unfairly	unfairly	RB	you	not	0	O
+unfairly	unfairly	RB	you	not	0	B-NEG
 not	not	RB	unfairly	to	0	B-NEG
 to	to	TO	not	tell	0	O
 tell	tell	VB	to	you	0	O
@@ -43883,7 +43883,7 @@ for	for	IN	folk	whom	0	O
 whom	whom	WP	for	i	0	O
 i	i	NN	whom	ca	0	O
 ca	ca	MD	i	n't	0	O
-n't	n't	RB	ca	answer	1	O
+n't	n't	RB	ca	answer	1	B-NEG
 answer	answer	VB	n't	,	0	O
 ,	,	,	answer	but	1	O
 but	but	CC	,	among	0	O
@@ -44015,7 +44015,7 @@ because	because	IN	her	she	0	O
 she	she	PRP	because	had	0	O
 had	had	VBD	she	married	0	O
 married	married	VBN	had	without	0	O
-without	without	IN	married	his	0	O
+without	without	IN	married	his	0	B-NEG
 his	his	PRP$	without	consent	0	O
 consent	consent	NN	his	and	0	O
 and	and	CC	consent	perhaps	0	O
@@ -44175,7 +44175,7 @@ much	much	RB	too	,	0	O
 for	for	IN	,	there	0	O
 there	there	EX	for	is	0	O
 is	is	VBZ	there	no	0	O
-no	no	DT	is	reason	0	O
+no	no	DT	is	reason	0	B-NEG
 reason	reason	NN	no	why	0	O
 why	why	WRB	reason	we	0	O
 we	we	PRP	why	should	0	O
@@ -44605,7 +44605,7 @@ sir	sir	NN	,	,	0	O
 that	that	IN	,	i	0	O
 i	i	NN	that	do	0	O
 do	do	VBP	i	n't	0	O
-n't	n't	RB	do	like	1	O
+n't	n't	RB	do	like	1	B-NEG
 like	like	VB	n't	it	0	O
 it	it	PRP	like	.	0	O
 .	.	.	it	''	1	O
@@ -45515,7 +45515,7 @@ behind	behind	IN	henry	,	0	O
 therefore	therefore	RB	,	,	0	O
 ,	,	,	therefore	not	1	O
 not	not	RB	,	without	0	B-NEG
-without	without	IN	not	some	0	O
+without	without	IN	not	some	0	B-NEG
 some	some	DT	without	prickings	0	O
 prickings	pricking	NNS	some	of	0	O
 of	of	IN	prickings	conscience	0	O
@@ -45845,7 +45845,7 @@ said	said	VBD	she	.	0	O
 i	i	JJ	``	owe	0	O
 owe	owe	VBP	i	him	0	O
 him	him	PRP	owe	nothing	0	O
-nothing	nothing	NN	him	,	0	O
+nothing	nothing	NN	him	,	0	B-NEG
 ,	,	,	nothing	and	1	O
 and	and	CC	,	his	0	O
 his	his	PRP$	and	friends	0	O
@@ -46812,7 +46812,7 @@ from	from	IN	rose	this	0	O
 this	this	DT	from	long	0	O
 long	long	JJ	this	and	0	O
 and	and	CC	long	inconclusive	0	O
-inconclusive	inconclusive	JJ	and	interview	0	O
+inconclusive	inconclusive	JJ	and	interview	0	B-NEG
 interview	interview	NN	inconclusive	,	0	O
 ,	,	,	interview	``	1	O
 ``	``	``	,	you	1	O
@@ -47314,7 +47314,7 @@ say	say	VB	to	that	0	O
 that	that	IN	say	she	0	O
 she	she	PRP	that	had	0	O
 had	had	VBD	she	not	0	O
-not	not	RB	had	been	0	O
+not	not	RB	had	been	0	B-NEG
 been	been	VBN	not	to	0	O
 to	to	TO	been	baskerville	0	O
 baskerville	baskerville	VB	to	hall	0	O
@@ -47338,7 +47338,7 @@ there	there	RB	her	,	0	O
 ,	,	,	there	and	1	O
 and	and	CC	,	could	0	O
 could	could	MD	and	not	0	O
-not	not	RB	could	have	0	O
+not	not	RB	could	have	0	B-NEG
 have	have	VB	not	returned	0	O
 returned	returned	VBN	have	to	0	O
 to	to	TO	returned	coombe	0	O
@@ -48210,7 +48210,7 @@ none	none	NN	``	,	0	B-NEG
 ,	,	,	none	sir	1	O
 sir	sir	NN	,	,	0	O
 ,	,	,	sir	none	1	O
-none	none	NN	,	.	0	O
+none	none	NN	,	.	0	B-NEG
 .	.	.	none	i	1	O
 i	i	NN	.	am	0	O
 am	am	VBP	i	proud	0	O
@@ -49499,7 +49499,7 @@ was	wa	VBD	there	no	0	O
 no	no	DT	was	sound	0	B-NEG
 sound	sound	NN	no	and	0	O
 and	and	CC	sound	no	0	O
-no	no	DT	and	movement	0	O
+no	no	DT	and	movement	0	B-NEG
 movement	movement	NN	no	.	0	O
 .	.	.	movement	one	1	O
 one	one	CD	.	great	0	O
@@ -50091,7 +50091,7 @@ the	the	DT	upon	moor	0	O
 moor	moor	NN	the	which	0	O
 which	which	WDT	moor	had	0	O
 had	had	VBD	which	not	0	O
-not	not	RB	had	been	0	O
+not	not	RB	had	been	0	B-NEG
 been	been	VBN	not	observed	0	O
 observed	observed	VBN	been	and	0	O
 and	and	CC	observed	reported	0	O
@@ -50177,7 +50177,7 @@ of	of	IN	anything	the	0	O
 the	the	DT	of	kind	0	O
 kind	kind	NN	the	,	0	O
 ,	,	,	kind	nor	1	O
-nor	nor	CC	,	could	0	O
+nor	nor	CC	,	could	0	B-NEG
 could	could	MD	nor	i	0	O
 i	i	VB	could	discover	0	O
 discover	discover	RP	i	any	0	O
@@ -50246,7 +50246,7 @@ kept	kept	VBN	had	him	0	O
 him	him	PRP	kept	in	0	O
 in	in	IN	him	that	0	O
 that	that	DT	in	inhospitable	0	O
-inhospitable	inhospitable	JJ	that	abode	0	O
+inhospitable	inhospitable	JJ	that	abode	0	B-NEG
 abode	abode	NN	inhospitable	.	0	O
 .	.	.	abode	was	1	O
 was	wa	VBD	.	he	0	O
@@ -50856,7 +50856,7 @@ presume	presume	NN	i	?	0	O
 ?	?	.	presume	''	1	O
 ''	''	''	?	``	1	O
 ``	``	``	''	no	1	O
-no	no	DT	``	,	0	O
+no	no	DT	``	,	0	B-NEG
 ,	,	,	no	watson	1	O
 watson	watson	NN	,	,	0	O
 ,	,	,	watson	i	1	O
@@ -51477,7 +51477,7 @@ and	and	CC	,	i	0	O
 i	i	RB	and	remain	0	O
 remain	remain	VBP	i	an	0	O
 an	an	DT	remain	unknown	0	O
-unknown	unknown	JJ	an	factor	0	O
+unknown	unknown	JJ	an	factor	0	B-NEG
 factor	factor	NN	unknown	in	0	O
 in	in	IN	factor	the	0	O
 the	the	DT	in	business	0	O
@@ -53198,7 +53198,7 @@ heavy	heavy	JJ	the	silence	0	O
 silence	silence	NN	heavy	of	0	O
 of	of	IN	silence	the	0	O
 the	the	DT	of	windless	0	O
-windless	windless	NN	the	night	0	O
+windless	windless	NN	the	night	0	B-NEG
 night	night	NN	windless	.	0	O
 .	.	.	night	i	1	O
 i	i	NN	.	saw	0	O
@@ -53240,10 +53240,10 @@ late	late	JJ	too	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	surely	1	O
 surely	surely	RB	,	not	0	O
-not	not	RB	surely	!	0	O
+not	not	RB	surely	!	0	B-NEG
 !	!	.	not	''	1	O
 ''	''	''	!	``	1	O
 ``	``	``	''	fool	1	O
@@ -54822,7 +54822,7 @@ show	show	VB	to	your	0	O
 your	your	PRP$	show	suspicions	0	O
 suspicions	suspicion	NNS	your	--	0	O
 --	--	:	suspicions	not	1	O
-not	not	RB	--	a	0	O
+not	not	RB	--	a	0	B-NEG
 a	a	DT	not	word	0	O
 word	word	NN	a	,	0	O
 ,	,	,	word	or	1	O
@@ -54939,7 +54939,7 @@ hurt	hurt	VB	somebody	?	0	O
 not	not	RB	?	--	0	B-NEG
 --	--	:	not	do	1	O
 do	do	VBP	--	n't	0	O
-n't	n't	RB	do	tell	1	O
+n't	n't	RB	do	tell	1	B-NEG
 tell	tell	VB	n't	me	0	O
 me	me	PRP	tell	that	0	O
 that	that	IN	me	it	0	O
@@ -56182,7 +56182,7 @@ fact	fact	NN	the	that	0	O
 that	that	IN	fact	we	0	O
 we	we	PRP	that	have	0	O
 have	have	VBP	we	no	0	O
-no	no	DT	have	case	0	O
+no	no	DT	have	case	0	B-NEG
 case	case	NN	no	at	0	O
 at	at	IN	case	present	0	O
 present	present	NN	at	,	0	O
@@ -56653,7 +56653,7 @@ i	i	NN	if	had	0	O
 had	had	VBD	i	n't	0	O
 n't	n't	RB	had	sworn	1	B-NEG
 sworn	sworn	VBN	n't	not	0	O
-not	not	RB	sworn	to	0	O
+not	not	RB	sworn	to	0	B-NEG
 to	to	TO	not	go	0	O
 go	go	VB	to	about	0	O
 about	about	IN	go	alone	0	O
@@ -58794,7 +58794,7 @@ and	and	CC	nerve	courage	0	O
 courage	courage	NN	and	i	0	O
 i	i	NN	courage	would	0	O
 would	would	MD	i	not	0	O
-not	not	RB	would	suggest	0	O
+not	not	RB	would	suggest	0	B-NEG
 suggest	suggest	VB	not	it	0	O
 it	it	PRP	suggest	,	0	O
 ,	,	,	it	but	1	O
@@ -58941,7 +58941,7 @@ go	go	VB	to	with	0	O
 with	with	IN	go	him	0	O
 him	him	PRP	with	,	0	O
 ,	,	,	him	nor	1	O
-nor	nor	CC	,	could	0	O
+nor	nor	CC	,	could	0	B-NEG
 could	could	MD	nor	i	0	O
 i	i	VB	could	understand	0	O
 understand	understand	VB	i	how	0	O
@@ -63013,7 +63013,7 @@ bloodhound	bloodhound	NN	pure	and	0	O
 and	and	CC	bloodhound	it	0	O
 it	it	PRP	and	was	0	O
 was	wa	VBD	it	not	0	O
-not	not	RB	was	a	0	O
+not	not	RB	was	a	0	B-NEG
 a	a	DT	not	pure	0	O
 pure	pure	NN	a	mastiff	0	O
 mastiff	mastiff	NN	pure	;	0	O
@@ -63432,7 +63432,7 @@ certain	certain	JJ	be	.	0	O
 .	.	.	certain	no	1	O
 no	no	DT	.	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	RB	,	,	0	O
+no	no	RB	,	,	0	B-NEG
 ,	,	,	no	he	1	O
 he	he	PRP	,	's	0	O
 's	's	VBZ	he	gone	1	O
@@ -63501,12 +63501,12 @@ the	the	DT	up	lamp	0	O
 lamp	lamp	NN	the	and	0	O
 and	and	CC	lamp	left	0	O
 left	left	VBD	and	no	0	O
-no	no	DT	left	corner	0	O
+no	no	DT	left	corner	0	B-NEG
 corner	corner	NN	no	of	0	O
 of	of	IN	corner	the	0	O
 the	the	DT	of	house	0	O
 house	house	NN	the	unexplored	0	O
-unexplored	unexplored	VBD	house	.	0	O
+unexplored	unexplored	VBD	house	.	0	B-NEG
 .	.	.	unexplored	no	1	O
 no	no	DT	.	sign	0	B-NEG
 sign	sign	NN	no	could	0	O
@@ -63921,11 +63921,11 @@ madam	madam	FW	,	.	0	O
 ``	``	``	''	no	1	O
 no	no	DT	``	,	0	B-NEG
 ,	,	,	no	no	1	O
-no	no	DT	,	,	0	O
+no	no	DT	,	,	0	B-NEG
 ,	,	,	no	i	1	O
 i	i	RB	,	did	0	O
 did	did	VBD	i	not	0	O
-not	not	RB	did	mean	0	O
+not	not	RB	did	mean	0	B-NEG
 mean	mean	VB	not	my	0	O
 my	my	PRP$	mean	husband	0	O
 husband	husband	NN	my	.	0	O
@@ -64010,7 +64010,7 @@ this	this	DT	but	is	0	O
 is	is	VBZ	this	nothing	0	O
 nothing	nothing	NN	is	--	0	B-NEG
 --	--	:	nothing	nothing	1	O
-nothing	nothing	NN	--	!	0	O
+nothing	nothing	NN	--	!	0	B-NEG
 !	!	.	nothing	it	1	O
 it	it	PRP	!	is	0	O
 is	is	VBZ	it	my	0	O
@@ -64773,7 +64773,7 @@ him	him	PRP	drag	out	0	O
 out	out	RP	him	he	0	O
 he	he	PRP	out	could	0	O
 could	could	MD	he	never	0	O
-never	never	RB	could	have	0	O
+never	never	RB	could	have	0	B-NEG
 have	have	VB	never	set	0	O
 set	set	VBN	have	his	0	O
 his	his	PRP$	set	foot	0	O
@@ -65170,7 +65170,7 @@ secret	secret	JJ	any	which	0	O
 which	which	WDT	secret	we	0	O
 we	we	PRP	which	have	0	O
 have	have	VBP	we	not	0	O
-not	not	RB	have	already	0	O
+not	not	RB	have	already	0	B-NEG
 already	already	RB	not	fathomed	0	O
 fathomed	fathomed	VBN	already	.	0	O
 .	.	.	fathomed	he	1	O
@@ -65198,7 +65198,7 @@ even	even	RB	which	in	0	O
 in	in	IN	even	daylight	0	O
 daylight	daylight	NN	in	were	0	O
 were	were	VBD	daylight	not	0	O
-not	not	RB	were	pleasant	0	O
+not	not	RB	were	pleasant	0	B-NEG
 pleasant	pleasant	JJ	not	to	0	O
 to	to	TO	pleasant	hear	0	O
 hear	hear	VB	to	.	0	O

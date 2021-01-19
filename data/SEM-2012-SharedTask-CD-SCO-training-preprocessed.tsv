@@ -16,10 +16,10 @@ in	O
 the	O
 mornings	O
 ,	O
-save	O
+save	B-NEG
 upon	O
 those	O
-not	O
+not	B-NEG
 infrequent	B-NEG
 occasions	O
 when	O
@@ -252,7 +252,7 @@ miss	O
 him	O
 and	O
 have	O
-no	O
+no	B-NEG
 notion	O
 of	O
 his	O
@@ -871,18 +871,18 @@ all	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 my	O
 dear	O
 watson	O
 ,	O
-not	O
+not	B-NEG
 all	O
 --	O
-by	O
-no	O
-means	O
+by	B-NEG
+no	I-NEG
+means	I-NEG
 all	O
 .	O
 i	O
@@ -1210,7 +1210,7 @@ such	O
 a	O
 one	O
 would	O
-not	O
+not	B-NEG
 drift	O
 into	O
 the	O
@@ -1371,7 +1371,7 @@ at	O
 least	O
 it	O
 is	O
-not	O
+not	B-NEG
 difficult	O
 to	O
 find	O
@@ -1626,7 +1626,7 @@ leaves	O
 his	O
 stick	O
 and	O
-not	O
+not	B-NEG
 his	O
 visiting-card	O
 after	O
@@ -2563,7 +2563,7 @@ no	B-NEG
 ,	O
 sir	O
 ,	O
-no	O
+no	B-NEG
 ;	O
 though	O
 i	O
@@ -2718,7 +2718,7 @@ that	O
 i	O
 have	O
 not	B-NEG
-inadvertently	O
+inadvertently	B-NEG
 --	O
 ''	O
 ``	O
@@ -3368,7 +3368,7 @@ suffered	O
 so	O
 grievously	O
 may	O
-not	O
+not	B-NEG
 again	O
 be	O
 loosed	O
@@ -3432,7 +3432,7 @@ wild	O
 profane	O
 ,	O
 and	O
-godless	O
+godless	B-NEG
 man	O
 .	O
 this	O
@@ -4493,7 +4493,7 @@ of	O
 her	O
 body	O
 ,	O
-nor	O
+nor	B-NEG
 yet	O
 was	O
 it	O
@@ -4712,7 +4712,7 @@ the	O
 family	O
 have	O
 been	O
-unhappy	O
+unhappy	B-NEG
 in	O
 their	O
 deaths	O
@@ -4741,7 +4741,7 @@ providence	O
 ,	O
 which	O
 would	O
-not	O
+not	B-NEG
 forever	O
 punish	O
 the	O
@@ -5794,8 +5794,8 @@ a	O
 symptom	O
 which	O
 is	O
-not	O
-unusual	O
+not	B-NEG
+unusual	B-NEG
 in	O
 cases	O
 of	O
@@ -6246,12 +6246,12 @@ with	O
 you	O
 there	O
 is	O
-no	O
+no	B-NEG
 reason	O
 why	O
 i	O
 should	O
-not	O
+not	B-NEG
 be	O
 perfectly	O
 frank	O
@@ -6999,7 +6999,7 @@ body	O
 ,	O
 which	O
 had	O
-not	O
+not	B-NEG
 been	O
 touched	O
 until	O
@@ -7282,7 +7282,7 @@ thought	O
 .	O
 i	O
 do	O
-n't	O
+n't	B-NEG
 suppose	O
 i	O
 should	O
@@ -7903,7 +7903,7 @@ in	O
 mr.	O
 holmes	O
 ,	O
-without	O
+without	B-NEG
 disclosing	O
 these	O
 facts	O
@@ -7919,7 +7919,7 @@ given	O
 my	O
 reasons	O
 for	O
-not	O
+not	B-NEG
 wishing	O
 to	O
 do	O
@@ -11743,7 +11743,7 @@ confess	O
 that	O
 i	O
 see	O
-no	O
+no	B-NEG
 connection	O
 .	O
 ''	O
@@ -12525,7 +12525,7 @@ a	O
 letter	O
 would	O
 be	O
-careless	O
+careless	B-NEG
 .	O
 if	O
 he	O
@@ -13911,7 +13911,7 @@ holmes	O
 and	O
 there	O
 is	O
-no	O
+no	B-NEG
 man	O
 upon	O
 earth	O
@@ -15268,7 +15268,7 @@ sir	O
 indeed	O
 i	O
 have	O
-not	O
+not	B-NEG
 .	O
 you	O
 saved	O
@@ -15967,7 +15967,7 @@ very	O
 active	O
 gentleman	O
 ,	O
-not	O
+not	B-NEG
 older	O
 than	O
 yourself	O
@@ -16525,7 +16525,7 @@ but	O
 i	O
 can	O
 hear	O
-no	O
+no	B-NEG
 word	O
 of	O
 it	O
@@ -16980,7 +16980,7 @@ whom	O
 ``	O
 that	O
 ,	O
-unfortunately	O
+unfortunately	B-NEG
 ,	O
 is	O
 what	O
@@ -17295,7 +17295,7 @@ mighty	O
 fine	O
 home	O
 and	O
-nothing	O
+nothing	B-NEG
 to	O
 do	O
 .	O
@@ -17768,7 +17768,7 @@ holmes	O
 ,	O
 i	O
 have	O
-not	O
+not	B-NEG
 .	O
 i	O
 've	O
@@ -18495,7 +18495,7 @@ of	O
 the	O
 matter	O
 ,	O
-nor	O
+nor	B-NEG
 could	O
 any	O
 inquiry	O
@@ -19753,7 +19753,7 @@ no	B-NEG
 ,	O
 i	O
 ca	O
-n't	O
+n't	B-NEG
 say	O
 that	O
 .	O
@@ -19772,7 +19772,7 @@ no	B-NEG
 ,	O
 sir	O
 ;	O
-nothing	O
+nothing	B-NEG
 .	O
 ''	O
 ``	O
@@ -20321,7 +20321,7 @@ them	O
 .	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 we	O
 will	O
@@ -20514,7 +20514,7 @@ no	B-NEG
 ,	O
 we	O
 have	O
-no	O
+no	B-NEG
 news	O
 of	O
 any	O
@@ -20560,14 +20560,14 @@ have	O
 never	B-NEG
 gone	O
 out	O
-without	O
+without	B-NEG
 keeping	O
 a	O
 sharp	O
 watch	O
 ,	O
 and	O
-no	O
+no	B-NEG
 one	O
 could	O
 have	O
@@ -20958,7 +20958,7 @@ devonshire	O
 man	O
 who	O
 did	O
-not	O
+not	B-NEG
 swear	O
 by	O
 his	O
@@ -22494,7 +22494,7 @@ voice	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 the	O
 yew	O
@@ -23989,7 +23989,7 @@ the	O
 sleep	O
 which	O
 would	O
-not	O
+not	B-NEG
 come	O
 .	O
 far	O
@@ -25076,7 +25076,7 @@ complain	O
 ''	O
 it	O
 seemed	O
-hopeless	O
+hopeless	B-NEG
 to	O
 pursue	O
 the	O
@@ -25102,7 +25102,7 @@ proof	O
 that	O
 barrymore	O
 had	O
-not	O
+not	B-NEG
 been	O
 in	O
 london	O
@@ -25271,7 +25271,7 @@ to	O
 be	O
 weaving	O
 an	O
-invisible	O
+invisible	B-NEG
 net	O
 round	O
 the	O
@@ -25979,7 +25979,7 @@ intended	O
 ``	O
 it	O
 is	O
-useless	O
+useless	B-NEG
 for	O
 us	O
 to	O
@@ -26015,7 +26015,7 @@ could	O
 not	B-NEG
 celebrate	O
 him	O
-without	O
+without	B-NEG
 being	O
 known	O
 yourself	O
@@ -26255,7 +26255,7 @@ i	O
 feel	O
 was	O
 an	O
-unjustifiable	O
+unjustifiable	B-NEG
 intrusion	O
 ,	O
 and	O
@@ -27347,7 +27347,7 @@ something	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 that	O
 was	O
@@ -27373,7 +27373,7 @@ booming	O
 ?	O
 ''	O
 ``	O
-no	O
+no	B-NEG
 ,	O
 i	O
 never	B-NEG
@@ -27742,12 +27742,12 @@ jerky	O
 ,	O
 zigzag	O
 ,	O
-irregular	O
+irregular	B-NEG
 progress	O
 made	O
 him	O
 not	B-NEG
-unlike	O
+unlike	B-NEG
 some	O
 huge	O
 moth	O
@@ -28417,7 +28417,7 @@ baskerville	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 ''	O
 said	O
@@ -28663,7 +28663,7 @@ their	O
 windows	O
 at	O
 the	O
-interminable	O
+interminable	B-NEG
 granite-flecked	O
 moor	O
 rolling	O
@@ -28855,7 +28855,7 @@ of	O
 my	O
 capital	O
 was	O
-irretrievably	O
+irretrievably	B-NEG
 swallowed	O
 up	O
 .	O
@@ -28899,7 +28899,7 @@ zoology	O
 i	O
 find	O
 an	O
-unlimited	O
+unlimited	B-NEG
 field	O
 of	O
 work	O
@@ -28973,11 +28973,11 @@ sister	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 i	O
 am	O
-never	O
+never	B-NEG
 dull	O
 ,	O
 ''	O
@@ -29506,7 +29506,7 @@ do	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 .	O
 i	O
 remember	O
@@ -29871,7 +29871,7 @@ move	O
 ``	O
 i	O
 can	O
-not	O
+not	B-NEG
 say	O
 anything	O
 definite	O
@@ -29914,7 +29914,7 @@ me	O
 why	O
 should	O
 you	O
-not	O
+not	B-NEG
 wish	O
 your	O
 brother	O
@@ -30367,7 +30367,7 @@ that	O
 they	O
 were	O
 some	O
-unwarlike	O
+unwarlike	B-NEG
 and	O
 harried	O
 race	O
@@ -30378,7 +30378,7 @@ to	O
 accept	O
 that	O
 which	O
-none	O
+none	B-NEG
 other	O
 would	O
 occupy	O
@@ -30467,7 +30467,7 @@ to	O
 today	O
 there	O
 was	O
-nothing	O
+nothing	B-NEG
 of	O
 importance	O
 to	O
@@ -30573,7 +30573,7 @@ not	B-NEG
 been	O
 seen	O
 and	O
-nothing	O
+nothing	B-NEG
 has	O
 been	O
 heard	O
@@ -32254,7 +32254,7 @@ that	O
 the	O
 test	O
 was	O
-worthless	O
+worthless	B-NEG
 and	O
 that	O
 we	O
@@ -32851,7 +32851,7 @@ rooms	O
 are	O
 unfurnished	B-NEG
 and	O
-unoccupied	O
+unoccupied	B-NEG
 so	O
 that	O
 his	O
@@ -34118,7 +34118,7 @@ especially	O
 that	O
 you	O
 should	O
-not	O
+not	B-NEG
 go	O
 alone	O
 upon	O
@@ -35003,7 +35003,7 @@ so	O
 intimate	O
 a	O
 scene	O
-without	O
+without	B-NEG
 my	O
 friend	O
 's	O
@@ -35554,7 +35554,7 @@ about	O
 and	O
 she	O
 would	O
-n't	O
+n't	B-NEG
 have	O
 let	O
 me	O
@@ -35939,7 +35939,7 @@ be	O
 rejected	O
 so	O
 brusquely	O
-without	O
+without	B-NEG
 any	O
 reference	O
 to	O
@@ -36044,7 +36044,7 @@ now	O
 that	O
 he	O
 is	O
-n't	O
+n't	B-NEG
 a	O
 crazy	O
 man	O
@@ -36057,7 +36057,7 @@ henry	O
 ``	O
 i	O
 ca	O
-n't	O
+n't	B-NEG
 forget	O
 the	O
 look	O
@@ -36077,7 +36077,7 @@ i	O
 must	O
 allow	O
 that	O
-no	O
+no	B-NEG
 man	O
 could	O
 make	O
@@ -36220,7 +36220,7 @@ a	O
 time	O
 he	O
 was	O
-not	O
+not	B-NEG
 responsible	O
 for	O
 what	O
@@ -36492,7 +36492,7 @@ agent	O
 that	O
 you	O
 do	O
-not	O
+not	B-NEG
 regret	O
 the	O
 confidence	O
@@ -37270,7 +37270,7 @@ sir	O
 henry	O
 --	O
 do	O
-n't	O
+n't	B-NEG
 ask	O
 me	O
 !	O
@@ -37293,7 +37293,7 @@ and	O
 that	O
 i	O
 can	O
-not	O
+not	B-NEG
 tell	O
 it	O
 .	O
@@ -37306,7 +37306,7 @@ but	O
 myself	O
 i	O
 would	O
-not	O
+not	B-NEG
 try	O
 to	O
 keep	O
@@ -37455,17 +37455,17 @@ cried	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 sir	O
 ,	O
 it	O
 is	O
-nothing	O
+nothing	B-NEG
 --	O
-nothing	O
-at	O
-all	O
+nothing	B-NEG
+at	I-NEG
+all	I-NEG
 !	O
 ''	O
 the	O
@@ -37638,13 +37638,13 @@ me	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 sir	O
 ;	O
-no	O
+no	B-NEG
 ,	O
-not	O
+not	B-NEG
 against	O
 you	O
 !	O
@@ -37873,7 +37873,7 @@ and	O
 that	O
 i	O
 could	O
-not	O
+not	B-NEG
 tell	O
 it	O
 to	O
@@ -38588,9 +38588,9 @@ for	O
 whom	O
 there	O
 was	O
-neither	O
+neither	B-NEG
 pity	O
-nor	O
+nor	B-NEG
 excuse	O
 .	O
 we	O
@@ -39327,7 +39327,7 @@ bird	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 it	O
 was	O
@@ -39377,7 +39377,7 @@ watson	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 .	O
 ''	O
 ``	O
@@ -39970,7 +39970,7 @@ thinking	O
 that	O
 all	O
 was	O
-not	O
+not	B-NEG
 well	O
 ,	O
 but	O
@@ -40142,7 +40142,7 @@ not	B-NEG
 to	O
 shoot	O
 an	O
-unarmed	O
+unarmed	B-NEG
 man	O
 who	O
 was	O
@@ -40504,7 +40504,7 @@ of	O
 that	O
 silent	O
 and	O
-motionless	O
+motionless	B-NEG
 figure	O
 .	O
 i	O
@@ -40570,7 +40570,7 @@ the	O
 tor	O
 and	O
 could	O
-not	O
+not	B-NEG
 feel	O
 the	O
 thrill	O
@@ -41187,7 +41187,7 @@ hound	O
 .	O
 it	O
 is	O
-incredible	O
+incredible	B-NEG
 ,	O
 impossible	B-NEG
 ,	O
@@ -42001,7 +42001,7 @@ henry	O
 indeed	O
 i	O
 did	O
-n't	O
+n't	B-NEG
 .	O
 ''	O
 ``	O
@@ -42193,7 +42193,7 @@ n't	B-NEG
 tell	O
 on	O
 him	O
-without	O
+without	B-NEG
 getting	O
 my	O
 wife	O
@@ -42519,7 +42519,7 @@ sir	O
 ,	O
 i	O
 do	O
-n't	O
+n't	B-NEG
 know	O
 that	O
 .	O
@@ -42718,13 +42718,13 @@ the	O
 matter	O
 ,	O
 and	O
-never	O
+never	B-NEG
 would	O
 have	O
 done	O
 had	O
 it	O
-not	O
+not	B-NEG
 been	O
 for	O
 my	O
@@ -43120,7 +43120,7 @@ would	O
 be	O
 treating	O
 you	O
-unfairly	O
+unfairly	B-NEG
 not	B-NEG
 to	O
 tell	O
@@ -43883,7 +43883,7 @@ for	O
 whom	O
 i	O
 ca	O
-n't	O
+n't	B-NEG
 answer	O
 ,	O
 but	O
@@ -44015,7 +44015,7 @@ because	O
 she	O
 had	O
 married	O
-without	O
+without	B-NEG
 his	O
 consent	O
 and	O
@@ -44175,7 +44175,7 @@ much	O
 for	O
 there	O
 is	O
-no	O
+no	B-NEG
 reason	O
 why	O
 we	O
@@ -44605,7 +44605,7 @@ sir	O
 that	O
 i	O
 do	O
-n't	O
+n't	B-NEG
 like	O
 it	O
 .	O
@@ -45515,7 +45515,7 @@ behind	O
 therefore	O
 ,	O
 not	B-NEG
-without	O
+without	B-NEG
 some	O
 prickings	O
 of	O
@@ -45845,7 +45845,7 @@ said	O
 i	O
 owe	O
 him	O
-nothing	O
+nothing	B-NEG
 ,	O
 and	O
 his	O
@@ -46812,7 +46812,7 @@ from	O
 this	O
 long	O
 and	O
-inconclusive	O
+inconclusive	B-NEG
 interview	O
 ,	O
 ``	O
@@ -47314,7 +47314,7 @@ say	O
 that	O
 she	O
 had	O
-not	O
+not	B-NEG
 been	O
 to	O
 baskerville	O
@@ -47338,7 +47338,7 @@ there	O
 ,	O
 and	O
 could	O
-not	O
+not	B-NEG
 have	O
 returned	O
 to	O
@@ -48210,7 +48210,7 @@ none	B-NEG
 ,	O
 sir	O
 ,	O
-none	O
+none	B-NEG
 .	O
 i	O
 am	O
@@ -49499,7 +49499,7 @@ was	O
 no	B-NEG
 sound	O
 and	O
-no	O
+no	B-NEG
 movement	O
 .	O
 one	O
@@ -50091,7 +50091,7 @@ the	O
 moor	O
 which	O
 had	O
-not	O
+not	B-NEG
 been	O
 observed	O
 and	O
@@ -50177,7 +50177,7 @@ of	O
 the	O
 kind	O
 ,	O
-nor	O
+nor	B-NEG
 could	O
 i	O
 discover	O
@@ -50246,7 +50246,7 @@ kept	O
 him	O
 in	O
 that	O
-inhospitable	O
+inhospitable	B-NEG
 abode	O
 .	O
 was	O
@@ -50856,7 +50856,7 @@ presume	O
 ?	O
 ''	O
 ``	O
-no	O
+no	B-NEG
 ,	O
 watson	O
 ,	O
@@ -51477,7 +51477,7 @@ and	O
 i	O
 remain	O
 an	O
-unknown	O
+unknown	B-NEG
 factor	O
 in	O
 the	O
@@ -53198,7 +53198,7 @@ heavy	O
 silence	O
 of	O
 the	O
-windless	O
+windless	B-NEG
 night	O
 .	O
 i	O
@@ -53240,10 +53240,10 @@ late	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 surely	O
-not	O
+not	B-NEG
 !	O
 ''	O
 ``	O
@@ -54822,7 +54822,7 @@ show	O
 your	O
 suspicions	O
 --	O
-not	O
+not	B-NEG
 a	O
 word	O
 ,	O
@@ -54939,7 +54939,7 @@ hurt	O
 not	B-NEG
 --	O
 do	O
-n't	O
+n't	B-NEG
 tell	O
 me	O
 that	O
@@ -56182,7 +56182,7 @@ fact	O
 that	O
 we	O
 have	O
-no	O
+no	B-NEG
 case	O
 at	O
 present	O
@@ -56653,7 +56653,7 @@ i	O
 had	O
 n't	B-NEG
 sworn	O
-not	O
+not	B-NEG
 to	O
 go	O
 about	O
@@ -58794,7 +58794,7 @@ and	O
 courage	O
 i	O
 would	O
-not	O
+not	B-NEG
 suggest	O
 it	O
 ,	O
@@ -58941,7 +58941,7 @@ go	O
 with	O
 him	O
 ,	O
-nor	O
+nor	B-NEG
 could	O
 i	O
 understand	O
@@ -63013,7 +63013,7 @@ bloodhound	O
 and	O
 it	O
 was	O
-not	O
+not	B-NEG
 a	O
 pure	O
 mastiff	O
@@ -63432,7 +63432,7 @@ certain	O
 .	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 he	O
 's	O
@@ -63501,12 +63501,12 @@ the	O
 lamp	O
 and	O
 left	O
-no	O
+no	B-NEG
 corner	O
 of	O
 the	O
 house	O
-unexplored	O
+unexplored	B-NEG
 .	O
 no	B-NEG
 sign	O
@@ -63921,11 +63921,11 @@ madam	O
 ``	O
 no	B-NEG
 ,	O
-no	O
+no	B-NEG
 ,	O
 i	O
 did	O
-not	O
+not	B-NEG
 mean	O
 my	O
 husband	O
@@ -64010,7 +64010,7 @@ this	O
 is	O
 nothing	B-NEG
 --	O
-nothing	O
+nothing	B-NEG
 !	O
 it	O
 is	O
@@ -64773,7 +64773,7 @@ him	O
 out	O
 he	O
 could	O
-never	O
+never	B-NEG
 have	O
 set	O
 his	O
@@ -65170,7 +65170,7 @@ secret	O
 which	O
 we	O
 have	O
-not	O
+not	B-NEG
 already	O
 fathomed	O
 .	O
@@ -65198,7 +65198,7 @@ even	O
 in	O
 daylight	O
 were	O
-not	O
+not	B-NEG
 pleasant	O
 to	O
 hear	O
