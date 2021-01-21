@@ -76,7 +76,6 @@ metrics = classification_report(test_labels, prediction, digits=3)
 print(metrics)
 
 
-"""
 errors = []
 for y_pred, y_true in zip(prediction, test_labels):
     if y_pred != y_true:
@@ -90,4 +89,3 @@ print(errors)
 
 # Word embeddings:
 # 0.9954297508477075
-"""
