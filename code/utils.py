@@ -1,7 +1,5 @@
-import csv
 import nltk
 from nltk.stem import WordNetLemmatizer
-
 
 def wordnet_pos(pos):
     """
