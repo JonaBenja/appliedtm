@@ -9,7 +9,7 @@ import argparse
 
 
 def extract_word_embedding(token, word_embedding_model):
-    '''
+    """
     Function that returns the word embedding for a given token out of a distributional semantic model and a 300-dimension vector of 0s otherwise
 
     :param token: the token
@@ -18,7 +18,8 @@ def extract_word_embedding(token, word_embedding_model):
     :type word_embedding_model: gensim.models.keyedvectors.Word2VecKeyedVectors
 
     :returns a vector representation of the token
-    '''
+    """
+
     if token in word_embedding_model:
         vector = word_embedding_model[token]
     else:
@@ -28,6 +29,14 @@ def extract_word_embedding(token, word_embedding_model):
 def combine_embeddings(data, word_embedding_model):
     """
     Extracts word embeddings for the token, previous token and next token and concatenates them
+
+    :param data: a pandas dataframe
+    :param word_embedding_model: the distributional semantic model
+    :type data: pandas.core.frame.DataFrame
+    :type word_embedding_model: gensim.models.keyedvectors.Word2VecKeyedVectors
+
+    :returns a list containing are combined embeddings
+    :rtype: list
     """
     embeddings = []
     for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
@@ -42,14 +51,24 @@ def combine_embeddings(data, word_embedding_model):
     return embeddings
 
 
-def make_sparse_features(training_data, feature_names):
-    """Transforms traditional features into one-hot-encoded vectors"""
+def make_sparse_features(data, feature_names):
+    """
+    Transforms traditional features into one-hot-encoded vectors
+
+    :param data: a pandas dataframe
+    :param feature_names: a list containing the header names of the traditional features
+    :type data: pandas.core.frame.DataFrame
+    :type feature_names: list
+
+    :returns a vector representation of the traditional features
+    :rtype: list
+    """
 
     sparse_features = []
-    for i in range(len(training_data)):
+    for i in range(len(data)):
         feature_dict = defaultdict(str)
         for feature in feature_names:
-            value = training_data[feature][i]
+            value = data[feature][i]
             feature_dict[feature] = value
 
         sparse_features.append(feature_dict)
@@ -60,7 +79,16 @@ def make_sparse_features(training_data, feature_names):
 def combine_features(sparse, dense):
     """
     Combines sparse (one-hot-encoded) and dense (e.g. word embeddings) features
-    into a combined feature set
+    into a combined feature set.
+
+    :param sparse: one-hot representations of the traditional features
+    :param dense: word embeddings of the token features
+    :type sparse: list
+    :type dense: list
+
+    :returns a vector representation of all features combined
+    :rtype: list
+
     """
     combined_vectors = []
     sparse = np.array(sparse.toarray())
@@ -100,6 +128,7 @@ def main():
     # Load training data
     training_data = args.training_data
     training = pd.read_csv(training_data, encoding='utf-8', sep='\t')
+    print(type(training))
 
     # Load test data
     test_data = args.test_data
