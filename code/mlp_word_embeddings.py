@@ -5,11 +5,8 @@ from collections import defaultdict
 import numpy as np
 import pandas as pd
 import gensim
+import argparse
 
-
-print('Loading word embedding model...')
-word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format('../models/GoogleNews-vectors-negative300.bin', binary=True)
-print('Done loading word embedding model')
 
 def extract_word_embedding(token, word_embedding_model):
     '''
@@ -27,13 +24,6 @@ def extract_word_embedding(token, word_embedding_model):
     else:
         vector = [0]*300
     return vector
-
-"""
-TRAINING
-"""
-
-baskerville = '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll'
-training = pd.read_csv(baskerville, encoding='utf-8', sep='\t')
 
 def combine_embeddings(data, word_embedding_model):
     embeddings = []
@@ -70,64 +60,82 @@ def combine_features(sparse, dense):
 
     return combined_vectors
 
+def train_classifier(X_train, y_train):
+    clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(300), random_state=1)
+    clf.fit(X_train, y_train)
+    return clf
 
-sparse = ["pos_tag",
-          "punctuation"]
+def main():
+    # Set up command line parser
+    parser = argparse.ArgumentParser(prog='mlp_word_embeddings.py',
+                                     usage='python %(prog)s training_data_file test_data_file',)
+    parser.add_argument('training_data',
+                        type=str,
+                        help='file path to the input data to preprocess.'
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll"')
 
-embeddings = combine_embeddings(training, word_embedding_model)
-sparse_features = make_sparse_features(training, sparse)
+    parser.add_argument('test_data',
+                        type=str,
+                        help='file path to the input data to preprocess.'
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll"')
 
-vec = DictVectorizer()
-sparse_vectors = vec.fit_transform(sparse_features)
+    args = parser.parse_args()
 
-training_data = combine_features(sparse_vectors, embeddings)
+    print('Loading word embedding model...')
+    word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
+        '../models/GoogleNews-vectors-negative300.bin', binary=True)
+    print('Done loading word embedding model')
 
-training_labels = [label for label in training['gold_label']]
+    sparse = ["pos_tag",
+              "punctuation"]
+
+    # Load training data
+    training_data = args.training_data
+    training = pd.read_csv(training_data, encoding='utf-8', sep='\t')
+
+    # Extract embeddings for token, prev_token and next_token
+    embeddings = combine_embeddings(training, word_embedding_model)
+
+    # Extract and vectorize one-hot features
+    sparse_features = make_sparse_features(training, sparse)
+    vec = DictVectorizer()
+    sparse_vectors = vec.fit_transform(sparse_features)
+
+    # Combine both kind of features into training data
+    training_data = combine_features(sparse_vectors, embeddings)
+    training_labels = [label for label in training['gold_label']]
+
+    # Train network
+    print("Training classifier...")
+    clf = train_classifier(training_data, training_labels)
+    print("Done training classifier")
+
+    # Load test data
+    test_data = args.test_data
+    test = pd.read_csv(test_data, encoding='utf-8', sep='\t')
+
+    # Extract embeddings for token, prev_token and next_token from test data
+    embeddings = combine_embeddings(test, word_embedding_model)
+
+    # Extract and vectorize one-hot features
+    sparse_features = make_sparse_features(test, sparse)
+    sparse_vectors = vec.transform(sparse_features)
+
+    # Combine both kind of features into training data
+    test_data = combine_features(sparse_vectors, embeddings)
+    test_labels = test['gold_label']
+
+    # Make prediction
+    prediction = clf.predict(test_data)
+
+    # Evaluate
+    metrics = classification_report(test_labels, prediction, digits=3)
+    print(metrics)
 
 
-x_train = training_data
-y_train = training_labels
-
-clf = MLPClassifier(solver='adam', alpha=1e-5,
-                    hidden_layer_sizes=(300), random_state=1)
-print("Training network...")
-clf.fit(x_train, y_train)
-print("Done training network")
-
-#TESTING
-
-wistoria = '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll'
-test = pd.read_csv(wistoria, encoding='utf-8', sep='\t')
-
-embeddings = combine_embeddings(test, word_embedding_model)
-sparse_features = make_sparse_features(test, sparse)
-
-sparse_vectors = vec.transform(sparse_features)
-
-test_data = combine_features(sparse_vectors, embeddings)
+if __name__ == '__main__':
+    main()
 
 
-test_labels = test['gold_label']
-
-prediction = clf.predict(test_data)
-
-metrics = classification_report(test_labels, prediction, digits=3)
-print(metrics)
-
-"""
-errors = []
-i = 0
-for y_pred, y_true, token in zip(prediction, test_labels, test.iloc[:, 0]):
-    i += 1
-    if y_pred != 'O' and y_true == 'O':
-        errors.append({token: [y_pred, y_true, i]})
-    elif y_pred == 'O' and y_true != 'O':
-        print(token, y_pred, y_true, i)
-
-print(errors)
-"""
-# One-hot encoded tokens
-# 0.9952086097596934
-
-# Word embeddings:
-# 0.9954297508477075
+# '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll'
