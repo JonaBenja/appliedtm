@@ -102,7 +102,7 @@ def combine_features(sparse, dense):
 def train_classifier(X_train, y_train):
     """Trains the Multilayer perceptron neural network"""
 
-    clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(300), random_state=1)
+    clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(500), random_state=1)
     clf.fit(X_train, y_train)
     return clf
 
@@ -128,7 +128,6 @@ def main():
     # Load training data
     training_data = args.training_data
     training = pd.read_csv(training_data, encoding='utf-8', sep='\t')
-    print(type(training))
 
     # Load test data
     test_data = args.test_data
@@ -175,6 +174,12 @@ def main():
     metrics = classification_report(test_labels, prediction, digits=3)
     print(metrics)
 
+    # Confusion matrix
+    data = {'Gold': test_labels, 'Predicted': prediction}
+    df = pd.DataFrame(data, columns=['Gold', 'Predicted'])
+
+    confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
+    print(confusion_matrix)
 
 if __name__ == '__main__':
     main()
