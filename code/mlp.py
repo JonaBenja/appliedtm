@@ -26,6 +26,9 @@ def extract_word_embedding(token, word_embedding_model):
     return vector
 
 def combine_embeddings(data, word_embedding_model):
+    """
+    Extracts word embeddings for the token, previous token and next token and concatenates them
+    """
     embeddings = []
     for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
 
@@ -39,7 +42,9 @@ def combine_embeddings(data, word_embedding_model):
     return embeddings
 
 
-def make_sparse_features(training_data, feature_names, test=False):
+def make_sparse_features(training_data, feature_names):
+    """Transforms traditional features into one-hot-encoded vectors"""
+
     sparse_features = []
     for i in range(len(training_data)):
         feature_dict = defaultdict(str)
@@ -53,14 +58,22 @@ def make_sparse_features(training_data, feature_names, test=False):
 
 
 def combine_features(sparse, dense):
+    """
+    Combines sparse (one-hot-encoded) and dense (e.g. word embeddings) features
+    into a combined feature set
+    """
     combined_vectors = []
-    for index, vector in enumerate(dense):
+    sparse = np.array(sparse.toarray())
+
+    for index, vector in enumerate(sparse):
             combined_vector = np.concatenate((vector, dense[index]))
             combined_vectors.append(combined_vector)
 
     return combined_vectors
 
 def train_classifier(X_train, y_train):
+    """Trains the Multilayer perceptron neural network"""
+
     clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(300), random_state=1)
     clf.fit(X_train, y_train)
     return clf
