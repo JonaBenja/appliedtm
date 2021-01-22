@@ -8,8 +8,8 @@ def lemma_extraction(tokens):
     Function to extract lemmas from tokens.
     """
     lemmas = []
+    lem = WordNetLemmatizer()
     for token in tokens:
-        lem = WordNetLemmatizer()
         lemma = lem.lemmatize(token)
         lemmas.append(lemma)
         

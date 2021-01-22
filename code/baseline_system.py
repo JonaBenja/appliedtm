@@ -16,7 +16,7 @@ def extract_features_and_labels(trainingfile, selected_features):
 
     data = []
     targets = []
-    feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5}
+    feature_to_index = {'token': 0}
     with open(trainingfile, 'r', encoding='utf8') as infile:
         for i,line in enumerate(infile):
             if i == 0:
@@ -124,7 +124,7 @@ def run_classifier(trainfile, testfile):
 
     #evaluation of the performances of the other systems with the best combination
     modelname = 'SVM'
-    selected_features = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
+    selected_features = ["token"]
     feature_values, labels = extract_features_and_labels(trainfile, selected_features)
     classifier, vectorizer = create_classifier(feature_values, labels)
     predictions, goldlabels = get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_features)

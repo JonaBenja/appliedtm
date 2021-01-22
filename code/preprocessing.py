@@ -30,7 +30,7 @@ def write_out(input_file):
     :type input_file: string
     """
     tokens_list, labels_list = load_data(input_file)
-    output_file = input_file.replace('simple.txt', 'preprocessed.conll')
+    output_file = input_file.replace('.txt', '-preprocessed.conll')
     with open(output_file, 'w', encoding='utf-8') as f:
         for token, label in zip(tokens_list, labels_list):
             output = '\t'.join([token.lower(), label])
