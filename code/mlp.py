@@ -94,17 +94,22 @@ def main():
 
     args = parser.parse_args()
 
-    print('Loading word embedding model...')
-    word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
-        '../models/GoogleNews-vectors-negative300.bin', binary=True)
-    print('Done loading word embedding model')
-
     sparse = ["pos_tag",
               "punctuation"]
 
     # Load training data
     training_data = args.training_data
     training = pd.read_csv(training_data, encoding='utf-8', sep='\t')
+
+    # Load test data
+    test_data = args.test_data
+    test = pd.read_csv(test_data, encoding='utf-8', sep='\t')
+
+    # Load word embeddings model
+    print('Loading word embedding model...')
+    word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
+        '../models/GoogleNews-vectors-negative300.bin', binary=True)
+    print('Done loading word embedding model')
 
     # Extract embeddings for token, prev_token and next_token
     embeddings = combine_embeddings(training, word_embedding_model)
@@ -122,10 +127,6 @@ def main():
     print("Training classifier...")
     clf = train_classifier(training_data, training_labels)
     print("Done training classifier")
-
-    # Load test data
-    test_data = args.test_data
-    test = pd.read_csv(test_data, encoding='utf-8', sep='\t')
 
     # Extract embeddings for token, prev_token and next_token from test data
     embeddings = combine_embeddings(test, word_embedding_model)
