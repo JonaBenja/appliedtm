@@ -3,8 +3,15 @@ import pandas as pd
 from utils import *
 
 """
-'../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll'
-'../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll'
+# TRAINING DATA
+'../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed.conll'
+
+# DEVELOPMENT DATA
+'../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed.conll'
+
+# TEST DATA
+'../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed.conll'
+'../data/SEM-2012-SharedTask-CD-SCO-test-circle-preprocessed.conll'
 """
 
 
@@ -54,7 +61,7 @@ def main():
     parser.add_argument('input_file',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple.txt"')
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed.conll"')
 
     args = parser.parse_args()
     input_file = args.input_file
