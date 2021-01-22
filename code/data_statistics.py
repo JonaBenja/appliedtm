@@ -1,57 +1,39 @@
 import pandas as pd
+import argparse
 from string import punctuation
 from collections import Counter
 
-"""
-TRAINING DATA
-"""
+def print_statistics(input_file):
+    """Function to compute statistics of a datafile"""
+    data = pd.read_csv(input_file, encoding = 'utf-8', sep='\t')
 
-baskerville = '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll'
+    tokens = data.iloc[:, 0]
+    labels = data.iloc[:, -1]
+    labeldict = Counter(labels)
 
-training_data = pd.read_csv(baskerville, encoding = 'utf-8', sep='\t')
+    n_tokens = [token for token in tokens if token not in punctuation]
 
-tokens = training_data.iloc[:, 0]
-labels = training_data.iloc[:, -1]
-labeldict = Counter(labels)
+    n_cues = []
+    for label, token in zip(labels, tokens):
+        if label != 'O':
+            n_cues.append(token)
 
-n_tokens = [token for token in tokens if token not in punctuation]
+    negation_cues = Counter(n_cues)
 
-n_cues = []
-for label, token in zip(labels, tokens):
-    if label != 'O':
-        n_cues.append(token)
+    print('Data statistics:')
+    print('tokens', len(tokens), 'of which', len(tokens)-len(n_tokens), 'are punctuation')
+    print('Negation cues')
+    print(labeldict)
+    print(negation_cues.most_common(10))
 
-negation_cues = Counter(n_cues)
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('input_file',
+                        help='file path to the input data to compute statistics of. Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed.conll"')
+    args = parser.parse_args()
+    input_file = args.input_file
 
-print('Training data:')
-print('tokens', len(tokens), 'of which', len(tokens)-len(n_tokens), 'are punctuation')
-print('Negation cues')
-print(labeldict)
-print(negation_cues.most_common(10))
+    print_statistics(input_file)
 
-"""
-DEVELOPMENT DATA
-"""
-
-wistoria = '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll'
-dev_data = pd.read_csv(wistoria, encoding = 'utf-8', sep='\t')
-
-tokens = dev_data.iloc[:, 0]
-labels = dev_data.iloc[:, -1]
-labeldict = Counter(labels)
-
-n_tokens = [token for token in tokens if token not in punctuation]
-
-n_cues = []
-for label, token in zip(labels, tokens):
-    if label != 'O':
-        n_cues.append(token)
-
-negation_cues = Counter(n_cues)
-
-print()
-print('Development data:')
-print('tokens', len(tokens), 'of which', len(tokens)-len(n_tokens), 'are punctuation')
-print('Negation cues')
-print(labeldict)
-print(negation_cues.most_common(10))
+if __name__ == '__main__':
+    main()
