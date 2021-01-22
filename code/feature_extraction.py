@@ -47,6 +47,8 @@ def write_features(input_file):
 
     punctuation = is_punctuation(tokens)
 
+    affixes = morphology(tokens)
+
     features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'gold_label': labels}
 
