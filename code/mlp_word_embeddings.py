@@ -139,3 +139,4 @@ if __name__ == '__main__':
 
 # '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll'
 # '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll'
+#'../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll'
