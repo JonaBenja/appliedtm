@@ -3,14 +3,31 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 
 
-def lemma_extraction(tokens):
+def wordnet_pos(pos):
+    """
+    Converts the PoS tags in WordNet readable tags
+    :param pos: nltk Pos tag
+    :return: WordNet tag
+    """
+    if pos.startswith('J'):
+        return 'a'
+    elif pos.startswith('V'):
+        return 'v'
+    elif pos.startswith('N'):
+        return 'n'
+    elif pos.startswith('R'):
+        return 'r'
+    else:
+        return 'n'
+
+def lemma_extraction(tokens, pos_list):
     """
     Function to extract lemmas from tokens.
     """
     lemmas = []
     lem = WordNetLemmatizer()
-    for token in tokens:
-        lemma = lem.lemmatize(token)
+    for token, pos in zip(tokens, pos_list):
+        lemma = lem.lemmatize(token, wordnet_pos(pos))
         lemmas.append(lemma)
         
     return lemmas

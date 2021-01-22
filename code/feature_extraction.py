@@ -38,16 +38,16 @@ def write_features(input_file):
                 "punctuation",
                 "gold_label"]
 
-    lemmas = lemma_extraction(tokens)
-
     pos_tags = pos_extraction(tokens)
+
+    lemmas = lemma_extraction(tokens, pos_tags)
 
     prev_next_tokens = previous_and_next_token_extraction(tokens)
     prev_tokens, next_tokens = prev_next_tokens
 
     punctuation = is_punctuation(tokens)
 
-    features_dict = {'token': tokens, 'lemma': lemmas, 'pos_tag': pos_tags, 'prev_token': prev_tokens,
+    features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'gold_label': labels}
 
     features_df = pd.DataFrame(features_dict, columns = feature_names)
