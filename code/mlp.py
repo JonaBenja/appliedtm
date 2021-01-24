@@ -38,14 +38,15 @@ def combine_embeddings(data, word_embedding_model):
     :rtype: list
     """
     embeddings = []
-    for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
-
+    #for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
+    for token in data['token']:
         token_vector = extract_word_embedding(token, word_embedding_model)
-        prev_token_vector = extract_word_embedding(prev_token, word_embedding_model)
-        next_token_vector = extract_word_embedding(next_token, word_embedding_model)
-        lemma_vector = extract_word_embedding(lemma, word_embedding_model)
+        #prev_token_vector = extract_word_embedding(prev_token, word_embedding_model)
+        #next_token_vector = extract_word_embedding(next_token, word_embedding_model)
+        #lemma_vector = extract_word_embedding(lemma, word_embedding_model)
 
-        embeddings.append(np.concatenate((token_vector, prev_token_vector, next_token_vector, lemma_vector)))
+        #embeddings.append(np.concatenate((token_vector, prev_token_vector, next_token_vector, lemma_vector)))
+        embeddings.append(token_vector)
 
     return embeddings
 
@@ -72,6 +73,7 @@ def make_sparse_features(data, feature_names):
 
         sparse_features.append(feature_dict)
 
+    print(sparse_features[0].keys())
     return sparse_features
 
 
@@ -96,6 +98,8 @@ def combine_features(sparse, dense):
             combined_vector = np.concatenate((vector, dense[index]))
             combined_vectors.append(combined_vector)
 
+    print(len(combined_vectors[0]))
+
     return combined_vectors
 
 def train_classifier(X_train, y_train):
@@ -112,22 +116,25 @@ def main():
     parser.add_argument('training_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll')
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll"')
 
     parser.add_argument('test_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll')
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll"')
 
     parser.add_argument('embedding_model',
                         type=str,
                         help='file path to a pretrained embedding model.'
-                             'Example path: ../models/GoogleNews-vectors-negative300.bin')
+                             'Example path: "../models/GoogleNews-vectors-negative300.bin"')
 
     args = parser.parse_args()
 
     sparse = ["pos_tag",
-              "punctuation"]
+              "punctuation",
+              "affixes"
+              ,"n_grams"
+              ]
 
     # Load training data
     training_data = args.training_data
@@ -192,4 +199,6 @@ if __name__ == '__main__':
 
 # '../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll'
 # '../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll'
-#'../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll'
+
+# '../models/GoogleNews-vectors-negative300.bin'
