@@ -155,7 +155,7 @@ def morphological_rules(tokens):
             label = "counter"
 
 
-        elif len(token) > 5 and token.endswith('less'):
+        elif len(token) > 5 and (token.endswith('less') or token.endswith('lessness')):
             label = 'less'
 
         elif token in stopwords_list:
