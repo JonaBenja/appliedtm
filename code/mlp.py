@@ -7,7 +7,6 @@ import pandas as pd
 import gensim
 import argparse
 
-
 def extract_word_embedding(token, word_embedding_model):
     """
     Function that returns the word embedding for a given token out of a distributional semantic model and a 300-dimension vector of 0s otherwise
@@ -113,12 +112,17 @@ def main():
     parser.add_argument('training_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll"')
+                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll')
 
     parser.add_argument('test_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll"')
+                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll')
+
+    parser.add_argument('embedding_model',
+                        type=str,
+                        help='file path to a pretrained embedding model.'
+                             'Example path: ../models/GoogleNews-vectors-negative300.bin')
 
     args = parser.parse_args()
 
@@ -134,9 +138,10 @@ def main():
     test = pd.read_csv(test_data, encoding='utf-8', sep='\t')
 
     # Load word embeddings model
+    embedding_model_path = args.embedding_model
     print('Loading word embedding model...')
     word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
-        '../models/GoogleNews-vectors-negative300.bin', binary=True)
+        embedding_model_path, binary=True)
     print('Done loading word embedding model')
 
     # Extract embeddings for token, prev_token and next_token
@@ -185,6 +190,6 @@ if __name__ == '__main__':
     main()
 
 
-# '../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll'
-# '../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll'
 #'../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll'
