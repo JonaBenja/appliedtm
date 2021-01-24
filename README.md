@@ -21,25 +21,51 @@ The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Ev
 
 ### Data
 This folder contains the data used for training and testing the system during development. 
-For measuring results, the system will be tested on an unseen test set.
+For measuring results, the system will be tested on two unseen test sets.
 
 training data: `SEM-2012-SharedTask-CD-SCO-training-simple.txt`
 
 development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
+
+test data: `SEM-2012-SharedTask-CD-SCO-test-cardboard.txt`
+
+&
+
+`SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
 
 ### Code
 This folder contains the following scripts:
 
 * `preprocessing.py` preprocesses the data and saves it as new files.
 
-training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed.tsv`
+training data: `SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed.conll`
 
-development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed.tsv`
+development data: `SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed.conll`
+
+test data: `SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed.conll`
+
+&
+
+`SEM-2012-SharedTask-CD-SCO-test-circle-preprocessed.conll`
 
 * `utils.py` contains all functions for the feature extraction.
 
 * `feature_extraction.py` extracts features and writes them to new files:
 
-training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.tsv`
+training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll`
 
-development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.tsv`
+development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll`
+
+test data: `SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll`
+
+&
+
+`SEM-2012-SharedTask-CD-SCO-test-circle-preprocessed-features.conll`
+
+* `baseline_system.py`
+
+* `svm_classifier.py`
+
+* `mlp_classifier.py`
+
+* `stopwords.txt`
