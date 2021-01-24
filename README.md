@@ -1,9 +1,9 @@
-# A [bunch of systems] for negation cue detection
+# A SVM and MLP system for negation cue detection
 
 This repository will contain all code and files used to train a negation detection classifier.
 The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
 
-### Annotations
+### annotations
 10 articles about vaccination that were retrieved from a larger batch of web crawled articles.
 
 `annotations` folder: contains the annotations made by the 4 contributing authors on the following files:
@@ -19,7 +19,7 @@ The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Ev
 * `en-wikipedia-org_20170702T222036.txt`
 * `fitfortravel-nhs-uk_20160812T165007.txt`
 
-### Data
+### data
 This folder contains the data used for training and testing the system during development. 
 For measuring results, the system will be tested on two unseen test sets.
 
@@ -27,25 +27,25 @@ training data: `SEM-2012-SharedTask-CD-SCO-training-simple.txt`
 
 development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
 
-test data: `SEM-2012-SharedTask-CD-SCO-test-cardboard.txt`
+test data #1: `SEM-2012-SharedTask-CD-SCO-test-cardboard.txt`
 
-&
+test data #2: `SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
 
-`SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
-
-### Code
+### code
 This folder contains the following scripts:
 
-* `preprocessing.py` preprocesses the data and saves it as new files.
+* `data_statistics.py` prints a 
+
+* `preprocessing.py` preprocesses a data file and saves it as a new file with `-preprocessed` at the end.
 
 * `utils.py` contains all functions for the feature extraction.
 
-* `feature_extraction.py` extracts features and writes them to new files:
+* `feature_extraction.py` extracts features from a data file and saves it as a new file with `-features` at then end.
 
-* `baseline_system.py`
+* `baseline_system.py` trains a baseline system on a data set with only the token as feature.
 
-* `svm_classifier.py`
+* `svm_classifier.py` trains a Support Vectors Machine system on the training data.
 
-* `mlp_classifier.py`
+* `mlp_classifier.py` trains a Multilayer Perceptron on the training data.
 
-* `stopwords.txt`
+* `stopwords.txt` contains a list of English stopwords.
