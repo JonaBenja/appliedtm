@@ -1,12 +1,10 @@
-# A SVM and MLP system for negation cue detection
+# An SVM and MLP system for negation cue detection
 
 This repository will contain all code and files used to train a negation detection classifier.
 The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
 
 ### annotations
-10 articles about vaccination that were retrieved from a larger batch of web crawled articles.
-
-`annotations` folder: contains the annotations made by the 4 contributing authors on the following files:
+This folder contains annotations for 10 articles about vaccination that were retrieved from a larger batch of web crawled articles. The annotations were made by the 4 contributing authors on the following files:
 
 * `dc-gov_20170703T010627.txt`
 * `cdc-gov_20170706T111717.txt`
@@ -34,7 +32,7 @@ test data #2: `SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
 ### code
 This folder contains the following scripts:
 
-* `data_statistics.py` prints a 
+* `data_statistics.py` prints statistics about the number of tokens and distributions of negations classes of the inputted dataset.
 
 * `preprocessing.py` preprocesses a data file and saves it as a new file with `-preprocessed` at the end.
 
