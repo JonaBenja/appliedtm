@@ -143,15 +143,15 @@ def morphological_rules(tokens):
             label = token[0:3]
 
 
-        elif len(token) > 5 and token.startswith('anti'): 
+        elif len(token) > 6 and token.startswith('anti'): 
             label = "anti"
 
 
-        elif len(token) > 5 and token.startswith('contra'): 
+        elif len(token) > 9 and token.startswith('contra'): 
             label = "contra"
 
 
-        elif len(token) > 5 and token.startswith('counter'): 
+        elif len(token) > 10 and token.startswith('counter'): 
             label = "counter"
 
 
