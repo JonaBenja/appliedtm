@@ -40,22 +40,17 @@ def write_features(input_file):
                 "gold_label"]
 
     pos_tags = pos_extraction(tokens)
-    print('pos', len(pos_tags))
 
     lemmas = lemma_extraction(tokens, pos_tags)
-    print('lem', len(lemmas))
 
     prev_next_tokens = previous_and_next_token_extraction(tokens)
     prev_tokens, next_tokens = prev_next_tokens
 
     punctuation = is_punctuation(tokens)
-    print('punct', len(punctuation))
 
     affixes = morphological_rules(tokens)
-    print('aff', len(affixes))
     
     n_grams = creating_ngrams(tokens)
-    print('ng', len(n_grams))
 
     features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes,
