@@ -27,7 +27,8 @@ def lemma_extraction(tokens, pos_list):
     for token, pos in zip(tokens, pos_list):
         lemma = lem.lemmatize(token, wordnet_pos(pos))
         lemmas.append(lemma)
-        
+    
+    
     return lemmas
     
 def pos_extraction(tokens):
@@ -106,8 +107,8 @@ def morphological_rules(tokens):
 
     greek_roots = ["gn", "mn","ph","pn","rh","th","y","sis","ic"]
     vowels_list = ["e", "a", "o", "i", "u"]
-
-    label_list = []
+    
+    label_list =[]
 
     for token in tokens: 
         label = 'reg'
@@ -143,7 +144,7 @@ def morphological_rules(tokens):
             label = token[0:3]
 
 
-        elif len(token) > 6 and token.startswith('anti'): 
+        elif len(token) > 5 and token.startswith('anti'): 
             label = "anti"
 
 
@@ -161,9 +162,8 @@ def morphological_rules(tokens):
         elif token in stopwords_list:
             label = 'reg'
 
-        #adding label to the list
         label_list.append(label)
-
+    
     return label_list
                     
                 
@@ -172,8 +172,9 @@ def creating_ngrams(tokens):
     """
     Function that creates n-gram out of the token when length of token >= 2
     """
+    n_grams = [] 
     for token in tokens: 
-        n_grams = [] 
+        
         if len(token) == 2:
             bigram = [token[i:i+2] for i in range(len(token)-1)]
             n_grams.append(bigram)
@@ -185,5 +186,9 @@ def creating_ngrams(tokens):
         if len(token) >=4:
             fgram = [token[i:i+4] for i in range(len(token)-1)]
             n_grams.append(fgram)
+            
+        if len(token) < 2: 
+            ngram = []
+            n_grams.append(ngram)
         
     return n_grams 
