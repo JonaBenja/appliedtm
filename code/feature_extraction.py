@@ -58,7 +58,8 @@ def write_features(input_file):
     print('ng', len(n_grams))
 
     features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
-                     'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes, 'n_grams': n_grams,'gold_label': labels}
+                     'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes,
+                     'n_grams': n_grams,'gold_label': labels}
 
     features_df = pd.DataFrame(features_dict, columns = feature_names)
 
