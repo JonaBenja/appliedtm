@@ -93,3 +93,97 @@ def is_punctuation(tokens):
         punctuation.append(punct)
     
     return punctuation
+
+def morphological_rules(tokens):
+    """
+    Function to check tokens on negational affixes.
+    """
+    #reading stopwords in as a list 
+    stopwords_file = open('stopwords.txt', 'r')
+    stopwords = stopwords_file.read()
+    stopwords_list = stopwords.split('\n')
+    stopwords_file.close()
+
+    greek_roots = ["gn", "mn","ph","pn","rh","th","y","sis","ic"]
+    vowels_list = ["e", "a", "o", "i", "u"]
+
+    label_list = []
+
+    for token in tokens: 
+        label = 'reg'
+
+        #checking affix a- in combination with Greek roots of the words they appear on
+        if len(token) > 2 and token[0] == 'a' and token[1] not in vowels_list and token not in stopwords:
+            for item in greek_roots:
+                if item in token: 
+                    label = 'a'
+
+        #checking affixes in combination with following tokens
+        elif len(token) > 3 and token.startswith('il') and token[2] == 'l':
+            label = 'il'
+
+
+        elif len(token) > 3 and token.startswith('im') and (token[2] == 'm' or 'p'):
+            label = 'im'
+
+
+        elif len(token) > 3 and token.startswith('ir') and token[2] == 'r':
+            label = 'ir'
+
+
+        elif len(token) > 5 and token.startswith("un") and not token.startswith("under") and token.endswith(("able", "ible", "ful", "y", "ing")):
+            label = 'un'
+
+        #checking occurrences of prefixes and suffixes  
+        elif len(token) > 3 and token.startswith('in'):
+            label = 'in'
+
+
+        elif len(token) > 5 and token.startswith(('dis', 'mis', 'non')):
+            label = token[0:3]
+
+
+        elif len(token) > 5 and token.startswith('anti'): 
+            label = "anti"
+
+
+        elif len(token) > 5 and token.startswith('contra'): 
+            label = "contra"
+
+
+        elif len(token) > 5 and token.startswith('counter'): 
+            label = "counter"
+
+
+        elif len(token) > 5 and token.endswith('less'):
+            label = 'less'
+
+        elif token in stopwords_list:
+            label = 'reg'
+
+        #adding label to the list
+        label_list.append(label)
+
+    return label_list
+                    
+                
+    
+def creating_ngrams(tokens):
+    """
+    Function that creates n-gram out of the token when length of token >= 2
+    """
+    for token in tokens: 
+        n_grams = [] 
+        if len(token) == 2:
+            bigram = [token[i:i+2] for i in range(len(token)-1)]
+            n_grams.append(bigram)
+
+        if len(token) == 3:
+            trigram = [token[i:i+3] for i in range(len(token)-1)]
+            n_grams.append(trigram)
+
+        if len(token) >=4:
+            fgram = [token[i:i+4] for i in range(len(token)-1)]
+            n_grams.append(fgram)
+        
+    return n_grams 
