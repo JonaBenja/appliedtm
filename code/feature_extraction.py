@@ -5,10 +5,8 @@ from utils import *
 """
 # TRAINING DATA
 '../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed.conll'
-
 # DEVELOPMENT DATA
 '../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed.conll'
-
 # TEST DATA
 '../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed.conll'
 '../data/SEM-2012-SharedTask-CD-SCO-test-circle-preprocessed.conll'
@@ -27,6 +25,7 @@ def write_features(input_file):
     # Read in preprocessed file
     input_data = pd.read_csv(input_file, encoding='utf-8', sep='\t')
     tokens = input_data.iloc[:, 0]
+    print('tok', len(tokens))
     labels = input_data.iloc[:, -1]
 
     # Defining header names
@@ -36,23 +35,30 @@ def write_features(input_file):
                 "prev_token",
                 "next_token",
                 "punctuation",
+                "affixes",
+                "n_grams",
                 "gold_label"]
 
     pos_tags = pos_extraction(tokens)
+    print('pos', len(pos_tags))
 
     lemmas = lemma_extraction(tokens, pos_tags)
+    print('lem', len(lemmas))
 
     prev_next_tokens = previous_and_next_token_extraction(tokens)
     prev_tokens, next_tokens = prev_next_tokens
 
     punctuation = is_punctuation(tokens)
+    print('punct', len(punctuation))
 
-    affixes = morphology(tokens)
+    affixes = morphological_rules(tokens)
+    print('aff', len(affixes))
     
     n_grams = creating_ngrams(tokens)
+    print('ng', len(n_grams))
 
     features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
-                     'next_token': next_tokens, 'punctuation': punctuation, 'gold_label': labels}
+                     'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes, 'n_grams': n_grams,'gold_label': labels}
 
     features_df = pd.DataFrame(features_dict, columns = feature_names)
 
