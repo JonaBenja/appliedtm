@@ -16,7 +16,7 @@ def extract_features_and_labels(trainingfile, selected_features):
 
     data = []
     targets = []
-    feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5}
+    feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5, 'affixes': 6, 'n_grams': 7}
     with open(trainingfile, 'r', encoding='utf8') as infile:
         for i,line in enumerate(infile):
             if i == 0:
@@ -124,7 +124,7 @@ def run_classifier(trainfile, testfile):
 
     #evaluation of the performances of the other systems with the best combination
     modelname = 'SVM'
-    selected_features = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
+    selected_features = ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes", "n_grams"]
     feature_values, labels = extract_features_and_labels(trainfile, selected_features)
     classifier, vectorizer = create_classifier(feature_values, labels)
     predictions, goldlabels = get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_features)
@@ -137,8 +137,8 @@ def run_classifier(trainfile, testfile):
 def main():
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll"')
-    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll"')
+    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll"')
+    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll"')
 
     args = parser.parse_args()
 
@@ -147,7 +147,5 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 
 
