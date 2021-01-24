@@ -1,4 +1,4 @@
-# An SVM and MLP system for negation cue detection
+# SVM and MLP systems for negation cue detection
 
 This repository will contain all code and files used to train a negation detection classifier.
 The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
@@ -29,6 +29,10 @@ test data #1: `SEM-2012-SharedTask-CD-SCO-test-cardboard.txt`
 
 test data #2: `SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
 
+### word embeddings
+The word embedding model used for the training of the MLP is the "GoogleNewsvectors-negative300.bin.gz".
+You can find it here: https://code.google.com/archive/p/word2vec/
+
 ### code
 This folder contains the following scripts:
 
@@ -47,3 +51,5 @@ This folder contains the following scripts:
 * `mlp_classifier.py` trains a Multilayer Perceptron on the training data.
 
 * `stopwords.txt` contains a list of English stopwords.
+
+Each of these scripts can be run from the command line through argparse. If you type '-h' after the name of the file, you will get some information regarding the requested arguments.
