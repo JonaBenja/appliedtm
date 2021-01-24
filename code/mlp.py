@@ -73,7 +73,6 @@ def make_sparse_features(data, feature_names):
 
         sparse_features.append(feature_dict)
 
-    print(sparse_features[0].keys())
     return sparse_features
 
 
@@ -97,8 +96,6 @@ def combine_features(sparse, dense):
     for index, vector in enumerate(sparse):
             combined_vector = np.concatenate((vector, dense[index]))
             combined_vectors.append(combined_vector)
-
-    print(len(combined_vectors[0]))
 
     return combined_vectors
 
@@ -132,8 +129,8 @@ def main():
 
     sparse = ["pos_tag",
               "punctuation",
-              "affixes"
-              ,"n_grams"
+              "affixes",
+              "n_grams"
               ]
 
     # Load training data
