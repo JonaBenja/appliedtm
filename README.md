@@ -38,29 +38,9 @@ This folder contains the following scripts:
 
 * `preprocessing.py` preprocesses the data and saves it as new files.
 
-training data: `SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed.conll`
-
-development data: `SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed.conll`
-
-test data: `SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed.conll`
-
-&
-
-`SEM-2012-SharedTask-CD-SCO-test-circle-preprocessed.conll`
-
 * `utils.py` contains all functions for the feature extraction.
 
 * `feature_extraction.py` extracts features and writes them to new files:
-
-training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.conll`
-
-development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.conll`
-
-test data: `SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll`
-
-&
-
-`SEM-2012-SharedTask-CD-SCO-test-circle-preprocessed-features.conll`
 
 * `baseline_system.py`
 
