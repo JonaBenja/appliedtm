@@ -38,15 +38,13 @@ def combine_embeddings(data, word_embedding_model):
     :rtype: list
     """
     embeddings = []
-    #for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
-    for token in data['token']:
+    for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
         token_vector = extract_word_embedding(token, word_embedding_model)
-        #prev_token_vector = extract_word_embedding(prev_token, word_embedding_model)
-        #next_token_vector = extract_word_embedding(next_token, word_embedding_model)
-        #lemma_vector = extract_word_embedding(lemma, word_embedding_model)
+        prev_token_vector = extract_word_embedding(prev_token, word_embedding_model)
+        next_token_vector = extract_word_embedding(next_token, word_embedding_model)
+        lemma_vector = extract_word_embedding(lemma, word_embedding_model)
 
-        #embeddings.append(np.concatenate((token_vector, prev_token_vector, next_token_vector, lemma_vector)))
-        embeddings.append(token_vector)
+        embeddings.append(np.concatenate((token_vector, prev_token_vector, next_token_vector, lemma_vector)))
 
     return embeddings
 
@@ -128,9 +126,7 @@ def main():
     args = parser.parse_args()
 
     sparse = ["pos_tag",
-              "punctuation",
-              "affixes",
-              "n_grams"
+              "punctuation"
               ]
 
     # Load training data
