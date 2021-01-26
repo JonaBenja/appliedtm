@@ -25,7 +25,6 @@ def write_features(input_file):
     # Read in preprocessed file
     input_data = pd.read_csv(input_file, encoding='utf-8', sep='\t')
     tokens = input_data.iloc[:, 0]
-    print('tok', len(tokens))
     labels = input_data.iloc[:, -1]
 
     # Defining header names
