@@ -1,12 +1,10 @@
-# A [bunch of systems] for negation cue detection
+# SVM and MLP systems for negation cue detection
 
 This repository will contain all code and files used to train a negation detection classifier.
 The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
 
-### Annotations
-10 articles about vaccination that were retrieved from a larger batch of web crawled articles.
-
-`annotations` folder: contains the annotations made by the 4 contributing authors on the following files:
+### annotations
+This folder contains annotations for 10 articles about vaccination that were retrieved from a larger batch of web crawled articles. The annotations were made by the 4 contributing authors on the following files:
 
 * `dc-gov_20170703T010627.txt`
 * `cdc-gov_20170706T111717.txt`
@@ -19,27 +17,39 @@ The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Ev
 * `en-wikipedia-org_20170702T222036.txt`
 * `fitfortravel-nhs-uk_20160812T165007.txt`
 
-### Data
+### data
 This folder contains the data used for training and testing the system during development. 
-For measuring results, the system will be tested on an unseen test set.
+For measuring results, the system will be tested on two unseen test sets.
 
 training data: `SEM-2012-SharedTask-CD-SCO-training-simple.txt`
 
 development data: `SEM-2012-SharedTask-CD-SCO-dev-simple.txt`
 
-### Code
+test data #1: `SEM-2012-SharedTask-CD-SCO-test-cardboard.txt`
+
+test data #2: `SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
+
+### word embeddings
+The word embedding model used for the training of the MLP is the "GoogleNewsvectors-negative300.bin.gz".
+You can find it here: https://code.google.com/archive/p/word2vec/
+
+### code
 This folder contains the following scripts:
 
-* `preprocessing.py` preprocesses the data and saves it as new files.
+* `data_statistics.py` prints statistics about the number of tokens and distributions of negations classes of the inputted dataset.
 
-training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed.tsv`
-
-development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed.tsv`
+* `preprocessing.py` preprocesses a data file and saves it as a new file with `-preprocessed` at the end.
 
 * `utils.py` contains all functions for the feature extraction.
 
-* `feature_extraction.py` extracts features and writes them to new files:
+* `feature_extraction.py` extracts features from a data file and saves it as a new file with `-features` at then end.
 
-training data: `SEM-2012-SharedTask-CD-SCO-training-preprocessed-features.tsv`
+* `baseline_system.py` trains a baseline system on a data set with only the token as feature.
 
-development data: `SEM-2012-SharedTask-CD-SCO-dev-preprocessed-features.tsv`
+* `svm_classifier.py` trains a Support Vectors Machine system on the training data.
+
+* `mlp_classifier.py` trains a Multilayer Perceptron on the training data.
+
+* `stopwords.txt` contains a list of English stopwords.
+
+Each of these scripts can be run from the command line through argparse. If you type '-h' after the name of the file, you will get some information regarding the requested arguments.
