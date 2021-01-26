@@ -132,12 +132,12 @@ def main():
               ]
 
     # Load training data
-    training_data = args.training_data
-    training = pd.read_csv(training_data, encoding='utf-8', sep='\t')
+    training_data_name = args.training_data
+    training = pd.read_csv(training_data_name, encoding='utf-8', sep='\t')
 
     # Load test data
-    test_data = args.test_data
-    test = pd.read_csv(test_data, encoding='utf-8', sep='\t')
+    test_data_name = args.test_data
+    test = pd.read_csv(test_data_name, encoding='utf-8', sep='\t')
 
     # Load word embeddings model
     embedding_model_path = args.embedding_model
@@ -187,6 +187,11 @@ def main():
 
     confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
     print(confusion_matrix)
+
+    # save prediction
+    test['prediction'] = prediction
+    filename = test_data_name.replace('.conll', '-prediction.conll')
+    test.to_csv(filename, sep='\t', index=False)
 
 if __name__ == '__main__':
     main()
