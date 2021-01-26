@@ -111,12 +111,12 @@ def main():
     parser.add_argument('training_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-preprocessed.conll"')
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-features.conll"')
 
     parser.add_argument('test_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-preprocessed.conll"')
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-features.conll"')
 
     parser.add_argument('embedding_model',
                         type=str,
@@ -197,8 +197,8 @@ if __name__ == '__main__':
     main()
 
 
-# '../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll'
-# '../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll'
-# '../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-preprocessed-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll'
+# '../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-features.conll'
 
 # '../models/GoogleNews-vectors-negative300.bin'

@@ -20,7 +20,7 @@ def write_features(input_file):
     :type input_file: string
     """
     # Prepare output file
-    output_file = input_file.replace('.conll', '-features.conll')
+    output_file = input_file.replace('-preprocessed.conll', '-features.conll')
 
     # Read in preprocessed file
     input_data = pd.read_csv(input_file, encoding='utf-8', sep='\t')
