@@ -77,14 +77,14 @@ def extract_examples(tokens_list, gold_labels, model_predictions):
 
     wrong_dict = defaultdict(Counter)               # mistakes dict
     right_dict = defaultdict(Counter)               # correct predictions dict
-    insight_dict = defaultdict(dict)               # dict containing preciding and following tokens of each mistake
+    insight_dict = defaultdict(dict)               # dict containing preceding and following tokens of each mistake
 
     for token, gold, prediction in zip(tokens_list, gold_labels, model_predictions):
         if gold != prediction:
             mistaken_label = prediction + '_instead_of_' + gold
             wrong_dict[mistaken_label][token] += 1
 
-            insight_dict[token]['PRECIDING'] = tokens_list[tokens_list.index(token) - 1]
+            insight_dict[token]['PRECEDING'] = tokens_list[tokens_list.index(token) - 1]
             insight_dict[token]['FOLLOWING'] = tokens_list[tokens_list.index(token) + 1]
 
     wrong_results_dict = dict()
@@ -104,7 +104,7 @@ def extract_examples(tokens_list, gold_labels, model_predictions):
 
     # prints some insights about each mistake the mistakes
     print('------------------------------------------------------------------------')
-    print('--> INSIGHTS ON PRECIDING AND FOLLOWING TOKENS FOR EACH MOST COMMON MISTAKE:')
+    print('--> INSIGHTS ON PRECEDING AND FOLLOWING TOKENS FOR EACH MOST COMMON MISTAKE:')
     i = 0
     for tok, infos in insight_dict.items():
         if i < 10:                                      # Modify this number to get more examples
