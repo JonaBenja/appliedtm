@@ -37,6 +37,7 @@ def error_analysis(inputfile):
     for feature in error_dict:
         if feature not in ['token', 'lemma', 'prev_token', 'next_token', 'n_grams']:
             print(error_dict[feature])
+            print('test')
 
 
 def main():
