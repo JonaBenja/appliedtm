@@ -73,7 +73,7 @@ def main():
     parser.add_argument('input_file',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features-prediction1.conll"')
+                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features-prediction.conll"')
 
     args = parser.parse_args()
     input_file = args.input_file
