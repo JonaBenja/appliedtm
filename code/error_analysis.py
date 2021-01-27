@@ -53,15 +53,18 @@ def error_analysis(inputfile):
             n_samples += 1
 
     for error_type in ft_error_dict:
-        print(error_type)
+        print('------------------------------------------------------------------------')
+        print('-----> ', error_type)
         print(len(tok_error_dict[error_type]), 'error(s) of this type')
         print()
         for error in tok_error_dict[error_type]:
             print('Line number:', error[0])
-            print(error[1:4])
+            print('Preceding:', error[1])
+            print('Current:', error[2])
+            print('Next:', error[3])
             print()
 
-
+        print('------------------------------------------------------------------------')
         for feature in ft_error_dict[error_type]:
             if feature in ['pos_tag', 'punctuation', 'affixes']:
                 print(feature)
