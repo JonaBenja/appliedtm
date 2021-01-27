@@ -54,9 +54,9 @@ def error_analysis(inputfile):
         print()
         for error in tok_error_dict[error_type]:
             print('Line number:', error[0])
-            print('Preceding:', error[1])
-            print('Current:', error[2])
-            print('Next:', error[3])
+            print('Preceding token:   ', error[1])
+            print('The error:         ', error[2])
+            print('Following token:   ', error[3])
             print()
 
         print('------------------------------------------------------------------------')

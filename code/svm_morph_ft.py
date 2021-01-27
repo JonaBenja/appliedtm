@@ -124,9 +124,6 @@ def run_classifier(trainfile, testfile):
     print('---->'+ modelname + ' with ' + ' and '.join(selected_features) + ' as features <----')
     print_precision_recall_fscore(predictions, goldlabels)
     print('------')
-    
-     #Load training data
-    training = pd.read_csv(trainfile, encoding='utf-8', sep='\t')
 
     #Load test data
     test = pd.read_csv(testfile, encoding='utf-8', sep='\t')    
