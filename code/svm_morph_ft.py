@@ -8,7 +8,6 @@ import argparse
 def extract_features_and_labels(trainingfile, selected_features):
     '''
     This function extracts features and labels from the training file
-
     :param trainingfile: the path to the training file
     :param selected_features: the features combination
     :returns: lists of features and annotations
@@ -37,7 +36,6 @@ def extract_features_and_labels(trainingfile, selected_features):
 def create_classifier(train_features, train_targets):
     '''
     This function creates classifiers based on SVM
-
     :param train_features: the list of training features
     :param train_targets: the list of training annotations
     :returns: the model and the vectors
@@ -56,12 +54,10 @@ def create_classifier(train_features, train_targets):
 def get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_features):
     '''
     Function that extracts features and runs the classifier on a test file returning predicted and gold labels
-
     :param testfile: path to the (preprocessed) test file
     :param vectorizer: vectorizer in which the mapping between feature values and dimensions is stored
     :param classifier: the trained classifier
     :param selected_features: the features combination
-
     :return predictions: list of output labels provided by the classifier on the test file
     :return goldlabels: list of gold labels as included in the test file
     '''
@@ -80,11 +76,9 @@ def get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_fea
 def print_confusion_matrix(predictions, goldlabels):
     '''
     Function that prints out a confusion matrix
-
     :param predictions: predicted labels
     :param goldlabels: gold standard labels
     :type predictions, goldlabels: list of strings
-
     :returns: confusion matrix
     '''
 
@@ -100,7 +94,6 @@ def print_confusion_matrix(predictions, goldlabels):
 def print_precision_recall_fscore(predictions, goldlabels):
     '''
     Function that prints out precision, recall and f-score in a complete report
-
     :param predictions: predicted output by classifier
     :param goldlabels: original gold labels
     :type predictions, goldlabels: list of strings
@@ -116,7 +109,6 @@ def print_precision_recall_fscore(predictions, goldlabels):
 def run_classifier(trainfile, testfile):
     '''
     Function that runs the classifier and prints the evaluation
-
     :param trainfile: path to the training file
     :param testfile: path to the test file
     '''
@@ -132,6 +124,18 @@ def run_classifier(trainfile, testfile):
     print('---->'+ modelname + ' with ' + ' and '.join(selected_features) + ' as features <----')
     print_precision_recall_fscore(predictions, goldlabels)
     print('------')
+    
+     #Load training data
+    training = pd.read_csv(trainfile, encoding='utf-8', sep='\t')
+
+    #Load test data
+    test = pd.read_csv(testfile, encoding='utf-8', sep='\t')    
+    
+    #save predictions in new file
+    test['prediction'] = predictions
+    filename = testfile.replace('.conll', '-prediction.conll')
+    test.to_csv(filename, sep='\t', index=False)
+    
 
 
 def main():
@@ -144,8 +148,9 @@ def main():
 
     # RUN THE FEATURE ABLATION ANALYSIS ON THE FOLLOWING COMBINATIONS ON A LOGISTIC REGRESSION CLASSIFIER
     run_classifier(args.trainfile, args.testfile)
+    
+   
+    
 
 if __name__ == '__main__':
     main()
-
-

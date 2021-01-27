@@ -1,6 +1,12 @@
 import pandas as pd
 import argparse
 from collections import defaultdict
+def create_feature_dict(feature_list):
+    feature_dict = dict()
+    for feature in feature_list:
+        feature_dict[feature] = defaultdict(int)
+
+    return feature_dict
 
 def error_analysis(inputfile):
     # Prepare variables and error dictionary
@@ -8,51 +14,59 @@ def error_analysis(inputfile):
 
     n_samples = 0
     n_errors = 0
-    fp_dict = dict()
-    fn_dict = dict()
 
-
-    for feature in features:
-        fp_dict[feature] = defaultdict(int)
-        fn_dict[feature] = defaultdict(int)
+    ft_error_dict = dict()
+    tok_error_dict = defaultdict(list)
 
     # Go through all samples of development set
     for line in inputfile:
-        n_samples += 1
         components = line.rstrip('\n').split()
+        if len(components) > 9:
+            if n_samples > 0:
 
-        # Find prediction of system and gol_label
-        prediction = components[-1]
-        label = components[-2]
+                # Find prediction of system and gold_label
+                token = components[0]
+                lemma = components[1]
+                pos_tag = components[2]
+                prev_token = components[3]
+                next_token = components[4]
+                punctuation = components[5]
+                affixes = components[6]
+                n_grams = list(components[7])
+                label = components[-2]
+                prediction = components[-1]
 
-        # If they are not the same, the system made an error
-        if prediction != 'O' and label == 'O':
-            n_errors += 1
+                # If they are not the same, the system made an error
+                if prediction != label:
+                    n_errors += 1
+                    error_type = prediction + ' instead of ' + label
 
-            # Count the feature values:
-            # Are there certain values that cause a lot of errors?
-            for feature, value in zip(fn_dict, components):
-                fp_dict[feature][value] += 1
+                    if error_type not in ft_error_dict:
+                        feature_dict = create_feature_dict(features)
+                        ft_error_dict[error_type] = feature_dict
 
-        elif prediction == 'O' and label != 'O':
-            n_errors += 1
+                    for feature, value in zip(features, components):
+                        ft_error_dict[error_type][feature][value] += 1
 
-            # Count the feature values:
-            # Are there certain values that cause a lot of errors?
-            for feature, value in zip(fn_dict, components):
-                fn_dict[feature][value] += 1
+                    tok_error_dict[error_type].append([n_samples, prev_token, token, next_token])
 
-    print('Number of errors:', n_errors)
-    print('Number of samples:', n_samples)
-    print(round(n_errors/n_samples * 100, 3), '%')
-    for feature in fn_dict:
-        if feature not in ['lemma', 'prev_token', 'next_token', 'n_grams']:
-            print(feature)
-            print('False positives:')
-            print(fp_dict[feature])
-            print('False negatives:')
-            print(fn_dict[feature])
+            n_samples += 1
 
+    for error_type in ft_error_dict:
+        print(error_type)
+        print(len(tok_error_dict[error_type]), 'error(s) of this type')
+        print()
+        for error in tok_error_dict[error_type]:
+            print('Line number:', error[0])
+            print(error[1:4])
+            print()
+
+
+        for feature in ft_error_dict[error_type]:
+            if feature in ['pos_tag', 'punctuation', 'affixes']:
+                print(feature)
+                print(ft_error_dict[error_type][feature])
+                print()
 
 def main():
     # Set up command line parser
