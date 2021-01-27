@@ -1,6 +1,6 @@
-import pandas as pd
 import argparse
 from collections import defaultdict
+
 def create_feature_dict(feature_list):
     feature_dict = dict()
     for feature in feature_list:
@@ -26,13 +26,8 @@ def error_analysis(inputfile):
 
                 # Find prediction of system and gold_label
                 token = components[0]
-                lemma = components[1]
-                pos_tag = components[2]
                 prev_token = components[3]
                 next_token = components[4]
-                punctuation = components[5]
-                affixes = components[6]
-                n_grams = list(components[7])
                 label = components[-2]
                 prediction = components[-1]
 
