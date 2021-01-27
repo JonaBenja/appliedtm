@@ -44,7 +44,7 @@ def error_analysis(inputfile):
 
     print('Number of errors:', n_errors)
     print('Number of samples:', n_samples)
-    print(n_errors/n_samples * 100, '%')
+    print(round(n_errors/n_samples * 100, 3), '%')
     for feature in fn_dict:
         if feature not in ['token', 'lemma', 'prev_token', 'next_token', 'n_grams']:
             print(feature)
