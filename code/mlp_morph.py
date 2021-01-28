@@ -128,7 +128,22 @@ def train_classifier(x_train, y_train):
     return clf
 
 
-def read_data_run_classifier(training_data_path, test_data_path, embedding_model_path):
+def load_data_embeddings(training_data_path, test_data_path, embedding_model_path):
+
+    print('Loading word embedding model...')
+    embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
+        embedding_model_path, binary=True)
+    print('Done loading word embedding model')
+
+    training = pd.read_csv(training_data_path, encoding='utf-8', sep='\t')
+    training_labels = training['gold_label']
+
+    test = pd.read_csv(test_data_path, encoding='utf-8', sep='\t')
+    test_labels = test['gold_label']
+
+    return training, training_labels, test, test_labels, embedding_model
+
+def run_classifier(training, training_labels, test, word_embedding_model, sparse):
     """
     Function to create a classifier and train it on a training datafile.
 
@@ -144,21 +159,8 @@ def read_data_run_classifier(training_data_path, test_data_path, embedding_model
     :rtype: sklearn.neural_network._multilayer_perceptron.MLPClassifier, list, list
     """
 
-    training = pd.read_csv(training_data_path, encoding='utf-8', sep='\t')
-    test = pd.read_csv(test_data_path, encoding='utf-8', sep='\t')
-
-    print('Loading word embedding model...')
-    word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
-        embedding_model_path, binary=True)
-    print('Done loading word embedding model')
-
     # Extract embeddings for token, prev_token and next_token
     embeddings = combine_embeddings(training, word_embedding_model)
-
-    sparse = ["pos_tag",
-              "punctuation",
-              "affixes",
-              'n_grams']
 
     # Extract and vectorize one-hot features
     sparse_features = make_sparse_features(training, sparse)
@@ -167,7 +169,6 @@ def read_data_run_classifier(training_data_path, test_data_path, embedding_model
 
     # Combine both kind of features into training data
     training_data = combine_features(sparse_vectors, embeddings)
-    training_labels = [label for label in training['gold_label']]
 
     # Train network
     print("Training classifier...")
@@ -182,28 +183,8 @@ def read_data_run_classifier(training_data_path, test_data_path, embedding_model
     sparse_vectors = vec.transform(sparse_features)
 
     test_data = combine_features(sparse_vectors, embeddings)
-    test_labels = test['gold_label']
 
-    return clf, test_data, test_labels
-
-
-def add_argument(parser, argument, help_message):
-    """
-    Function to add arguments to the commandline parser
-
-    :param parser: an argparse parser
-    :param argument: the name of the argument to be add to the parser
-    :param help_message: a help string to be added to the argument
-
-    :type parser: argparse.ArgumentParser
-    :type argument: str
-    :type help_message: str
-
-    :returns a parser object with the argument added
-    :rtype: argparse.ArgumentParser
-    """
-
-    return parser.add_argument(argument, type=str, help=help_message)
+    return clf, test_data
 
 
 def evaluation(test_labels, prediction):
@@ -225,6 +206,7 @@ def evaluation(test_labels, prediction):
 
     confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
     print(confusion_matrix)
+    print()
 
 
 def main():
@@ -239,7 +221,7 @@ def main():
 
     # Add arguments to command line parser
     for argument, help_message in zip(arguments, helps):
-        parser = add_argument(parser, argument, help_message)
+        parser.add_argument(argument, type=str, help=help_message)
 
     args = parser.parse_args()
 
@@ -248,14 +230,23 @@ def main():
     test_data_path = args.test_data
     embedding_model_path = args.embedding_model
 
-    # Train classifier
-    clf, test_data, test_labels = read_data_run_classifier(training_data_path, test_data_path, embedding_model_path)
+    # Load data and the embedding model
+    training, training_labels, test, test_labels, word_embedding_model = load_data_embeddings(training_data_path, test_data_path, embedding_model_path)
 
-    # Make prediction
-    prediction = clf.predict(test_data)
+    sparse = [["pos_tag", "punctuation"], ["pos_tag", "punctuation", "affixes", 'n_grams']]
 
-    # Print evaluation
-    evaluation(test_labels, prediction)
+    # Train classifiers
+    for features in sparse:
+        clf, test_data = run_classifier(training, training_labels, test, word_embedding_model, features)
+
+        # Make prediction
+        prediction = clf.predict(test_data)
+
+        # Print evaluation
+        print('-------------------------------------------------------')
+        print("Evaluation of MLP system with the following sparse features:")
+        print(features)
+        evaluation(test_labels, prediction)
 
 
 if __name__ == '__main__':
