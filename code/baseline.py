@@ -144,7 +144,6 @@ def main():
 
     args = parser.parse_args()
 
-    # RUN THE FEATURE CLASSIFIER
     run_classifier(args.trainfile, args.testfile)
 
 if __name__ == '__main__':
