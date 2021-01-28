@@ -37,7 +37,7 @@ You can find it here: https://code.google.com/archive/p/word2vec/
 The packages that are required to run the code for this project can be found in code/requirements.txt.
 
 ### code
-This folder contains the following scripts:
+This folder contains the following scripts and files: 
 
 * `data_statistics.py` prints statistics about the number of tokens and distributions of negations classes of the inputted dataset.
 
@@ -54,5 +54,8 @@ This folder contains the following scripts:
 * `mlp_classifier.py` trains a Multilayer Perceptron on the training data.
 
 * `stopwords.txt` contains a list of English stopwords.
+
+* `requirements.txt` contains the requirements for the code in this project.
+
 
 Each of these scripts can be run from the command line through argparse. If you type '-h' after the name of the file, you will get some information regarding the requested arguments.
