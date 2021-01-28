@@ -8,7 +8,6 @@ from sklearn.metrics import classification_report
 from sklearn.feature_extraction import DictVectorizer
 
 
-
 def extract_word_embedding(token, word_embedding_model):
     """
     Function that returns the word embedding for a given token out of a
@@ -111,38 +110,44 @@ def combine_features(sparse, dense):
 
 
 def train_classifier(x_train, y_train):
-    """Trains the Multilayer perceptron neural network"""
+    """Trains the Multilayer Perceptron neural network"""
 
     clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=500, random_state=1)
     clf.fit(x_train, y_train)
     return clf
+
+def parse_commandline(parser, argument, help):
+    parser.add_argument(argument, type=str, help=help)
+
+    return parser
+
+def evaluation(test_labels, prediction):
+    metrics = classification_report(test_labels, prediction, digits=3)
+    print(metrics)
+
+    # Confusion matrix
+    data = {'Gold': test_labels, 'Predicted': prediction}
+    df = pd.DataFrame(data, columns=['Gold', 'Predicted'])
+
+    confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
+    print(confusion_matrix)
 
 
 def main():
     # Set up command line parser
     parser = argparse.ArgumentParser(prog='mlp_classifier_morph_ft.py',
                                      usage='python %(prog)s training_data_file test_data_file',)
-    parser.add_argument('training_data',
-                        type=str,
-                        help='file path to the input data to preprocess.'
-                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll')
 
-    parser.add_argument('test_data',
-                        type=str,
-                        help='file path to the input data to preprocess.'
-                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll')
+    arguments = ['training_data', 'test_data', 'embedding_model']
+    helps = ['file path to the input data to preprocess. Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll',
+             'file path to the input data to preprocess. Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll',
+             'file path to a pretrained embedding model. Example path: ../models/GoogleNews-vectors-negative300.bin']
 
-    parser.add_argument('embedding_model',
-                        type=str,
-                        help='file path to a pretrained embedding model.'
-                             'Example path: ../models/GoogleNews-vectors-negative300.bin')
+    # Add arguments to command line parser
+    for argument, help in zip(arguments, helps):
+        parser = parse_commandline(parser, argument, help)
 
     args = parser.parse_args()
-
-    sparse = ["pos_tag",
-              "punctuation",
-              "affixes",
-              'n_grams']
 
     # Load training data
     training_data_name = args.training_data
@@ -161,6 +166,11 @@ def main():
 
     # Extract embeddings for token, prev_token and next_token
     embeddings = combine_embeddings(training, word_embedding_model)
+
+    sparse = ["pos_tag",
+              "punctuation",
+              "affixes",
+              'n_grams']
 
     # Extract and vectorize one-hot features
     sparse_features = make_sparse_features(training, sparse)
@@ -190,16 +200,8 @@ def main():
     # Make prediction
     prediction = clf.predict(test_data)
 
-    # Evaluate
-    metrics = classification_report(test_labels, prediction, digits=3)
-    print(metrics)
-
-    # Confusion matrix
-    data = {'Gold': test_labels, 'Predicted': prediction}
-    df = pd.DataFrame(data, columns=['Gold', 'Predicted'])
-
-    confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
-    print(confusion_matrix)
+    # Print evaluation
+    evaluation(test_labels, prediction)
 
 
 if __name__ == '__main__':
