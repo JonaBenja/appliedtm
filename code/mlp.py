@@ -119,8 +119,8 @@ def train_classifier(x_train, y_train):
 
 def main():
     # Set up command line parser
-    parser = argparse.ArgumentParser(prog='mlp_classifier.py',
-                                     usage='python %(prog)s training_data_file test_data_file',)
+    parser = argparse.ArgumentParser(prog='mlp.py',
+                                     usage='python %(prog)s training_data_file test_data_file')
     parser.add_argument('training_data',
                         type=str,
                         help='file path to the input data to preprocess.'

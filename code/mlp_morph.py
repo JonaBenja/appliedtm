@@ -135,7 +135,7 @@ def evaluation(test_labels, prediction):
 
 def main():
     # Set up command line parser
-    parser = argparse.ArgumentParser(prog='mlp_classifier_morph_ft.py',
+    parser = argparse.ArgumentParser(prog='mlp__morph.py',
                                      usage='python %(prog)s training_data_file test_data_file',)
 
     arguments = ['training_data', 'test_data', 'embedding_model']

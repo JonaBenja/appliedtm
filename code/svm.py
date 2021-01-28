@@ -146,9 +146,12 @@ def run_classifier(trainfile, testfile):
 
 def main():
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
-    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
+    parser = argparse.ArgumentParser(prog='svm.py',
+                                     usage='python %(prog)s training_data_file test_data_file')
+    parser.add_argument('trainfile',
+                        help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
+    parser.add_argument('testfile',
+                        help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
 
     args = parser.parse_args()
 

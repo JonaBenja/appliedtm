@@ -12,14 +12,13 @@ def extract_features_and_labels(trainingfile, selected_features):
     :param selected_features: the features combination
     :returns: lists of features and annotations
     '''
-
     data = []
     targets = []
     
-    #mapping features to columns
+    # mapping features to columns
     feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5, 'affixes': 6, 'n_grams': 7}
     with open(trainingfile, 'r', encoding='utf8') as infile:
-        for i,line in enumerate(infile):
+        for i, line in enumerate(infile):
             if i == 0:
                 pass
             else:
@@ -44,20 +43,19 @@ def create_classifier(train_features, train_targets):
     :param train_targets: the list of training annotations
     :returns: the model and the vectors
     '''
-    #initialising linear model 
+    # initialising linear model
     model = LinearSVC()
     
-    #setting vectorizer 
+    # setting vectorizer
     vec = DictVectorizer()
     
-    #vectorize features 
+    # vectorize features
     features_vectorized = vec.fit_transform(train_features)
     
-    #fitting the model 
+    # fitting the model
     model.fit(features_vectorized, train_targets)
 
     return model, vec
-
 
 
 def get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_features):
@@ -79,8 +77,6 @@ def get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_fea
     predictions = classifier.predict(test_features_vectorized)
 
     return predictions, goldlabels
-
-
 
 
 def print_confusion_matrix(predictions, goldlabels):
@@ -144,19 +140,19 @@ def run_classifier(trainfile, testfile):
     test.to_csv(filename, sep='\t', index=False)
     
 
-
 def main():
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-features.conll"')
-    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-features.conll"')
+    parser = argparse.ArgumentParser(prog='svm_morph.py',
+                                     usage='python %(prog)s training_data_file test_data_file')
+    parser.add_argument('trainfile',
+                        help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-features.conll"')
+    parser.add_argument('testfile',
+                        help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-features.conll"')
 
     args = parser.parse_args()
     
     run_classifier(args.trainfile, args.testfile)
-    
-   
-    
+
 
 if __name__ == '__main__':
     main()
