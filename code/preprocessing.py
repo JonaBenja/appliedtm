@@ -13,11 +13,17 @@ def load_data(input_file):
     with open(input_file, 'r', encoding='utf-8') as infile:
 
         for line in infile:
+            #splitting each line into components 
             components = line.rstrip('\n').split()
 
+            #checking for excistence of line 
             if len(components) > 0:
+                
+                #mapping token and label to components 
                 token = components[3]
                 label = components[-1]
+                
+                #adding to lists 
                 tokens_list.append(token)
                 labels_list.append(label)
 
@@ -29,10 +35,18 @@ def write_out(input_file):
     :param input_file: path to the data file
     :type input_file: string
     """
+    
+    #loading the data 
     tokens_list, labels_list = load_data(input_file)
+    
+    #replacing ending of filename 
     output_file = input_file.replace('.txt', '-preprocessed.conll')
+    
+    #writing preprocessed data to file 
     with open(output_file, 'w', encoding='utf-8') as f:
         for token, label in zip(tokens_list, labels_list):
+            
+            #lowercasing all tokens 
             output = '\t'.join([token.lower(), label])
             f.write(output + '\n')
 
