@@ -63,24 +63,24 @@ def error_analysis(inputfile):
     # Print tokens and context for errors per error type
     f = open("error_analysis_output.txt", "w")
     for error_type in ft_error_dict:
-        print('------------------------------------------------------------------------', file= f)
-        print('-----> ', error_type, file= f)
-        print(len(tok_error_dict[error_type]), 'error(s) of this type', file= f)
-        print(' ',file= f)
+        print('------------------------------------------------------------------------', file=f)
+        print('-----> ', error_type, file=f)
+        print(len(tok_error_dict[error_type]), 'error(s) of this type', file=f)
+        print(' ', file=f)
         for error in tok_error_dict[error_type]:
-            print('Line number:', error[0], file= f)
-            print('Preceding token:   ', error[1], file= f)
-            print('The error:         ', error[2], file= f)
-            print('Following token:   ', error[3], file= f)
-            print(' ', file= f)
+            print('Line number:', error[0], file=f)
+            print('Preceding token:   ', error[1], file=f)
+            print('The error:         ', error[2], file=f)
+            print('Following token:   ', error[3], file=f)
+            print(' ', file=f)
 
         # Print statistics on feature values per error type
-        print('------------------------------------------------------------------------', file= f)
+        print('------------------------------------------------------------------------', file=f)
         for feature in ft_error_dict[error_type]:
             if feature in ['pos_tag', 'punctuation', 'affixes']:
-                print(feature, file= f)
-                print(ft_error_dict[error_type][feature], file= f)
-                print(' ',file= f)
+                print(feature, file=f)
+                print(ft_error_dict[error_type][feature], file=f)
+                print(' ', file=f)
     f.close()
 
 
