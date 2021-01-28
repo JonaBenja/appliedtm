@@ -149,8 +149,8 @@ def main():
 
     parser = argparse.ArgumentParser(description= 'This script trains two classifiers based on SVM.')
 
-    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll"')
-    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll"')
+    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
+    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
 
     args = parser.parse_args()
     
