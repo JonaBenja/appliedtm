@@ -9,3 +9,5 @@ pip install nltk
 pip install numpy
 pip install pandas
 pip install -U scikit-learn
+
+Latest versions available of each library till current date: 28-01-2021
