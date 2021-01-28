@@ -1,0 +1,212 @@
+------------------------------------------------------------------------
+----->  B-NEG instead of O
+10 error(s) of this type
+ 
+Line number: 296
+Preceding token:    most
+The error:          incredible
+Following token:    and
+ 
+Line number: 716
+Preceding token:    but
+The error:          none
+Following token:    the
+ 
+Line number: 1908
+Preceding token:    of
+The error:          disrepair
+Following token:    .
+ 
+Line number: 3850
+Preceding token:    and
+The error:          no
+Following token:    pains
+ 
+Line number: 7350
+Preceding token:    were
+The error:          none
+Following token:    the
+ 
+Line number: 8622
+Preceding token:    has
+The error:          none
+Following token:    the
+ 
+Line number: 9516
+Preceding token:    's
+The error:          absence
+Following token:    ,
+ 
+Line number: 9789
+Preceding token:    ,
+The error:          except
+Following token:    into
+ 
+Line number: 11811
+Preceding token:    man
+The error:          never
+Following token:    lived
+ 
+Line number: 11816
+Preceding token:    .
+The error:          unhappily
+Following token:    ,
+ 
+------------------------------------------------------------------------
+pos_tag
+defaultdict(<class 'int'>, {'JJ': 1, 'VBD': 1, 'NN': 3, 'DT': 1, 'VBN': 1, 'IN': 1, 'RB': 2})
+ 
+punctuation
+defaultdict(<class 'int'>, {'0': 10})
+ 
+affixes
+defaultdict(<class 'int'>, {'in': 1, 'reg': 7, 'dis': 1, 'un': 1})
+ 
+------------------------------------------------------------------------
+----->  O instead of B-NEG
+23 error(s) of this type
+ 
+Line number: 800
+Preceding token:    his
+The error:          unbrushed
+Following token:    hair
+ 
+Line number: 805
+Preceding token:    his
+The error:          unshaven
+Following token:    chin
+ 
+Line number: 946
+Preceding token:    out
+The error:          unbrushed
+Following token:    and
+ 
+Line number: 948
+Preceding token:    and
+The error:          unkempt
+Following token:    ,
+ 
+Line number: 977
+Preceding token:    own
+The error:          unconventional
+Following token:    appearance
+ 
+Line number: 2054
+Preceding token:    nervous
+The error:          impatience
+Following token:    .
+ 
+Line number: 2730
+Preceding token:    was
+The error:          unknown
+Following token:    there
+ 
+Line number: 3056
+Preceding token:    out
+The error:          unburned
+Following token:    from
+ 
+Line number: 3121
+Preceding token:    paper
+The error:          without
+Following token:    watermark
+ 
+Line number: 3297
+Preceding token:    is
+The error:          undoubtedly
+Following token:    a
+ 
+Line number: 3738
+Preceding token:    you
+The error:          nor
+Following token:    anyone
+ 
+Line number: 4586
+Preceding token:    something
+The error:          unnatural
+Following token:    about
+ 
+Line number: 5035
+Preceding token:    yourself
+The error:          insensibly
+Following token:    twisting
+ 
+Line number: 5184
+Preceding token:    quite
+The error:          inadmissable
+Following token:    .
+ 
+Line number: 5242
+Preceding token:    the
+The error:          insufferable
+Following token:    fatigues
+ 
+Line number: 7230
+Preceding token:    it
+The error:          without
+Following token:    your
+ 
+Line number: 7474
+Preceding token:    .
+The error:          save
+Following token:    for
+ 
+Line number: 7648
+Preceding token:    not
+The error:          dissatisfied
+Following token:    at
+ 
+Line number: 8832
+Preceding token:    same
+The error:          unknown
+Following token:    crime
+ 
+Line number: 9354
+Preceding token:    is
+The error:          undoubtedly
+Following token:    a
+ 
+Line number: 10406
+Preceding token:    the
+The error:          unknown
+Following token:    dangers
+ 
+Line number: 11105
+Preceding token:    arrest
+The error:          without
+Following token:    her
+ 
+Line number: 11222
+Preceding token:    ,
+The error:          fearless
+Following token:    ,
+ 
+------------------------------------------------------------------------
+pos_tag
+defaultdict(<class 'int'>, {'JJ': 11, 'VBN': 2, 'NN': 2, 'IN': 3, 'RB': 3, 'CC': 1, 'VB': 1})
+ 
+punctuation
+defaultdict(<class 'int'>, {'0': 23})
+ 
+affixes
+defaultdict(<class 'int'>, {'reg': 15, 'im': 1, 'un': 2, 'in': 3, 'dis': 1, 'less': 1})
+ 
+------------------------------------------------------------------------
+----->  O instead of I-NEG
+1 error(s) of this type
+ 
+Line number: 13008
+Preceding token:    no
+The error:          more
+Following token:    in
+ 
+------------------------------------------------------------------------
+pos_tag
+defaultdict(<class 'int'>, {'RBR': 1})
+ 
+punctuation
+defaultdict(<class 'int'>, {'0': 1})
+ 
+affixes
+defaultdict(<class 'int'>, {'reg': 1})
+ 
