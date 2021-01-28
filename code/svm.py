@@ -130,6 +130,7 @@ def run_classifier(trainfile, testfile, selected_features):
 
     :param trainfile: path to the training file
     :param testfile: path to the test file
+    :return: predictions
     '''
 
     #evaluation of the performances of the SVM with the classical features
@@ -141,31 +142,37 @@ def run_classifier(trainfile, testfile, selected_features):
     print('---->'+ modelname + ' with ' + ' and '.join(selected_features) + ' as features <----')
     print_precision_recall_fscore(predictions, goldlabels)
     print('------')
+    
+    return predictions
 
 def main():
 
     parser = argparse.ArgumentParser(description= 'This script trains two classifiers based on SVM.')
 
-    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
-    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
+    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll"')
+    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll"')
 
     args = parser.parse_args()
     
-                        #traditional features (SVM)
-    selected_features = [["token", "lemma","pos_tag","prev_token","next_token","punctuation"],
-                         
-                        #with morphological features (SVM-MORPH)
-                        ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes",         
-                         "n_grams"]]
+    #traditional features (SVM)
+    selected_features_traditional = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
+    run_classifier(args.trainfile, args.testfile, selected_features_traditional) 
     
-    for features in selected_features:
-        run_classifier(args.trainfile, args.testfile, features)
+    #with morphological features (SVM-MORPH)
+    selected_features_morph = ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes", "n_grams"]
+    
+    #saving predictions to variable 
+    predictions = run_classifier(args.trainfile, args.testfile, selected_features_morph)
+    
+    #writing best performing system with predictions (SVM-MORPH)
+    test = pd.read_csv(args.testfile, encoding = 'utf-8', sep = '\t')
+    test['prediction'] = predictions
+    filename = args.testfile.replace("conll", "-prediction.conll")
+    test.to_csv(filename, sep = '\t', index = False)
+    
+        
 
 if __name__ == '__main__':
     main()
-
-
-
-
 
 
