@@ -144,16 +144,17 @@ def run_classifier(trainfile, testfile, selected_features):
 
 def main():
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description= 'This script trains two classifiers based on SVM.')
+
     parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
     parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
 
     args = parser.parse_args()
     
-                        #traditional features
+                        #traditional features (SVM)
     selected_features = [["token", "lemma","pos_tag","prev_token","next_token","punctuation"],
                          
-                        #with morphological features
+                        #with morphological features (SVM-MORPH)
                         ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes",         
                          "n_grams"]]
     

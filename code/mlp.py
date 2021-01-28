@@ -212,7 +212,9 @@ def evaluation(test_labels, prediction):
 def main():
     # Set up command line parser
     parser = argparse.ArgumentParser(prog='mlp_morph.py',
-                                     usage='python %(prog)s training_data_file test_data_file',)
+                                     usage='python %(prog)s training_data_file test_data_file',
+                                     description= 'This script trains two classifiers based on a Multilayer Perceptron. '
+                                                  'Note that this script might run for around 1h.')
 
     arguments = ['training_data', 'test_data', 'embedding_model']
     helps = ['file path to the input data to preprocess. Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll',
@@ -233,7 +235,10 @@ def main():
     # Load data and the embedding model
     training, training_labels, test, test_labels, word_embedding_model = load_data_embeddings(training_data_path, test_data_path, embedding_model_path)
 
-    sparse = [["pos_tag", "punctuation"], ["pos_tag", "punctuation", "affixes", 'n_grams']]
+              # just traditional features (MLP)
+    sparse = [["pos_tag", "punctuation"],
+              # with morphological features (MLP-MORPH)
+              ["pos_tag", "punctuation", "affixes", 'n_grams']]
 
     # Train classifiers
     for features in sparse:
