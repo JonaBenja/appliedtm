@@ -122,7 +122,7 @@ def run_classifier(trainfile, testfile):
     '''
 
 
-    #evaluation of the performances of the other systems with the best combination
+    #evaluation of the performances of the baseline system
     modelname = 'SVM'
     selected_features = ["token"]
     feature_values, labels = extract_features_and_labels(trainfile, selected_features)
@@ -144,7 +144,6 @@ def main():
 
     args = parser.parse_args()
 
-    # RUN THE FEATURE ABLATION ANALYSIS ON THE FOLLOWING COMBINATIONS ON A LOGISTIC REGRESSION CLASSIFIER
     run_classifier(args.trainfile, args.testfile)
 
 if __name__ == '__main__':

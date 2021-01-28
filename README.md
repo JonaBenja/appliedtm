@@ -33,8 +33,11 @@ test data #2: `SEM-2012-SharedTask-CD-SCO-test-circle-.txt`
 The word embedding model used for the training of the MLP is the "GoogleNewsvectors-negative300.bin.gz".
 You can find it here: https://code.google.com/archive/p/word2vec/
 
+### requirements
+The packages that are required to run the code for this project can be found in code/requirements.txt.
+
 ### code
-This folder contains the following scripts:
+This folder contains the following scripts and files: 
 
 * `data_statistics.py` prints statistics about the number of tokens and distributions of negations classes of the inputted dataset.
 
@@ -46,10 +49,19 @@ This folder contains the following scripts:
 
 * `baseline_system.py` trains a baseline system on a data set with only the token as feature.
 
-* `svm_classifier.py` trains a Support Vectors Machine system on the training data.
+* `svm.py` trains a Support Vectors Machine system on the training data with the classical features.
 
-* `mlp_classifier.py` trains a Multilayer Perceptron on the training data.
+* `svm-morph.py` trains a Support Vector Machine system on the training data with the classical and morpholocial features.
+
+* `mlp.py` trains a Multilayer Perceptron on the training data with the classical features.
+
+* `mlp-morph.py` trains a Multilayer Perceptron on the training data with the classical and morphological features.
+
+* `error-analysis.py` runs an error analysis on the results of the predicted data.
 
 * `stopwords.txt` contains a list of English stopwords.
+
+* `requirements.txt` contains the requirements for the code in this project.
+
 
 Each of these scripts can be run from the command line through argparse. If you type '-h' after the name of the file, you will get some information regarding the requested arguments.

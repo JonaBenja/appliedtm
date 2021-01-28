@@ -132,7 +132,7 @@ def run_classifier(trainfile, testfile):
     :param testfile: path to the test file
     '''
 
-    #evaluation of the performances of the SVM with the classical features
+    #evaluation of the performances of the SVM with the traditional features
     modelname = 'SVM'
     selected_features = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
     feature_values, labels = extract_features_and_labels(trainfile, selected_features)
