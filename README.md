@@ -49,9 +49,15 @@ This folder contains the following scripts and files:
 
 * `baseline_system.py` trains a baseline system on a data set with only the token as feature.
 
-* `svm_classifier.py` trains a Support Vectors Machine system on the training data.
+* `svm.py` trains a Support Vectors Machine system on the training data with the classical features.
 
-* `mlp_classifier.py` trains a Multilayer Perceptron on the training data.
+* `svm-morph.py` trains a Support Vector Machine system on the training data with the classical and morpholocial features.
+
+* `mlp.py` trains a Multilayer Perceptron on the training data with the classical features.
+
+* `mlp-morph.py` trains a Multilayer Perceptron on the training data with the classical and morphological features.
+
+* `error-analysis.py` runs an error analysis on the results of the predicted data.
 
 * `stopwords.txt` contains a list of English stopwords.
 
