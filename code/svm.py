@@ -154,23 +154,20 @@ def main():
 
     args = parser.parse_args()
     
-    #traditional features (SVM)
-    selected_features_traditional = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
-    run_classifier(args.trainfile, args.testfile, selected_features_traditional) 
-    
-    #with morphological features (SVM-MORPH)
-    selected_features_morph = ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes", "n_grams"]
-    
-    #saving predictions to variable 
-    predictions = run_classifier(args.trainfile, args.testfile, selected_features_morph)
-    
-    #writing best performing system with predictions (SVM-MORPH)
-    test = pd.read_csv(args.testfile, encoding = 'utf-8', sep = '\t')
-    test['prediction'] = predictions
-    filename = args.testfile.replace(".conll", "-predictions.conll")
-    test.to_csv(filename, sep = '\t', index = False)
-    
-        
+                        #traditional features (SVM)
+    selected_features = [["token", "lemma","pos_tag","prev_token","next_token","punctuation"],
+
+                        #with morphological features (SVM-MORPH)
+                        ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes", "n_grams"]]
+
+    for i,features in enumerate(selected_features):
+        predictions = run_classifier(args.trainfile, args.testfile, features)
+        if i == 1:
+            # write the best performing system predictions to an outputfile  (SVM-MORPH)
+            test = pd.read_csv(args.testfile, encoding='utf-8', sep='\t')
+            test['prediction'] = predictions
+            filename = args.testfile.replace(".conll", "-predictions.conll")
+            test.to_csv(filename, sep='\t', index=False)
 
 if __name__ == '__main__':
     main()
