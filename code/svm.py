@@ -167,7 +167,7 @@ def main():
     #writing best performing system with predictions (SVM-MORPH)
     test = pd.read_csv(args.testfile, encoding = 'utf-8', sep = '\t')
     test['prediction'] = predictions
-    filename = args.testfile.replace("conll", "-prediction.conll")
+    filename = args.testfile.replace(".conll", "-prediction.conll")
     test.to_csv(filename, sep = '\t', index = False)
     
         
