@@ -51,13 +51,14 @@ def write_features(input_file):
     
     n_grams = creating_ngrams(tokens)
 
-    features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
+    features_dict = {'token': tokens, 'pos_tag': pos_tags, 'lemma': lemmas, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes,
-                     'n_grams': n_grams,'gold_label': labels}
+                     'n_grams': n_grams, 'gold_label': labels}
 
-    features_df = pd.DataFrame(features_dict, columns = feature_names)
+    features_df = pd.DataFrame(features_dict, columns=feature_names)
 
     features_df.to_csv(output_file, sep='\t', index=False)
+
 
 def main():
     # Set up command line parser

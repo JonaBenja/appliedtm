@@ -1,15 +1,17 @@
+import argparse
+import gensim
+import numpy as np
+import pandas as pd
+from collections import defaultdict
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report
 from sklearn.feature_extraction import DictVectorizer
-from collections import defaultdict
-import numpy as np
-import pandas as pd
-import gensim
-import argparse
+
 
 def extract_word_embedding(token, word_embedding_model):
     """
-    Function that returns the word embedding for a given token out of a distributional semantic model and a 300-dimension vector of 0s otherwise
+    Function that returns the word embedding for a given token out of a
+    distributional semantic model and a 300-dimension vector of 0s otherwise
 
     :param token: the token
     :param word_embedding_model: the distributional semantic model
@@ -25,6 +27,7 @@ def extract_word_embedding(token, word_embedding_model):
         vector = [0]*300
     return vector
 
+
 def combine_embeddings(data, word_embedding_model):
     """
     Extracts word embeddings for the token, previous token and next token and concatenates them
@@ -39,11 +42,14 @@ def combine_embeddings(data, word_embedding_model):
     """
     embeddings = []
     for token, prev_token, next_token, lemma in zip(data['token'], data['prev_token'], data['next_token'], data['lemma']):
+
+        # Extract embeddings for all token features
         token_vector = extract_word_embedding(token, word_embedding_model)
         prev_token_vector = extract_word_embedding(prev_token, word_embedding_model)
         next_token_vector = extract_word_embedding(next_token, word_embedding_model)
         lemma_vector = extract_word_embedding(lemma, word_embedding_model)
 
+        # Concatenate the embeddings
         embeddings.append(np.concatenate((token_vector, prev_token_vector, next_token_vector, lemma_vector)))
 
     return embeddings
@@ -64,11 +70,16 @@ def make_sparse_features(data, feature_names):
 
     sparse_features = []
     for i in range(len(data)):
+
+        # Prepare feature dictionary for each sample
         feature_dict = defaultdict(str)
+
+        # Add feature values to dictionary
         for feature in feature_names:
             value = data[feature][i]
             feature_dict[feature] = value
 
+        # Append all sample feature dictionaries
         sparse_features.append(feature_dict)
 
     return sparse_features
@@ -92,42 +103,43 @@ def combine_features(sparse, dense):
     sparse = np.array(sparse.toarray())
 
     for index, vector in enumerate(sparse):
-            combined_vector = np.concatenate((vector, dense[index]))
-            combined_vectors.append(combined_vector)
+        combined_vector = np.concatenate((vector, dense[index]))
+        combined_vectors.append(combined_vector)
 
     return combined_vectors
 
-def train_classifier(X_train, y_train):
+
+def train_classifier(x_train, y_train):
     """Trains the Multilayer perceptron neural network"""
 
-    clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=(500), random_state=1)
-    clf.fit(X_train, y_train)
+    clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=500, random_state=1)
+    clf.fit(x_train, y_train)
     return clf
+
 
 def main():
     # Set up command line parser
-    parser = argparse.ArgumentParser(prog='mlp.py',
+    parser = argparse.ArgumentParser(prog='mlp_classifier.py',
                                      usage='python %(prog)s training_data_file test_data_file',)
     parser.add_argument('training_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-training-features.conll"')
+                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll')
 
     parser.add_argument('test_data',
                         type=str,
                         help='file path to the input data to preprocess.'
-                             'Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-features.conll"')
+                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll')
 
     parser.add_argument('embedding_model',
                         type=str,
                         help='file path to a pretrained embedding model.'
-                             'Example path: "../models/GoogleNews-vectors-negative300.bin"')
+                             'Example path: ../models/GoogleNews-vectors-negative300.bin')
 
     args = parser.parse_args()
 
     sparse = ["pos_tag",
-              "punctuation"
-              ]
+              "punctuation"]
 
     # Load training data
     training_data = args.training_data
@@ -186,12 +198,6 @@ def main():
     confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
     print(confusion_matrix)
 
+
 if __name__ == '__main__':
     main()
-
-
-# '../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll'
-# '../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll'
-# '../data/SEM-2012-SharedTask-CD-SCO-test-cardboard-features.conll'
-
-# '../models/GoogleNews-vectors-negative300.bin'
