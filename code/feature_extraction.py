@@ -64,7 +64,8 @@ def write_features(input_file):
 def main():
     # Set up command line parser
     parser = argparse.ArgumentParser(prog='feature_extraction.py',
-                                     usage='python %(prog)s path_to_file',)
+                                     usage='python %(prog)s path_to_file',
+                                     description='This script runs the feature extraction over a preprocessed file.')
     parser.add_argument('input_file',
                         type=str,
                         help='file path to the input data to preprocess.'

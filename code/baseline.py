@@ -137,7 +137,8 @@ def run_classifier(trainfile, testfile):
 def main():
 
     parser = argparse.ArgumentParser(prog='baseline.py',
-                                     usage='python %(prog)s training_data_file test_data_file')
+                                     usage='python %(prog)s training_data_file test_data_file',
+                                     description='This script trains a baseline system based on SVM.')
 
     parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-preprocessed-features.conll"')
     parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed-features.conll"')

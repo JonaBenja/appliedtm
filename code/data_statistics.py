@@ -27,7 +27,7 @@ def print_statistics(input_file):
     print(negation_cues.most_common(10))
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='This script extracts statistics from the original dataset.')
     parser.add_argument('input_file',
                         help='file path to the input data to compute statistics of. Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-preprocessed.conll"')
     args = parser.parse_args()

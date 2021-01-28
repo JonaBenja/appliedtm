@@ -87,7 +87,8 @@ def error_analysis(inputfile):
 def main():
     # Set up command line parser
     parser = argparse.ArgumentParser(prog='error_analysis.py',
-                                     usage='python %(prog)s path_to_file',)
+                                     usage='python %(prog)s path_to_file',
+                                     description='This script runs an error analysis over the output of the best performing system (SVM-MORPH).')
     parser.add_argument('input_file',
                         type=str,
                         help='file path to the input data to preprocess.'

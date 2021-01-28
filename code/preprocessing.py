@@ -52,7 +52,7 @@ def write_out(input_file):
 
 
 def main():
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='This script runs a preprocessing on the original data files.')
     parser.add_argument('input_file',
                         help='file path to the input data to preprocess. Example path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple.txt"')
     args = parser.parse_args()
