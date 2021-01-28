@@ -50,8 +50,6 @@ def write_features(input_file):
     affixes = morphological_rules(tokens)
     n_grams = creating_ngrams(tokens)
 
-    features_dict = {'token': tokens, 'pos_tag': pos_tags, 'lemma': lemmas, 'prev_token': prev_tokens,
-    
     # Defining feature names for writing to output file 
     features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes,
