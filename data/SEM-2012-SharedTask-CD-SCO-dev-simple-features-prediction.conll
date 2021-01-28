@@ -294,7 +294,7 @@ have	have	VB	``	just	0	reg	['have', 'ave', 've']	O	O
 just	just	RB	have	had	0	reg	['just', 'ust', 'st']	O	O
 had	have	VBN	just	most	0	reg	['had', 'ad']	O	O
 most	most	RBS	had	incredible	0	reg	['most', 'ost', 'st']	O	O
-incredible	incredible	JJ	most	and	0	in	['incr', 'ncre', 'cred', 'redi', 'edib', 'dibl', 'ible', 'ble', 'le']	O	O
+incredible	incredible	JJ	most	and	0	in	['incr', 'ncre', 'cred', 'redi', 'edib', 'dibl', 'ible', 'ble', 'le']	O	B-NEG
 and	and	CC	incredible	grotesque	0	reg	['and', 'nd']	O	O
 grotesque	grotesque	JJ	and	experience	0	reg	['grot', 'rote', 'otes', 'tesq', 'esqu', 'sque', 'que', 'ue']	O	O
 experience	experience	NN	grotesque	.	0	reg	['expe', 'xper', 'peri', 'erie', 'rien', 'ienc', 'ence', 'nce', 'ce']	O	O
@@ -602,7 +602,7 @@ situation	situation	NN	a	.	0	reg	['situ', 'itua', 'tuat', 'uati', 'atio', 'tion'
 it	it	PRP	.	is	0	reg	['it']	O	O
 is	be	VBZ	it	most	0	reg	['is']	O	O
 most	most	RBS	is	improper	0	reg	['most', 'ost', 'st']	O	O
-improper	improper	JJ	most	--	0	im	['impr', 'mpro', 'prop', 'rope', 'oper', 'per', 'er']	B-NEG	O
+improper	improper	JJ	most	--	0	im	['impr', 'mpro', 'prop', 'rope', 'oper', 'per', 'er']	B-NEG	B-NEG
 --	--	:	improper	most	1	reg	['--']	O	O
 most	most	JJS	--	outrageous	0	reg	['most', 'ost', 'st']	O	O
 outrageous	outrageous	JJ	most	.	0	reg	['outr', 'utra', 'trag', 'rage', 'ageo', 'geou', 'eous', 'ous', 'us']	O	O
@@ -1906,7 +1906,7 @@ a	a	DT	in	crazy	0	reg	[]	O	O
 crazy	crazy	JJ	a	state	0	reg	['craz', 'razy', 'azy', 'zy']	O	O
 state	state	NN	crazy	of	0	reg	['stat', 'tate', 'ate', 'te']	O	O
 of	of	IN	state	disrepair	0	reg	['of']	O	O
-disrepair	disrepair	NN	of	.	0	dis	['disr', 'isre', 'srep', 'repa', 'epai', 'pair', 'air', 'ir']	O	O
+disrepair	disrepair	NN	of	.	0	dis	['disr', 'isre', 'srep', 'repa', 'epai', 'pair', 'air', 'ir']	O	B-NEG
 .	.	.	disrepair	when	1	reg	[]	O	O
 when	when	WRB	.	the	0	reg	['when', 'hen', 'en']	O	O
 the	the	DT	when	trap	0	reg	['the', 'he']	O	O
@@ -2185,7 +2185,7 @@ and	and	CC	conversation	sat	0	reg	['and', 'nd']	O	O
 sat	sat	NN	and	,	0	reg	['sat', 'at']	O	O
 ,	,	,	sat	smoking	1	reg	[]	O	O
 smoking	smoke	VBG	,	endless	0	reg	['smok', 'moki', 'okin', 'king', 'ing', 'ng']	O	O
-endless	endless	NN	smoking	cigarettes	0	less	['endl', 'ndle', 'dles', 'less', 'ess', 'ss']	O	B-NEG
+endless	endless	NN	smoking	cigarettes	0	less	['endl', 'ndle', 'dles', 'less', 'ess', 'ss']	O	O
 cigarettes	cigarette	NNS	endless	,	0	reg	['ciga', 'igar', 'gare', 'aret', 'rett', 'ette', 'ttes', 'tes', 'es']	O	O
 ,	,	,	cigarettes	lost	1	reg	[]	O	O
 lost	lose	VBN	,	in	0	reg	['lost', 'ost', 'st']	O	O
@@ -2728,7 +2728,7 @@ embassy	embassy	NN	spanish	.	0	reg	['emba', 'mbas', 'bass', 'assy', 'ssy', 'sy']
 the	the	DT	.	man	0	reg	['the', 'he']	O	O
 man	man	NN	the	was	0	reg	['man', 'an']	O	O
 was	be	VBD	man	unknown	0	reg	['was', 'as']	O	O
-unknown	unknown	JJ	was	there	0	reg	['unkn', 'nkno', 'know', 'nown', 'own', 'wn']	B-NEG	B-NEG
+unknown	unknown	JJ	was	there	0	reg	['unkn', 'nkno', 'know', 'nown', 'own', 'wn']	B-NEG	O
 there	there	RB	unknown	.	0	reg	['ther', 'here', 'ere', 're']	O	O
 .	.	.	there	after	1	reg	[]	O	O
 after	after	IN	.	this	0	reg	['afte', 'fter', 'ter', 'er']	O	O
@@ -3119,7 +3119,7 @@ upon	upon	IN	written	ordinary	0	reg	['upon', 'pon', 'on']	O	O
 ordinary	ordinary	JJ	upon	cream-laid	0	reg	['ordi', 'rdin', 'dina', 'inar', 'nary', 'ary', 'ry']	O	O
 cream-laid	cream-laid	JJ	ordinary	paper	1	reg	['crea', 'ream', 'eam-', 'am-l', 'm-la', '-lai', 'laid', 'aid', 'id']	O	O
 paper	paper	NN	cream-laid	without	0	reg	['pape', 'aper', 'per', 'er']	O	O
-without	without	IN	paper	watermark	0	reg	['with', 'itho', 'thou', 'hout', 'out', 'ut']	B-NEG	B-NEG
+without	without	IN	paper	watermark	0	reg	['with', 'itho', 'thou', 'hout', 'out', 'ut']	B-NEG	O
 watermark	watermark	NN	without	.	0	reg	['wate', 'ater', 'term', 'erma', 'rmar', 'mark', 'ark', 'rk']	O	O
 .	.	.	watermark	it	1	reg	[]	O	O
 it	it	PRP	.	is	0	reg	['it']	O	O
@@ -3295,7 +3295,7 @@ the	the	DT	.	oval	0	reg	['the', 'he']	O	O
 oval	oval	JJ	the	seal	0	reg	['oval', 'val', 'al']	O	O
 seal	seal	NN	oval	is	0	reg	['seal', 'eal', 'al']	O	O
 is	be	VBZ	seal	undoubtedly	0	reg	['is']	O	O
-undoubtedly	undoubtedly	RB	is	a	0	un	['undo', 'ndou', 'doub', 'oubt', 'ubte', 'bted', 'tedl', 'edly', 'dly', 'ly']	B-NEG	B-NEG
+undoubtedly	undoubtedly	RB	is	a	0	un	['undo', 'ndou', 'doub', 'oubt', 'ubte', 'bted', 'tedl', 'edly', 'dly', 'ly']	B-NEG	O
 a	a	DT	undoubtedly	plain	0	reg	[]	O	O
 plain	plain	NN	a	sleeve-link	0	reg	['plai', 'lain', 'ain', 'in']	O	O
 sleeve-link	sleeve-link	NN	plain	--	1	reg	['slee', 'leev', 'eeve', 'eve-', 've-l', 'e-li', '-lin', 'link', 'ink', 'nk']	O	O
@@ -3734,9 +3734,9 @@ his	his	PRP$	reached	house	0	reg	['his', 'is']	O	O
 house	house	NN	his	and	0	reg	['hous', 'ouse', 'use', 'se']	O	O
 and	and	CC	house	found	0	reg	['and', 'nd']	O	O
 found	find	VBD	and	neither	0	reg	['foun', 'ound', 'und', 'nd']	O	O
-neither	neither	CC	found	you	0	reg	['neit', 'eith', 'ithe', 'ther', 'her', 'er']	B-NEG	O
+neither	neither	CC	found	you	0	reg	['neit', 'eith', 'ithe', 'ther', 'her', 'er']	B-NEG	B-NEG
 you	you	PRP	neither	nor	0	reg	['you', 'ou']	O	O
-nor	nor	CC	you	anyone	0	reg	['nor', 'or']	B-NEG	B-NEG
+nor	nor	CC	you	anyone	0	reg	['nor', 'or']	B-NEG	O
 anyone	anyone	NN	nor	else	0	reg	['anyo', 'nyon', 'yone', 'one', 'ne']	O	O
 else	else	RB	anyone	inside	0	reg	['else', 'lse', 'se']	O	O
 inside	inside	IN	else	it	0	in	['insi', 'nsid', 'side', 'ide', 'de']	O	O
@@ -4006,7 +4006,7 @@ hour	hour	NN	very	.	0	reg	['hour', 'our', 'ur']	O	O
 remarkable	remarkable	JJ	``	,	0	reg	['rema', 'emar', 'mark', 'arka', 'rkab', 'kabl', 'able', 'ble', 'le']	O	O
 ,	,	,	remarkable	but	1	reg	[]	O	O
 but	but	CC	,	by	0	reg	['but', 'ut']	O	O
-by	by	IN	but	no	0	reg	['by']	B-NEG	O
+by	by	IN	but	no	0	reg	['by']	B-NEG	B-NEG
 no	no	DT	by	means	0	reg	['no']	I-NEG	I-NEG
 means	mean	NNS	no	impossible	0	reg	['mean', 'eans', 'ans', 'ns']	I-NEG	I-NEG
 impossible	impossible	JJ	means	,	0	im	['impo', 'mpos', 'poss', 'ossi', 'ssib', 'sibl', 'ible', 'ble', 'le']	B-NEG	B-NEG
@@ -5182,7 +5182,7 @@ good	good	JJ	very	--	0	reg	['good', 'ood', 'od']	O	O
 --	--	:	good	but	1	reg	['--']	O	O
 but	but	CC	--	quite	0	reg	['but', 'ut']	O	O
 quite	quite	RB	but	inadmissable	0	reg	['quit', 'uite', 'ite', 'te']	O	O
-inadmissable	inadmissable	JJ	quite	.	0	in	['inad', 'nadm', 'admi', 'dmis', 'miss', 'issa', 'ssab', 'sabl', 'able', 'ble', 'le']	B-NEG	B-NEG
+inadmissable	inadmissable	JJ	quite	.	0	in	['inad', 'nadm', 'admi', 'dmis', 'miss', 'issa', 'ssab', 'sabl', 'able', 'ble', 'le']	B-NEG	O
 .	.	.	inadmissable	a	1	reg	[]	O	O
 a	a	DT	.	spaniard	0	reg	[]	O	O
 spaniard	spaniard	NN	a	would	0	reg	['span', 'pani', 'ania', 'niar', 'iard', 'ard', 'rd']	O	O
@@ -6468,7 +6468,7 @@ had	have	VBD	tenants	brought	0	reg	['had', 'ad']	O	O
 brought	bring	VBN	had	little	0	reg	['brou', 'roug', 'ough', 'ught', 'ght', 'ht']	O	O
 little	little	RB	brought	or	0	reg	['litt', 'ittl', 'ttle', 'tle', 'le']	O	O
 or	or	CC	little	nothing	0	reg	['or']	O	O
-nothing	nothing	NN	or	with	0	reg	['noth', 'othi', 'thin', 'hing', 'ing', 'ng']	B-NEG	O
+nothing	nothing	NN	or	with	0	reg	['noth', 'othi', 'thin', 'hing', 'ing', 'ng']	B-NEG	B-NEG
 with	with	IN	nothing	them	0	reg	['with', 'ith', 'th']	O	O
 them	them	PRP	with	,	0	reg	['them', 'hem', 'em']	O	O
 ,	,	,	them	and	1	reg	[]	O	O
@@ -7228,7 +7228,7 @@ i	i	NN	that	had	0	reg	[]	O	O
 had	have	VBD	i	solved	0	reg	['had', 'ad']	O	O
 solved	solve	VBN	had	it	0	reg	['solv', 'olve', 'lved', 'ved', 'ed']	O	O
 it	it	PRP	solved	without	0	reg	['it']	O	O
-without	without	IN	it	your	0	reg	['with', 'itho', 'thou', 'hout', 'out', 'ut']	B-NEG	B-NEG
+without	without	IN	it	your	0	reg	['with', 'itho', 'thou', 'hout', 'out', 'ut']	B-NEG	O
 your	your	PRP$	without	help	0	reg	['your', 'our', 'ur']	O	O
 help	help	NN	your	.	0	reg	['help', 'elp', 'lp']	O	O
 .	.	.	help	''	1	reg	[]	O	O
@@ -8830,7 +8830,7 @@ confederates	confederate	NNS	all	in	0	reg	['conf', 'onfe', 'nfed', 'fede', 'eder
 in	in	IN	confederates	the	0	reg	['in']	O	O
 the	the	DT	in	same	0	reg	['the', 'he']	O	O
 same	same	JJ	the	unknown	0	reg	['same', 'ame', 'me']	O	O
-unknown	unknown	JJ	same	crime	0	reg	['unkn', 'nkno', 'know', 'nown', 'own', 'wn']	B-NEG	B-NEG
+unknown	unknown	JJ	same	crime	0	reg	['unkn', 'nkno', 'know', 'nown', 'own', 'wn']	B-NEG	O
 crime	crime	NN	unknown	.	0	reg	['crim', 'rime', 'ime', 'me']	O	O
 .	.	.	crime	if	1	reg	[]	O	O
 if	if	IN	.	it	0	reg	['if']	O	O
@@ -9352,7 +9352,7 @@ mr.	mr.	JJ	,	lucas	1	reg	['mr.', 'r.']	O	O
 lucas	lucas	NN	mr.	,	0	reg	['luca', 'ucas', 'cas', 'as']	O	O
 ,	,	,	lucas	is	1	reg	[]	O	O
 is	be	VBZ	,	undoubtedly	0	reg	['is']	O	O
-undoubtedly	undoubtedly	RB	is	a	0	un	['undo', 'ndou', 'doub', 'oubt', 'ubte', 'bted', 'tedl', 'edly', 'dly', 'ly']	B-NEG	B-NEG
+undoubtedly	undoubtedly	RB	is	a	0	un	['undo', 'ndou', 'doub', 'oubt', 'ubte', 'bted', 'tedl', 'edly', 'dly', 'ly']	B-NEG	O
 a	a	DT	undoubtedly	foreigner	0	reg	[]	O	O
 foreigner	foreigner	NN	a	,	0	reg	['fore', 'orei', 'reig', 'eign', 'igne', 'gner', 'ner', 'er']	O	O
 ,	,	,	foreigner	chocolate	1	reg	[]	O	O
@@ -9514,7 +9514,7 @@ after	after	IN	,	a	0	reg	['afte', 'fter', 'ter', 'er']	O	O
 a	a	DT	after	year	0	reg	[]	O	O
 year	year	NN	a	's	0	reg	['year', 'ear', 'ar']	O	O
 's	's	POS	year	absence	1	reg	"[""'s""]"	O	O
-absence	absence	NN	's	,	0	reg	['abse', 'bsen', 'senc', 'ence', 'nce', 'ce']	O	O
+absence	absence	NN	's	,	0	reg	['abse', 'bsen', 'senc', 'ence', 'nce', 'ce']	O	B-NEG
 ,	,	,	absence	to	1	reg	[]	O	O
 to	to	TO	,	high	0	reg	['to']	O	O
 high	high	JJ	to	gable	0	reg	['high', 'igh', 'gh']	O	O
@@ -9666,7 +9666,7 @@ of	of	IN	moment	temper	0	reg	['of']	O	O
 temper	temper	NN	of	by	0	reg	['temp', 'empe', 'mper', 'per', 'er']	O	O
 by	by	IN	temper	his	0	reg	['by']	O	O
 his	his	PRP$	by	imperious	0	reg	['his', 'is']	O	O
-imperious	imperious	JJ	his	employer	0	im	['impe', 'mper', 'peri', 'erio', 'riou', 'ious', 'ous', 'us']	O	B-NEG
+imperious	imperious	JJ	his	employer	0	im	['impe', 'mper', 'peri', 'erio', 'riou', 'ious', 'ous', 'us']	O	O
 employer	employer	NN	imperious	.	0	reg	['empl', 'mplo', 'ploy', 'loye', 'oyer', 'yer', 'er']	O	O
 .	.	.	employer	he	1	reg	[]	O	O
 he	he	PRP	.	in	0	reg	['he']	O	O
@@ -9684,7 +9684,7 @@ in	in	IN	unite	their	0	reg	['in']	O	O
 their	their	PRP$	in	fear	0	reg	['thei', 'heir', 'eir', 'ir']	O	O
 fear	fear	NN	their	and	0	reg	['fear', 'ear', 'ar']	O	O
 and	and	CC	fear	dislike	0	reg	['and', 'nd']	O	O
-dislike	dislike	NN	and	of	0	dis	['disl', 'isli', 'slik', 'like', 'ike', 'ke']	B-NEG	O
+dislike	dislike	NN	and	of	0	dis	['disl', 'isli', 'slik', 'like', 'ike', 'ke']	B-NEG	B-NEG
 of	of	IN	dislike	their	0	reg	['of']	O	O
 their	their	PRP$	of	master	0	reg	['thei', 'heir', 'eir', 'ir']	O	O
 master	master	NN	their	.	0	reg	['mast', 'aste', 'ster', 'ter', 'er']	O	O
@@ -9787,7 +9787,7 @@ out	out	RP	go	at	0	reg	['out', 'ut']	O	O
 at	at	IN	out	all	0	reg	['at']	O	O
 all	all	DT	at	,	0	reg	['all', 'll']	O	O
 ,	,	,	all	except	1	reg	[]	O	O
-except	except	IN	,	into	0	reg	['exce', 'xcep', 'cept', 'ept', 'pt']	O	O
+except	except	IN	,	into	0	reg	['exce', 'xcep', 'cept', 'ept', 'pt']	O	B-NEG
 into	into	IN	except	the	0	in	['into', 'nto', 'to']	O	O
 the	the	DT	into	garden	0	reg	['the', 'he']	O	O
 garden	garden	NN	the	.	0	reg	['gard', 'arde', 'rden', 'den', 'en']	O	O
@@ -10404,7 +10404,7 @@ formidable	formidable	JJ	and	inhabitants	0	reg	['form', 'ormi', 'rmid', 'mida', 
 inhabitants	inhabitant	NNS	formidable	,	0	in	['inha', 'nhab', 'habi', 'abit', 'bita', 'itan', 'tant', 'ants', 'nts', 'ts']	O	O
 ,	,	,	inhabitants	the	1	reg	[]	O	O
 the	the	DT	,	unknown	0	reg	['the', 'he']	O	O
-unknown	unknown	JJ	the	dangers	0	reg	['unkn', 'nkno', 'know', 'nown', 'own', 'wn']	B-NEG	B-NEG
+unknown	unknown	JJ	the	dangers	0	reg	['unkn', 'nkno', 'know', 'nown', 'own', 'wn']	B-NEG	O
 dangers	danger	NNS	unknown	of	0	reg	['dang', 'ange', 'nger', 'gers', 'ers', 'rs']	O	O
 of	of	IN	dangers	the	0	reg	['of']	O	O
 the	the	DT	of	approach	0	reg	['the', 'he']	O	O
@@ -11103,7 +11103,7 @@ we	we	PRP	.	ca	0	reg	['we']	O	O
 ca	ca	MD	we	n't	0	reg	['ca']	O	O
 n't	n't	RB	ca	arrest	1	reg	"[""n't"", ""'t""]"	B-NEG	B-NEG
 arrest	arrest	VB	n't	without	0	reg	['arre', 'rres', 'rest', 'est', 'st']	O	O
-without	without	IN	arrest	her	0	reg	['with', 'itho', 'thou', 'hout', 'out', 'ut']	B-NEG	B-NEG
+without	without	IN	arrest	her	0	reg	['with', 'itho', 'thou', 'hout', 'out', 'ut']	B-NEG	O
 her	her	PRP	without	evidence	0	reg	['her', 'er']	O	O
 evidence	evidence	NN	her	,	0	reg	['evid', 'vide', 'iden', 'denc', 'ence', 'nce', 'ce']	O	O
 ,	,	,	evidence	that	1	reg	[]	O	O
@@ -13092,7 +13092,7 @@ master	master	NN	his	.	0	reg	['mast', 'aste', 'ster', 'ter', 'er']	O	O
 .	.	.	master	we	1	reg	[]	O	O
 we	we	PRP	.	could	0	reg	['we']	O	O
 could	could	MD	we	not	0	reg	['coul', 'ould', 'uld', 'ld']	O	O
-not	not	RB	could	doubt	0	reg	['not', 'ot']	B-NEG	O
+not	not	RB	could	doubt	0	reg	['not', 'ot']	B-NEG	B-NEG
 doubt	doubt	VB	not	that	0	reg	['doub', 'oubt', 'ubt', 'bt']	O	O
 that	that	IN	doubt	justice	0	reg	['that', 'hat', 'at']	O	O
 justice	justice	NN	that	,	0	reg	['just', 'usti', 'stic', 'tice', 'ice', 'ce']	O	O
@@ -13503,7 +13503,7 @@ intended	intend	VBN	are	to	0	in	['inte', 'nten', 'tend', 'ende', 'nded', 'ded', 
 to	to	TO	intended	propitiate	0	reg	['to']	O	O
 propitiate	propitiate	VB	to	his	0	reg	['prop', 'ropi', 'opit', 'piti', 'itia', 'tiat', 'iate', 'ate', 'te']	O	O
 his	his	PRP$	propitiate	unclean	0	reg	['his', 'is']	O	O
-unclean	unclean	JJ	his	gods	0	reg	['uncl', 'ncle', 'clea', 'lean', 'ean', 'an']	B-NEG	O
+unclean	unclean	JJ	his	gods	0	reg	['uncl', 'ncle', 'clea', 'lean', 'ean', 'an']	B-NEG	B-NEG
 gods	god	NNS	unclean	.	0	reg	['gods', 'ods', 'ds']	O	O
 .	.	.	gods	in	1	reg	[]	O	O
 in	in	IN	.	extreme	0	reg	['in']	O	O
