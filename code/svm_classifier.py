@@ -16,6 +16,8 @@ def extract_features_and_labels(trainingfile, selected_features):
 
     data = []
     targets = []
+    
+    #mapping features to matching columns
     feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5}
     with open(trainingfile, 'r', encoding='utf8') as infile:
         for i,line in enumerate(infile):
@@ -23,12 +25,14 @@ def extract_features_and_labels(trainingfile, selected_features):
                 pass
             else:
                 components = line.rstrip('\n').split()
-                if len(components) > 0:    #checks if the row exists
+                #checks if the row exists
+                if len(components) > 0:   
                     feature_dict = {}
                     for feature_name in selected_features:
                         components_index = feature_to_index.get(feature_name)
                         feature_dict[feature_name] = components[components_index]
                     data.append(feature_dict)
+                    
                     # the gold label is in the last column
                     targets.append(components[-1])
     return data, targets
@@ -43,10 +47,16 @@ def create_classifier(train_features, train_targets):
     :returns: the model and the vectors
     '''
 
-
+    #running linear SVC model 
     model = LinearSVC()
+    
+    #initialize vector transformer
     vec = DictVectorizer()
+    
+    #transform features 
     features_vectorized = vec.fit_transform(train_features)
+    
+    #fit model
     model.fit(features_vectorized, train_targets)
 
     return model, vec
@@ -68,6 +78,7 @@ def get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_fea
 
     # we use the same function as above (guarantees features have the same name and form)
     features, goldlabels = extract_features_and_labels(testfile, selected_features)
+    
     # we need to use the same fitting as before, so now we only transform the current features according to this mapping (using only transform)
     test_features_vectorized = vectorizer.transform(features)
     predictions = classifier.predict(test_features_vectorized)
@@ -121,8 +132,7 @@ def run_classifier(trainfile, testfile):
     :param testfile: path to the test file
     '''
 
-
-    #evaluation of the performances of the other systems with the best combination
+    #evaluation of the performances of the SVM with the classical features
     modelname = 'SVM'
     selected_features = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
     feature_values, labels = extract_features_and_labels(trainfile, selected_features)
@@ -142,7 +152,6 @@ def main():
 
     args = parser.parse_args()
 
-    # RUN THE FEATURE ABLATION ANALYSIS ON THE FOLLOWING COMBINATIONS ON A LOGISTIC REGRESSION CLASSIFIER
     run_classifier(args.trainfile, args.testfile)
 
 if __name__ == '__main__':
