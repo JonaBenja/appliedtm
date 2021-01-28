@@ -57,7 +57,7 @@ This folder contains the following scripts and files:
 
 * `stopwords.txt` contains a list of English stopwords.
 
-* `requirements.txt` contains the requirements for the code in this project.
+
 
 
 Each of these scripts can be run from the command line through argparse. If you type '-h' after the name of the file, you will get some information regarding the requested arguments.
