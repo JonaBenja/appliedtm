@@ -99,9 +99,11 @@ def combine_features(sparse, dense):
     :rtype: list
 
     """
+    # Prepare containers
     combined_vectors = []
     sparse = np.array(sparse.toarray())
 
+    # Concatanate vectors for each sample
     for index, vector in enumerate(sparse):
         combined_vector = np.concatenate((vector, dense[index]))
         combined_vectors.append(combined_vector)
@@ -110,47 +112,41 @@ def combine_features(sparse, dense):
 
 
 def train_classifier(x_train, y_train):
-    """Trains the Multilayer perceptron neural network"""
+    """
+    Trains the Multilayer Perceptron neural network
+
+    :param x_train: training data
+    :param y_train: training labels
+    :type x_train: list
+    :type y_train: list
+    :returns a trained classifier
+    :rtype: sklearn.neural_network._multilayer_perceptron.MLPClassifier
+    """
 
     clf = MLPClassifier(solver='adam', alpha=1e-5, hidden_layer_sizes=500, random_state=1)
     clf.fit(x_train, y_train)
     return clf
 
 
-def main():
-    # Set up command line parser
-    parser = argparse.ArgumentParser(prog='mlp.py',
-                                     usage='python %(prog)s training_data_file test_data_file')
-    parser.add_argument('training_data',
-                        type=str,
-                        help='file path to the input data to preprocess.'
-                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll')
+def read_data_run_classifier(training_data_path, test_data_path, embedding_model_path):
+    """
+    Function to create a classifier and train it on a training datafile.
 
-    parser.add_argument('test_data',
-                        type=str,
-                        help='file path to the input data to preprocess.'
-                             'Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll')
+    :param training_data_path: path to the training datafile
+    :param test_data_path: path to the test datafile
+    :param embedding_model_path: path to the embedding model
 
-    parser.add_argument('embedding_model',
-                        type=str,
-                        help='file path to a pretrained embedding model.'
-                             'Example path: ../models/GoogleNews-vectors-negative300.bin')
+    :type training_data_path: string
+    :type test_data_path: string
+    :type embedding_model_path: string
 
-    args = parser.parse_args()
+    :returns a trained classifier, test data and test labels
+    :rtype: sklearn.neural_network._multilayer_perceptron.MLPClassifier, list, list
+    """
 
-    sparse = ["pos_tag",
-              "punctuation"]
+    training = pd.read_csv(training_data_path, encoding='utf-8', sep='\t')
+    test = pd.read_csv(test_data_path, encoding='utf-8', sep='\t')
 
-    # Load training data
-    training_data = args.training_data
-    training = pd.read_csv(training_data, encoding='utf-8', sep='\t')
-
-    # Load test data
-    test_data = args.test_data
-    test = pd.read_csv(test_data, encoding='utf-8', sep='\t')
-
-    # Load word embeddings model
-    embedding_model_path = args.embedding_model
     print('Loading word embedding model...')
     word_embedding_model = gensim.models.KeyedVectors.load_word2vec_format(
         embedding_model_path, binary=True)
@@ -158,6 +154,9 @@ def main():
 
     # Extract embeddings for token, prev_token and next_token
     embeddings = combine_embeddings(training, word_embedding_model)
+
+    sparse = ["pos_tag",
+              "punctuation"]
 
     # Extract and vectorize one-hot features
     sparse_features = make_sparse_features(training, sparse)
@@ -176,18 +175,45 @@ def main():
     # Extract embeddings for token, prev_token and next_token from test data
     embeddings = combine_embeddings(test, word_embedding_model)
 
-    # Extract and vectorize one-hot features
+    # Extract and vectorize one-hot features for test data
     sparse_features = make_sparse_features(test, sparse)
     sparse_vectors = vec.transform(sparse_features)
 
-    # Combine both kind of features into training data
     test_data = combine_features(sparse_vectors, embeddings)
     test_labels = test['gold_label']
 
-    # Make prediction
-    prediction = clf.predict(test_data)
+    return clf, test_data, test_labels
 
-    # Evaluate
+
+def add_argument(parser, argument, help_message):
+    """
+    Function to add arguments to the commandline parser
+
+    :param parser: an argparse parser
+    :param argument: the name of the argument to be add to the parser
+    :param help_message: a help string to be added to the argument
+
+    :type parser: argparse.ArgumentParser
+    :type argument: str
+    :type help_message: str
+
+    :returns a parser object with the argument added
+    :rtype: argparse.ArgumentParser
+    """
+
+    return parser.add_argument(argument, type=str, help=help_message)
+
+
+def evaluation(test_labels, prediction):
+    """
+    Function to print f-score, precision and recall for each class of test data.
+    Also prints confusion matrix
+
+    :param test_labels: the test labels from the test set
+    :param prediction: the prediction of the trained classifier on the test set
+    :type test_labels: list
+    :type prediction: list
+    """
     metrics = classification_report(test_labels, prediction, digits=3)
     print(metrics)
 
@@ -197,6 +223,37 @@ def main():
 
     confusion_matrix = pd.crosstab(df['Gold'], df['Predicted'], rownames=['Gold'], colnames=['Predicted'])
     print(confusion_matrix)
+
+
+def main():
+    # Set up command line parser
+    parser = argparse.ArgumentParser(prog='mlp_morph.py',
+                                     usage='python %(prog)s training_data_file test_data_file',)
+
+    arguments = ['training_data', 'test_data', 'embedding_model']
+    helps = ['file path to the input data to preprocess. Example path: ../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll',
+             'file path to the input data to preprocess. Example path: ../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll',
+             'file path to a pretrained embedding model. Example path: ../models/GoogleNews-vectors-negative300.bin']
+
+    # Add arguments to command line parser
+    for argument, help_message in zip(arguments, helps):
+        parser = add_argument(parser, argument, help_message)
+
+    args = parser.parse_args()
+
+    # Load arguments into variables
+    training_data_path = args.training_data
+    test_data_path = args.test_data
+    embedding_model_path = args.embedding_model
+
+    # Train classifier
+    clf, test_data, test_labels = read_data_run_classifier(training_data_path, test_data_path, embedding_model_path)
+
+    # Make prediction
+    prediction = clf.predict(test_data)
+
+    # Print evaluation
+    evaluation(test_labels, prediction)
 
 
 if __name__ == '__main__':
