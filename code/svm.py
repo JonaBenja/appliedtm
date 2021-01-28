@@ -18,7 +18,7 @@ def extract_features_and_labels(trainingfile, selected_features):
     targets = []
     
     #mapping features to matching columns
-    feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5}
+    feature_to_index = {'token': 0, 'lemma': 1, 'pos_tag': 2, 'prev_token': 3, 'next_token': 4, 'punctuation': 5, 'affixes': 6, 'n_grams': 7}
     with open(trainingfile, 'r', encoding='utf8') as infile:
         for i,line in enumerate(infile):
             if i == 0:
@@ -124,7 +124,7 @@ def print_precision_recall_fscore(predictions, goldlabels):
     print(report)
 
 
-def run_classifier(trainfile, testfile):
+def run_classifier(trainfile, testfile, selected_features):
     '''
     Function that runs the classifier and prints the evaluation
 
@@ -132,9 +132,8 @@ def run_classifier(trainfile, testfile):
     :param testfile: path to the test file
     '''
 
-    #evaluation of the performances of the SVM with the traditional features
+    #evaluation of the performances of the SVM with the classical features
     modelname = 'SVM'
-    selected_features = ["token", "lemma","pos_tag","prev_token","next_token","punctuation"]
     feature_values, labels = extract_features_and_labels(trainfile, selected_features)
     classifier, vectorizer = create_classifier(feature_values, labels)
     predictions, goldlabels = get_predicted_and_gold_labels(testfile, vectorizer, classifier, selected_features)
@@ -143,22 +142,28 @@ def run_classifier(trainfile, testfile):
     print_precision_recall_fscore(predictions, goldlabels)
     print('------')
 
-
 def main():
 
-    parser = argparse.ArgumentParser(prog='svm.py',
-                                     usage='python %(prog)s training_data_file test_data_file')
-    parser.add_argument('trainfile',
-                        help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
-    parser.add_argument('testfile',
-                        help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('trainfile', help='file path to training data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-training-simple-features.conll"')
+    parser.add_argument('testfile', help='file path to the test data with the new features. Recommended path: "../data/SEM-2012-SharedTask-CD-SCO-dev-simple-features.conll"')
 
     args = parser.parse_args()
-
-    run_classifier(args.trainfile, args.testfile)
+    
+                        #traditional features
+    selected_features = [["token", "lemma","pos_tag","prev_token","next_token","punctuation"],
+                         
+                        #with morphological features
+                        ["token", "lemma","pos_tag","prev_token","next_token","punctuation", "affixes",         
+                         "n_grams"]]
+    
+    for features in selected_features:
+        run_classifier(args.trainfile, args.testfile, features)
 
 if __name__ == '__main__':
     main()
+
+
 
 
 
