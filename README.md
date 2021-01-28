@@ -49,13 +49,9 @@ This folder contains the following scripts and files:
 
 * `baseline_system.py` trains a baseline system on a data set with only the token as feature.
 
-* `svm.py` trains a Support Vectors Machine system on the training data with the classical features.
+* `svm.py` trains a Support Vectors Machine system on the training data with the traditional and morphological features. Saves the best performing system as a new file with `-predictions`at the end.
 
-* `svm-morph.py` trains a Support Vector Machine system on the training data with the classical and morpholocial features.
-
-* `mlp.py` trains a Multilayer Perceptron on the training data with the classical features.
-
-* `mlp-morph.py` trains a Multilayer Perceptron on the training data with the classical and morphological features.
+* `mlp.py` trains a Multilayer Perceptron on the training data with the traditional and morphological features.
 
 * `error-analysis.py` runs an error analysis on the results of the predicted data.
 
