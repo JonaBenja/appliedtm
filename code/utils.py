@@ -21,6 +21,9 @@ def wordnet_pos(pos):
 def lemma_extraction(tokens, pos_list):
     """
     Function to extract lemmas from tokens.
+    :param tokens: list with tokens
+    :param pos_list: list with POS tags for tokens
+    :return: list with lemmas 
     """
     lemmas = []
     lem = WordNetLemmatizer()
@@ -34,6 +37,8 @@ def lemma_extraction(tokens, pos_list):
 def pos_extraction(tokens):
     """
     Function to extract part-of-speech tags from tokens.
+    :param tokens: list with tokens
+    :return: list with POS tags
     """
     pos_list = []
     tagged = nltk.pos_tag(tokens)
@@ -45,6 +50,8 @@ def pos_extraction(tokens):
 def previous_and_next_token_extraction(tokens):
     """
     Function to extract previous and preceding token from tokens list.
+    :param tokens: list with tokens
+    :return: list with previous tokens, list with next tokens
     """
     position_index = 0
 
@@ -81,6 +88,8 @@ def previous_and_next_token_extraction(tokens):
 def is_punctuation(tokens):
     """
     Function to determine if a token is a punctuation mark.
+    :param tokens: list with tokens
+    :return: list with punctuation indications 
     """
     punctuation = []
     for token in tokens:
@@ -98,6 +107,8 @@ def is_punctuation(tokens):
 def morphological_rules(tokens):
     """
     Function to check tokens on negational affixes.
+    :param tokens: list with tokens
+    :return: label_list with labels voor negational morphology 
     """
     #reading stopwords in as a list 
     stopwords_file = open('stopwords.txt', 'r')
@@ -132,7 +143,7 @@ def morphological_rules(tokens):
             label = 'ir'
 
 
-        elif len(token) > 5 and token.startswith("un") and not token.startswith("under") and token.endswith(("able", "ible", "ful", "y", "ing")):
+        elif len(token) > 5 and token.startswith("un") and not token.startswith("under") and token.endswith(( "able", "ible", "ful", "y", "ing", "ish", "ious", "ous", "worthy")):
             label = 'un'
 
         #checking occurrences of prefixes and suffixes  
@@ -171,6 +182,8 @@ def morphological_rules(tokens):
 def creating_ngrams(tokens):
     """
     Function that creates n-gram out of the token when length of token >= 2
+    :param tokens: list with tokens
+    :return: list with n_grams per token
     """
     n_grams = [] 
     for token in tokens: 

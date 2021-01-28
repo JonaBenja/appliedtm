@@ -37,26 +37,29 @@ def write_features(input_file):
                 "affixes",
                 "n_grams",
                 "gold_label"]
-
+    
+    # Running functions from utils to extract features 
     pos_tags = pos_extraction(tokens)
-
     lemmas = lemma_extraction(tokens, pos_tags)
 
     prev_next_tokens = previous_and_next_token_extraction(tokens)
     prev_tokens, next_tokens = prev_next_tokens
 
     punctuation = is_punctuation(tokens)
-
-    affixes = morphological_rules(tokens)
     
+    affixes = morphological_rules(tokens)
     n_grams = creating_ngrams(tokens)
 
     features_dict = {'token': tokens, 'pos_tag': pos_tags, 'lemma': lemmas, 'prev_token': prev_tokens,
+    
+    # Defining feature names for writing to output file 
+    features_dict = {'token': tokens, 'pos_tag': pos_tags,'lemma': lemmas, 'prev_token': prev_tokens,
                      'next_token': next_tokens, 'punctuation': punctuation, 'affixes': affixes,
                      'n_grams': n_grams, 'gold_label': labels}
 
     features_df = pd.DataFrame(features_dict, columns=feature_names)
 
+    # Writing features names to file 
     features_df.to_csv(output_file, sep='\t', index=False)
 
 
