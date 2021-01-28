@@ -1,7 +1,7 @@
 # SVM and MLP systems for negation cue detection
 
-This repository will contain all code and files used to train a negation detection classifier.
-The project is executed by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
+This repository contains all code and files used to train a negation detection classifier.
+The project was carried out by Jona Bosman, Myrthe Buckens, Gabriele Catanese and Eva den Uijl, during January 2021.
 
 ### annotations
 This folder contains annotations for 10 articles about the vaccination debate that were retrieved from a larger batch of web crawled articles. The annotations were made by the 4 contributing authors on the following files:
