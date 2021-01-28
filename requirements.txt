@@ -1,0 +1,11 @@
+Requirements: 
+
+The following packages are required to run the code. This list can be copied into your terminal and run, using pip install.
+They are automatically downloaded or updated to the version that is used in this project.  
+
+pip install argparse
+pip install gensim
+pip install nltk
+pip install numpy
+pip install pandas
+pip install -U scikit-learn

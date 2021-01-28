@@ -34,7 +34,7 @@ The word embedding model used for the training of the MLP is the "GoogleNewsvect
 You can find it here: https://code.google.com/archive/p/word2vec/
 
 ### requirements
-The packages that are required to run the code for this project can be found in code/requirements.txt.
+The packages that are required to run the code for this project can be found in `requirements.txt`.
 
 ### code
 This folder contains the following scripts and files: 
